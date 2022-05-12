@@ -1,6 +1,5 @@
 import React from 'react';
 import './Main.scss';
-import './Common.scss';
 function Main() {
   return (
     <body className="main_page position_relative">
