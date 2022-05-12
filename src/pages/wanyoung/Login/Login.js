@@ -1,7 +1,13 @@
 import React from 'react';
 import './Login.scss';
+import { useNavigate } from 'react-router-dom';
+import '../style/common.scss';
 
 const Login = () => {
+  const navigate = useNavigate();
+  const onClickLogin = () => {
+    navigate('/main-wanyoung');
+  };
   return (
     <body className="login flex center height100vh flexDirectionColumn">
       <section className="loginBox flex flexDirectionColumn">
@@ -20,7 +26,9 @@ const Login = () => {
               type="password"
               placeholder="비밀번호"
             />
-            <button className="loginBoxBtn">로그인</button>
+            <button className="loginBoxBtn" onClick={onClickLogin}>
+              로그인
+            </button>
           </div>
         </form>
         <div className="loginBoxLine flex center">

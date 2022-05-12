@@ -1,5 +1,7 @@
 import React from 'react';
 import './Main.scss';
+import '../style/common.scss';
+
 function Main() {
   return (
     <body className="mainPage positionRelative">
@@ -18,26 +20,26 @@ function Main() {
           </div>
           <div className="navBarItem flex spaceAround positionRelative">
             <button>
-              <img src="images/wanyoung/image/home.png" alt="" />
+              <img src="images/wanyoung/image/home.png" alt="아이콘" />
             </button>
             <button>
-              <img src="images/wanyoung/image/send.png" alt="" />
+              <img src="images/wanyoung/image/send.png" alt="아이콘" />
             </button>
             <button>
-              <img src="images/wanyoung/image/more.png" alt="" />
+              <img src="images/wanyoung/image/more.png" alt="아이콘" />
             </button>
             <button>
-              <img src="images/wanyoung/image/compass.png" alt="" />
+              <img src="images/wanyoung/image/compass.png" alt="아이콘" />
             </button>
             <button>
-              <img src="images/wanyoung/image/heart.png" alt="" />
+              <img src="images/wanyoung/image/heart.png" alt="아이콘" />
             </button>
             <button>
               <img
                 id="user_profile"
                 className="imgCircle32px"
                 src="images/wanyoung/image/person_pic5.jpg"
-                alt=""
+                alt="유저사진"
               />
             </button>
             <div
@@ -49,7 +51,7 @@ function Main() {
                   <img
                     className="hiddenNavBarImg"
                     src="images/wanyoung/image/feed_user.png"
-                    alt=""
+                    alt="유저사진"
                   />
                   <p className="fontSize14px">프로필</p>
                 </div>
@@ -57,7 +59,7 @@ function Main() {
                   <img
                     className="hiddenNavBarImg"
                     src="images/wanyoung/image/mark.png"
-                    alt=""
+                    alt="유저사진"
                   />
                   <p className="fontSize14px">저장됨</p>
                 </div>
@@ -65,7 +67,7 @@ function Main() {
                   <img
                     className="hiddenNavBarImg"
                     src="images/wanyoung/image/feed_user.png"
-                    alt=""
+                    alt="유저사진"
                   />
                   <p className="fontSize14px">설정</p>
                 </div>
@@ -73,7 +75,7 @@ function Main() {
                   <img
                     className="hiddenNavBarImg"
                     src="images/wanyoung/image/feed_user.png"
-                    alt=""
+                    alt="유저사진"
                   />
                   <p className="fontSize14px">계정전환</p>
                 </div>
@@ -92,12 +94,12 @@ function Main() {
               <img
                 className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
-                alt=""
+                alt="아이콘"
               />
               <img
                 className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic.jpg"
-                alt=""
+                alt="유저사진"
               />
               <span>peter_2</span>
             </div>
@@ -105,12 +107,12 @@ function Main() {
               <img
                 className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
-                alt=""
+                alt="아이콘"
               />
               <img
                 className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/pserson_pic1.jpg"
-                alt=""
+                alt="유저사진"
               />
               <span>harry_po</span>
             </div>
@@ -118,12 +120,12 @@ function Main() {
               <img
                 className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
-                alt=""
+                alt="아이콘"
               />
               <img
                 className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic2.jpg"
-                alt=""
+                alt="유저사진"
               />
               <span>malfoy_ee</span>
             </div>
@@ -131,12 +133,12 @@ function Main() {
               <img
                 className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
-                alt=""
+                alt="아이콘"
               />
               <img
                 className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic3.jpg"
-                alt=""
+                alt="유저사진"
               />
               <span>lee_j</span>
             </div>
@@ -144,12 +146,12 @@ function Main() {
               <img
                 className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
-                alt=""
+                alt="아이콘"
               />
               <img
                 className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic4.jpg"
-                alt=""
+                alt="유저사진"
               />
               <span>min_jj</span>
             </div>
@@ -157,12 +159,12 @@ function Main() {
               <img
                 className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
-                alt=""
+                alt="아이콘"
               />
               <img
                 className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic5.jpg"
-                alt=""
+                alt="유저사진"
               />
               <span>ghost_shell</span>
             </div>
@@ -170,12 +172,12 @@ function Main() {
               <img
                 className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
-                alt=""
+                alt="아이콘"
               />
               <img
                 className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic6.jpg"
-                alt=""
+                alt="유저사진"
               />
               <span>wecode_</span>
             </div>
@@ -183,12 +185,12 @@ function Main() {
               <img
                 className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
-                alt=""
+                alt="아이콘"
               />
               <img
                 className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic7.jpg"
-                alt=""
+                alt="유저사진"
               />
               <span>rider_kim</span>
             </div>
@@ -196,12 +198,12 @@ function Main() {
               <img
                 className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
-                alt=""
+                alt="아이콘"
               />
               <img
                 className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic8.jpg"
-                alt=""
+                alt="유저사진"
               />
               <span>broom_stick</span>
             </div>
@@ -239,7 +241,7 @@ function Main() {
                 alt="다이렉트 메세지"
               />
               <div className="feedInnerItems flex marginRight">
-                <img src="images/wanyoung/image/mark.png" alt="" />
+                <img src="images/wanyoung/image/mark.png" alt="아이콘" />
               </div>
             </div>
             <div className="flex flexStart">
@@ -281,7 +283,7 @@ function Main() {
               <img
                 className="marginLeft"
                 src="images/wanyoung/image/smile.png"
-                alt=""
+                alt="아이콘"
               />
               <input
                 id="comment-input"
@@ -331,7 +333,7 @@ function Main() {
                 alt="다이렉트 메세지"
               />
               <div className="feedInnerItems flex marginRight">
-                <img src="images/wanyoung/image/mark.png" alt="" />
+                <img src="images/wanyoung/image/mark.png" alt="아이콘" />
               </div>
             </div>
             <div className="flex flexStart">
@@ -372,7 +374,7 @@ function Main() {
               <img
                 className="marginLeft"
                 src="images/wanyoung/image/smile.png"
-                alt=""
+                alt="아이콘"
               />
               <input
                 id="comment-input"
@@ -422,7 +424,7 @@ function Main() {
                 alt="다이렉트 메세지"
               />
               <div className="feedInnerItems flex marginRight">
-                <img src="images/wanyoung/image/mark.png" alt="" />
+                <img src="images/wanyoung/image/mark.png" alt="아이콘" />
               </div>
             </div>
             <div className="flex flexStart">
@@ -463,7 +465,7 @@ function Main() {
               <img
                 className="marginLeft"
                 src="images/wanyoung/image/smile.png"
-                alt=""
+                alt="아이콘"
               />
               <input
                 id="comment-input"
@@ -487,7 +489,7 @@ function Main() {
               <img
                 className="imgCircle56px marginLeft"
                 src="images/wanyoung/image/person_pic5.jpg"
-                alt=""
+                alt="유저사진"
               />
               <div className="flex flexDirectionColumn marginLeft">
                 <p className="marginLeft rightContentUserName">wan_0_kim</p>
@@ -504,7 +506,7 @@ function Main() {
                   <img
                     className="imgCircle32px"
                     src="images/wanyoung/image/person_pic2.jpg"
-                    alt=""
+                    alt="유저사진"
                   />
                   <div className="flex flexDirectionColumn marginLeft">
                     <p className="rightContentUserName">tree_angel</p>
@@ -522,7 +524,7 @@ function Main() {
                   <img
                     className="imgCircle32px"
                     src="images/wanyoung/image/person_pic3.jpg"
-                    alt=""
+                    alt="유저사진"
                   />
                   <div className="flex flexDirectionColumn marginLeft">
                     <p className="rightContentUserName">wecode_2</p>
@@ -540,7 +542,7 @@ function Main() {
                   <img
                     className="imgCircle32px"
                     src="images/wanyoung/image/person_pic4.jpg"
-                    alt=""
+                    alt="유저사진"
                   />
                   <div className="flex flexDirectionColumn marginLeft">
                     <p className="rightContentUserName">suban__0_0</p>
@@ -558,7 +560,7 @@ function Main() {
                   <img
                     className="imgCircle32px"
                     src="images/wanyoung/image/person_pic5.jpg"
-                    alt=""
+                    alt="유저사진"
                   />
                   <div className="flex flexDirectionColumn marginLeft">
                     <p className="rightContentUserName">koko_a</p>
@@ -576,7 +578,7 @@ function Main() {
                   <img
                     className="imgCircle32px"
                     src="images/wanyoung/image/person_pic6.jpg"
-                    alt=""
+                    alt="유저사진"
                   />
                   <div className="flex flexDirectionColumn marginLeft">
                     <p className="rightContentUserName">mina_park</p>
