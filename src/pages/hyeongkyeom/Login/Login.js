@@ -27,10 +27,10 @@ const Login = () => {
               로그인
             </button>
             <p>또는</p>
-            <a className="facebookLogin" href="#">
+            <a className="facebookLogin" href="#!">
               <i class="fa-brands fa-facebook-square" /> Facebook으로 로그인
             </a>
-            <a className="forgetPwd" href="#">
+            <a className="forgetPwd" href="#!">
               비밀번호를 잊으셨나요?
             </a>
           </article>
@@ -38,7 +38,7 @@ const Login = () => {
         <section className="signBorder">
           <p className="signUp">
             계정이 없으신가요?{' '}
-            <a className="signUplink" href="#">
+            <a className="signUplink" href="#!">
               가입하기
             </a>
           </p>

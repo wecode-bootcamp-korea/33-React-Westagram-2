@@ -120,9 +120,7 @@ const Main = () => {
                 alt="feedProfileImg"
               />
               <div className="feedProfileName">
-                <p className="feedProfileId">
-                  <b>hang_ke_mi</b>
-                </p>
+                <p className="feedProfileId">hang_ke_mi</p>
                 <p className="feedProfileLocation">WeCode - 위코드</p>
               </div>
               <i id="feedProfileMore" className="fa-solid fa-ellipsis" />
