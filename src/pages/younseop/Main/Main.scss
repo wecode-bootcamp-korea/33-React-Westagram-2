@@ -121,6 +121,7 @@ $bold: 700;
           .like-list-text {
             display: flex;
             justify-content: flex-start;
+            padding-top: 4px;
 
             .like-user {
               font-weight: $bold;

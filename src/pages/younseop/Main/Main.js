@@ -1,6 +1,6 @@
 import React from 'react';
 import './Main.scss';
-import Nav from '../../../Components/Nav.js';
+import Nav from '../../../Components/Nav';
 
 function Main() {
   return (
@@ -13,7 +13,7 @@ function Main() {
               <div className="post-profile">
                 <div className="user-info">
                   <img
-                    src="public/images/younseop/post-user.jpg"
+                    src="images/younseop/post-user.jpg"
                     alt=""
                     className="user-photo"
                   />
@@ -21,42 +21,39 @@ function Main() {
                 </div>
                 <img
                   className="more-icon"
-                  src="public/images/younseop/more-icon.svg"
+                  src="images/younseop/more-icon.svg"
                   alt=""
                 />
               </div>
               <div className="img-wrapper">
-                <img src="public/images/younseop/post-user.jpg" alt="" />
+                <img src="images/younseop/post-user.jpg" alt="" />
               </div>
               <div className="btns-wrapper">
                 <div className="left-ic-wrapper">
                   <button className="like-btn">
-                    <img
-                      src="public/images/younseop/heart-regular.svg"
-                      alt=""
-                    />
+                    <img src="images/younseop/heart-regular.svg" alt="" />
                   </button>
                   <button className="comment-btn">
-                    <img src="public/images/younseop/comment.svg" alt="" />
+                    <img src="images/younseop/comment.svg" alt="" />
                   </button>
                   <button className="share-btn">
-                    <img src="public/images/younseop/share.svg" alt="" />
+                    <img src="images/younseop/share.svg" alt="" />
                   </button>
                 </div>
                 <button className="bookmark-btn">
-                  <img src="public/images/younseop/bookmark.svg" alt="" />
+                  <img src="images/younseop/bookmark.svg" alt="" />
                 </button>
               </div>
               <div className="like-list">
                 <img
-                  src="public/images/younseop/post-user.jpg"
+                  src="images/younseop/post-user.jpg"
                   alt=""
                   className="user-photo"
                 />
                 <div className="like-list-text">
                   <span className="like-user">wecode</span>
                   <span>님</span>
-                  <span className="like-number">&nbsp외 10명</span>
+                  <span className="like-number">외 10명</span>
                   <span>이 좋아합니다.</span>
                 </div>
               </div>
@@ -87,7 +84,7 @@ function Main() {
             <div className="aside-wrapper">
               <div className="profile">
                 <img
-                  src="public/images/younseop/post-user.jpg"
+                  src="images/younseop/post-user.jpg"
                   alt=""
                   className="user-photo"
                 />
@@ -104,7 +101,7 @@ function Main() {
                 <ul className="story-contents">
                   <li className="story-profile">
                     <img
-                      src="public/images/younseop/post-user.jpg"
+                      src="images/younseop/post-user.jpg"
                       alt=""
                       className="user-photo"
                     />
@@ -115,7 +112,7 @@ function Main() {
                   </li>
                   <li className="story-profile">
                     <img
-                      src="public/images/younseop/post-user.jpg"
+                      src="images/younseop/post-user.jpg"
                       alt=""
                       className="user-photo"
                     />
@@ -126,7 +123,7 @@ function Main() {
                   </li>
                   <li className="story-profile">
                     <img
-                      src="public/images/younseop/post-user.jpg"
+                      src="images/younseop/post-user.jpg"
                       alt=""
                       className="user-photo"
                     />
@@ -137,7 +134,7 @@ function Main() {
                   </li>
                   <li className="story-profile">
                     <img
-                      src="public/images/younseop/post-user.jpg"
+                      src="images/younseop/post-user.jpg"
                       alt=""
                       className="user-photo"
                     />
@@ -157,7 +154,7 @@ function Main() {
                   <li className="user-list-item">
                     <div className="list-item-info">
                       <img
-                        src="public/images/younseop/post-user.jpg"
+                        src="images/younseop/post-user.jpg"
                         alt=""
                         className="user-photo"
                       />
@@ -171,7 +168,7 @@ function Main() {
                   <li className="user-list-item">
                     <div className="list-item-info">
                       <img
-                        src="public/images/younseop/post-user.jpg"
+                        src="images/younseop/post-user.jpg"
                         alt=""
                         className="user-photo"
                       />
@@ -185,7 +182,7 @@ function Main() {
                   <li className="user-list-item">
                     <div className="list-item-info">
                       <img
-                        src="public/images/younseop/post-user.jpg"
+                        src="images/younseop/post-user.jpg"
                         alt=""
                         className="user-photo"
                       />
