@@ -4,22 +4,22 @@ $radius-3: 3px;
 $radius-8: 8px;
 $bold: 700;
 
-@mixin flex-space-between {
+@mixin flexSpaceBetween {
   display: flex;
   justify-content: space-between;
 }
 
-@mixin flex-center {
+@mixin flexCenter {
   display: flex;
   align-items: center;
 }
 
-@mixin flex-row {
+@mixin flexRow {
   display: flex;
   flex-direction: row;
 }
 
-@mixin flex-column {
+@mixin flexColumn {
   display: flex;
   flex-direction: column;
 }
@@ -28,7 +28,7 @@ $bold: 700;
   padding-bottom: 48px;
 
   section {
-    @include flex-row;
+    @include flexRow;
 
     padding-top: 126px;
     height: 100vh;
@@ -48,14 +48,14 @@ $bold: 700;
         background-color: #fff;
         border-radius: $radius-3;
 
-        .post-profile {
-          @include flex-space-between;
+        .postProfile {
+          @include flexSpaceBetween;
 
           padding: 16px;
           align-items: center;
 
-          .user-info {
-            @include flex-center;
+          .userInfo {
+            @include flexCenter;
 
             img {
               width: 32px;
@@ -69,13 +69,13 @@ $bold: 700;
             }
           }
 
-          .more-icon {
+          .iconNamedMore {
             width: 24px;
             height: 24px;
           }
         }
 
-        .img-wrapper {
+        .imgWrapper {
           width: 612px;
           height: 612px;
           margin: 0;
@@ -87,8 +87,8 @@ $bold: 700;
           }
         }
 
-        .btns-wrapper {
-          @include flex-space-between;
+        .btnsWrapper {
+          @include flexSpaceBetween;
 
           padding: 8px 16px;
 
@@ -105,8 +105,8 @@ $bold: 700;
           }
         }
 
-        .like-list {
-          @include flex-row;
+        .likeList {
+          @include flexRow;
 
           padding: 0 16px 12px 16px;
 
@@ -118,37 +118,37 @@ $bold: 700;
             border: $border;
           }
 
-          .like-list-text {
+          .likeListText {
             display: flex;
             justify-content: flex-start;
             padding-top: 4px;
 
-            .like-user {
+            .likeUser {
               font-weight: $bold;
             }
 
-            .like-number {
+            .likeNumber {
               font-weight: $bold;
               margin-left: 5px;
             }
           }
         }
 
-        .desc-wrapper {
+        .descWrapper {
           padding: 0 16px 8px;
 
-          .post-user {
+          .postUser {
             font-weight: $bold;
             margin-right: 8px;
           }
         }
 
-        .comments-wrapper {
+        .commentsWrapper {
           margin: 0;
           padding: 0 16px 8px;
           list-style-type: none;
 
-          .post-comment {
+          .postComment {
             margin-bottom: 2px;
 
             &:last-child {
@@ -158,7 +158,7 @@ $bold: 700;
             .comment {
               margin: 0;
 
-              .comment-user {
+              .commentUser {
                 font-weight: $bold;
                 margin-right: 8px;
               }
@@ -166,19 +166,19 @@ $bold: 700;
           }
         }
 
-        .post-time {
+        .postTime {
           margin: 0;
           padding: 0 16px 12px;
           color: #9e9e9e;
         }
 
-        .write-comment {
-          @include flex-space-between;
+        .writeComment {
+          @include flexSpaceBetween;
 
           border-top: $border;
           font-size: 16px;
 
-          .write-area {
+          .writeArea {
             border: none;
             border-radius: 0;
             padding: 16px;
@@ -213,16 +213,16 @@ $bold: 700;
       }
     }
 
-    .main-right {
+    .mainRight {
       background-color: transparent;
       flex-grow: 1;
 
-      .aside-wrapper {
+      .asideWrapper {
         position: fixed;
         max-width: 293px;
 
         .profile {
-          @include flex-center;
+          @include flexCenter;
           justify-content: flex-start;
           margin-bottom: 16px;
 
@@ -233,14 +233,14 @@ $bold: 700;
             margin-right: 20px;
           }
 
-          .profile-text-wrapper {
-            @include flex-column;
+          .profileTextWrapper {
+            @include flexColumn;
 
-            .profile-name {
+            .profileName {
               font-weight: $bold;
             }
 
-            .profile-location {
+            .profileLocation {
               color: #9b9b9b;
               font-size: 14px;
               font-weight: 500;
@@ -258,17 +258,17 @@ $bold: 700;
           margin-bottom: 16px;
           overflow: hidden;
 
-          .story-header {
-            @include flex-space-between;
+          .storyHeader {
+            @include flexSpaceBetween;
 
             margin: 16px 0;
             align-items: center;
 
-            .story-title {
+            .storyTitle {
               color: #999999;
             }
 
-            .story-all {
+            .storyAll {
               font-weight: 700;
               border: none;
               border-radius: 0;
@@ -277,11 +277,11 @@ $bold: 700;
             }
           }
 
-          .story-contents {
+          .storyContents {
             list-style-type: none;
             padding-left: 0;
 
-            .story-profile {
+            .storyProfile {
               display: flex;
               justify-content: flex-start;
               margin-bottom: 16px;
@@ -293,14 +293,14 @@ $bold: 700;
                 margin-right: 8px;
               }
 
-              .story-text-wrapper {
-                @include flex-column;
+              .storyTextWrapper {
+                @include flexColumn;
 
-                .story-name {
+                .storyName {
                   font-weight: $bold;
                 }
 
-                .story-time {
+                .storyTime {
                   color: #9b9b9b;
                   font-size: 14px;
                 }
@@ -309,23 +309,23 @@ $bold: 700;
           }
         }
 
-        .recommended-user {
+        .recommendedUser {
           border: $border;
           background-color: #fff;
           border-radius: $radius-3;
           padding: 0 16px;
 
-          .user-list-header {
-            @include flex-space-between;
+          .userListHeader {
+            @include flexSpaceBetween;
 
             margin: 16px 0;
             align-items: center;
 
-            .user-list-title {
+            .userListTitle {
               color: #999999;
             }
 
-            .user-list-all {
+            .userListAll {
               font-weight: 700;
               border: none;
               border-radius: 0;
@@ -334,16 +334,16 @@ $bold: 700;
             }
           }
 
-          .user-list {
+          .userList {
             list-style-type: none;
             padding-left: 0;
 
-            .user-list-item {
-              @include flex-space-between;
+            .userListItem {
+              @include flexSpaceBetween;
 
               margin-bottom: 16px;
 
-              .list-item-info {
+              .listItemInfo {
                 display: flex;
 
                 img {
@@ -353,21 +353,21 @@ $bold: 700;
                   margin-right: 8px;
                 }
 
-                .story-text-wrapper {
-                  @include flex-column;
+                .storyTextWrapper {
+                  @include flexColumn;
 
-                  .story-name {
+                  .storyName {
                     font-weight: $bold;
                   }
 
-                  .story-time {
+                  .storyTime {
                     color: #9b9b9b;
                     font-size: 14px;
                   }
                 }
               }
 
-              .user-follow {
+              .userFollow {
                 border: none;
                 background-color: transparent;
                 font-weight: 700;

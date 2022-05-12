@@ -8,8 +8,8 @@ function Login() {
       <Nav />
       <div className="login">
         <div className="wrapper">
-          <h1 className="westa-logo">Westagram</h1>
-          <div className="login-box">
+          <h1 className="westaLogo">Westagram</h1>
+          <div className="loginBox">
             <input
               type="text"
               id="id"
@@ -17,12 +17,12 @@ function Login() {
             />
             <input type="password" id="password" placeholder="비밀번호" />
             <a href="/main">
-              <button id="login-btn" disabled>
+              <button id="loginBtn" disabled>
                 로그인
               </button>
             </a>
           </div>
-          <a href="/" className="forgot-pw">
+          <a href="/" className="forgotPw">
             비밀번호를 잊으셨나요?
           </a>
         </div>
