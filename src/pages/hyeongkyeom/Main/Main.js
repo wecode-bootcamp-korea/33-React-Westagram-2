@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/common.scss';
+import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/reset.scss';
+import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/variables.scss';
 import './Main.scss';
 
 const Main = () => {
+  let [colors, setColors] = useState({ color: 'black' });
+  let [className, setClassName] = useState('fa-regular fa-heart');
+
+  const handleClick = () => {
+    let newColor;
+    let newClassName;
+    if (colors !== { color: 'red' }) {
+      newColor = { color: 'red' };
+      newClassName = 'fa-solid fa-heart';
+    } else if ((className = 'fa-solid fa-heart')) {
+      newColor = { color: 'black' };
+      newClassName = 'fa-regular fa-heart';
+    }
+    setColors(newColor);
+    setClassName(newClassName);
+  };
+
   return (
     <div className="main">
       <section className="mainWrapper">
@@ -136,7 +156,12 @@ const Main = () => {
               <div className="feedBottomLikes">
                 <div className="feedBottomLikesIcon">
                   <div className="feedBottomLikesIconLeft">
-                    <i id="feedHeartBtn" className="fa-regular fa-heart" />
+                    <i
+                      id="feedHeartBtn"
+                      className={className}
+                      style={colors}
+                      onClick={handleClick}
+                    />
                     <i className="fa-regular fa-comment" />
                     <i className="fa-solid fa-arrow-up-from-bracket" />
                   </div>

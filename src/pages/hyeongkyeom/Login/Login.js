@@ -1,5 +1,8 @@
 import React from 'react';
 import './Login.scss';
+import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/common.scss';
+import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/reset.scss';
+import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/variables.scss';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
