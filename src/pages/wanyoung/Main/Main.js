@@ -2,21 +2,21 @@ import React from 'react';
 import './Main.scss';
 function Main() {
   return (
-    <body className="main_page position_relative">
-      <section className="nav_bar position_fixed flex center">
-        <nav className="nav_bar_inner flex space_around position_fixed">
+    <body className="mainPage positionRelative">
+      <section className="navBar positionFixed flex center">
+        <nav className="navBarInner flex spaceAround positionFixed">
           <h2 className="logo">Westagram</h2>
-          <div className="position_relative">
-            <i className="fa-solid fa-magnifying-glass position_absolute glass" />
+          <div className="positionRelative">
+            <i className="fa-solid fa-magnifying-glass positionAbsolute glass" />
             <input
-              className="nav_bar_input"
+              className="navBarInput"
               type="text"
               placeholder="검색"
               maxLength="14"
             />
-            <div className="search_user_result flex flex_direction_column flex_start hidden" />
+            <div className="searchUserResult flex flexDirectionColumn flexStart hidden" />
           </div>
-          <div className="nav_bar_item flex space_around position_relative">
+          <div className="navBarItem flex spaceAround positionRelative">
             <button>
               <img src="images/wanyoung/image/home.png" alt="" />
             </button>
@@ -35,558 +35,558 @@ function Main() {
             <button>
               <img
                 id="user_profile"
-                className="img_circle_32px"
+                className="imgCircle32px"
                 src="images/wanyoung/image/person_pic5.jpg"
                 alt=""
               />
             </button>
             <div
               id="hidden_nav"
-              className="hidden_nav_bar flex flex_direction_column space_around position_absolute hidden"
+              className="hiddenNavBar flex flexDirectionColumn spaceAround positionAbsolute hidden"
             >
-              <div className="flex flex_direction_column space_around hidden_nav_item">
-                <div className="hidden_nav_img_wrapper margin_left flex flex_start">
+              <div className="flex flexDirectionColumn spaceAround hiddenNavItem">
+                <div className="hiddenNavImgWrapper marginLeft flex flexStart">
                   <img
-                    className="hidden_nav_bar_img"
+                    className="hiddenNavBarImg"
                     src="images/wanyoung/image/feed_user.png"
                     alt=""
                   />
-                  <p className="font_size_14px">프로필</p>
+                  <p className="fontSize14px">프로필</p>
                 </div>
-                <div className="hidden_nav_img_wrapper margin_left flex flex_start">
+                <div className="hiddenNavImgWrapper marginLeft flex flexStart">
                   <img
-                    className="hidden_nav_bar_img"
+                    className="hiddenNavBarImg"
                     src="images/wanyoung/image/mark.png"
                     alt=""
                   />
-                  <p className="font_size_14px">저장됨</p>
+                  <p className="fontSize14px">저장됨</p>
                 </div>
-                <div className="hidden_nav_img_wrapper margin_left flex flex_start">
+                <div className="hiddenNavImgWrapper marginLeft flex flexStart">
                   <img
-                    className="hidden_nav_bar_img"
+                    className="hiddenNavBarImg"
                     src="images/wanyoung/image/feed_user.png"
                     alt=""
                   />
-                  <p className="font_size_14px">설정</p>
+                  <p className="fontSize14px">설정</p>
                 </div>
-                <div className="hidden_nav_img_wrapper margin_left flex flex_start">
+                <div className="hiddenNavImgWrapper marginLeft flex flexStart">
                   <img
-                    className="hidden_nav_bar_img"
+                    className="hiddenNavBarImg"
                     src="images/wanyoung/image/feed_user.png"
                     alt=""
                   />
-                  <p className="font_size_14px">계정전환</p>
+                  <p className="fontSize14px">계정전환</p>
                 </div>
               </div>
-              <div className="hidden_nav_img_wrapper margin_left flex flex_start">
-                <p className="font_size_14px">로그아웃</p>
+              <div className="hiddenNavImgWrapper marginLeft flex flexStart">
+                <p className="fontSize14px">로그아웃</p>
               </div>
             </div>
           </div>
         </nav>
       </section>
-      <section className="main_content flex">
-        <div className="left_content flex flex_direction_column">
-          <article className="left_content_new_story flex space_between">
-            <div className="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+      <section className="mainContent flex">
+        <div className="leftContent flex flexDirectionColumn">
+          <article className="leftContentNewStory flex spaceBetween">
+            <div className="newStoryInnerBox positionRelative flex center flexDirectionColumn marginLeft">
               <img
-                className="img_circle_56px"
+                className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
                 alt=""
               />
               <img
-                className="new_story_user_img position_absolute img_circle_46px"
+                className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic.jpg"
                 alt=""
               />
               <span>peter_2</span>
             </div>
-            <div className="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+            <div className="newStoryInnerBox positionRelative flex center flexDirectionColumn marginLeft">
               <img
-                className="img_circle_56px"
+                className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
                 alt=""
               />
               <img
-                className="new_story_user_img position_absolute img_circle_46px"
+                className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/pserson_pic1.jpg"
                 alt=""
               />
               <span>harry_po</span>
             </div>
-            <div className="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+            <div className="newStoryInnerBox positionRelative flex center flexDirectionColumn marginLeft">
               <img
-                className="img_circle_56px"
+                className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
                 alt=""
               />
               <img
-                className="new_story_user_img position_absolute img_circle_46px"
+                className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic2.jpg"
                 alt=""
               />
               <span>malfoy_ee</span>
             </div>
-            <div className="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+            <div className="newStoryInnerBox positionRelative flex center flexDirectionColumn marginLeft">
               <img
-                className="img_circle_56px"
+                className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
                 alt=""
               />
               <img
-                className="new_story_user_img position_absolute img_circle_46px"
+                className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic3.jpg"
                 alt=""
               />
               <span>lee_j</span>
             </div>
-            <div className="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+            <div className="newStoryInnerBox positionRelative flex center flexDirectionColumn marginLeft">
               <img
-                className="img_circle_56px"
+                className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
                 alt=""
               />
               <img
-                className="new_story_user_img position_absolute img_circle_46px"
+                className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic4.jpg"
                 alt=""
               />
               <span>min_jj</span>
             </div>
-            <div className="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+            <div className="newStoryInnerBox positionRelative flex center flexDirectionColumn marginLeft">
               <img
-                className="img_circle_56px"
+                className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
                 alt=""
               />
               <img
-                className="new_story_user_img position_absolute img_circle_46px"
+                className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic5.jpg"
                 alt=""
               />
               <span>ghost_shell</span>
             </div>
-            <div className="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+            <div className="newStoryInnerBox positionRelative flex center flexDirectionColumn marginLeft">
               <img
-                className="img_circle_56px"
+                className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
                 alt=""
               />
               <img
-                className="new_story_user_img position_absolute img_circle_46px"
+                className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic6.jpg"
                 alt=""
               />
               <span>wecode_</span>
             </div>
-            <div className="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+            <div className="newStoryInnerBox positionRelative flex center flexDirectionColumn marginLeft">
               <img
-                className="img_circle_56px"
+                className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
                 alt=""
               />
               <img
-                className="new_story_user_img position_absolute img_circle_46px"
+                className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic7.jpg"
                 alt=""
               />
               <span>rider_kim</span>
             </div>
-            <div className="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+            <div className="newStoryInnerBox positionRelative flex center flexDirectionColumn marginLeft">
               <img
-                className="img_circle_56px"
+                className="imgCircle56px"
                 src="images/wanyoung/image/circle.png"
                 alt=""
               />
               <img
-                className="new_story_user_img position_absolute img_circle_46px"
+                className="newStoryUserImg positionAbsolute imgCircle46px"
                 src="images/wanyoung/image/person_pic8.jpg"
                 alt=""
               />
               <span>broom_stick</span>
             </div>
           </article>
-          <article className="left_content_feed_box flex flex_direction_column">
-            <div className="feed_box_title flex flex_start">
+          <article className="leftContentFeedBox flex flexDirectionColumn">
+            <div className="feedBoxTitle flex flexStart">
               <img
-                className="user_title_img margin_left"
+                className="userTitleImg marginLeft"
                 src="images/wanyoung/image/person_pic6.jpg"
                 alt="유저 프로필 사진"
               />
-              <p className="user_text margin_left">new_0_person</p>
+              <p className="userText marginLeft">new_0_person</p>
             </div>
             <img
-              className="feed_box_img"
+              className="feedBoxImg"
               src="images/wanyoung/image/racoon1.jpg"
               alt="피드 사진"
             />
-            <div className="feed_items flex flex_start center">
+            <div className="feedItems flex flexStart center">
               <img
                 id="feed_heart"
                 style={{ color: 'black' }}
-                className="margin_left"
+                className="marginLeft"
                 src="images/wanyoung/image/heart.png"
                 alt="좋아요"
               />
               <img
-                className="margin_left"
+                className="marginLeft"
                 src="images/wanyoung/image/chat.png"
                 alt="댓글 말풍선"
               />
               <img
-                className="margin_left"
+                className="marginLeft"
                 src="images/wanyoung/image/send.png"
                 alt="다이렉트 메세지"
               />
-              <div className="feed_inner_items flex margin_right">
+              <div className="feedInnerItems flex marginRight">
                 <img src="images/wanyoung/image/mark.png" alt="" />
               </div>
             </div>
-            <div className="flex flex_start">
+            <div className="flex flexStart">
               <img
-                className="img_circle_17px margin_left"
+                className="imgCircle17px marginLeft"
                 src="images/wanyoung/image/person_pic4.jpg"
                 alt="좋아요 누른 사람"
               />
               <img
-                className="img_circle_17px"
+                className="imgCircle17px"
                 src="images/wanyoung/image/person_pic6.jpg"
                 alt="좋아요 누른 사람"
               />
               <img
-                className="img_circle_17px"
+                className="imgCircle17px"
                 src="images/wanyoung/image/person_pic8.jpg"
                 alt="좋아요 누른 사람"
               />
-              <p className="user_text margin_left">
+              <p className="userText marginLeft">
                 harry_0님 외{' '}
-                <span id="count" className="user_text">
+                <span id="count" className="userText">
                   60
                 </span>
                 명이 좋아합니다.
               </p>
             </div>
-            <div className="margin_top">
-              <p className="margin_left font_size_14px">
+            <div className="marginTop">
+              <p className="marginLeft fontSize14px">
                 new_0_person{' '}
-                <span className="margin_left font_size_12px">라쿤 귀여워~</span>
+                <span className="marginLeft fontSize12px">라쿤 귀여워~</span>
               </p>
             </div>
 
-            <div id="comment-content" className="feed_comment" />
-            <div className="feed_day flex flex_start">
-              <p className="margin_left">1일전</p>
+            <div id="comment-content" className="feedComment" />
+            <div className="feedDay flex flexStart">
+              <p className="marginLeft">1일전</p>
             </div>
-            <form className="feed_input flex space_between">
+            <form className="feedInput flex spaceBetween">
               <img
-                className="margin_left"
+                className="marginLeft"
                 src="images/wanyoung/image/smile.png"
                 alt=""
               />
               <input
                 id="comment-input"
-                className="margin_left feed_input_input"
+                className="marginLeft feedInputInput"
                 type="text"
                 placeholder="댓글 달기"
               />
               <button
                 id="comment-button"
                 type="submit"
-                className="font_size_14px"
+                className="fontSize14px"
               >
                 게시
               </button>
             </form>
           </article>
-          <article className="left_content_feed_box flex flex_direction_column">
-            <div className="feed_box_title flex flex_start">
+          <article className="leftContentFeedBox flex flexDirectionColumn">
+            <div className="feedBoxTitle flex flexStart">
               <img
-                className="user_title_img margin_left"
+                className="userTitleImg marginLeft"
                 src="images/wanyoung/image/person_pic8.jpg"
                 alt="유저 프로필 사진"
               />
-              <p className="user_text margin_left">old_man</p>
+              <p className="userText marginLeft">old_man</p>
             </div>
             <img
-              className="feed_box_img"
+              className="feedBoxImg"
               src="images/wanyoung/image/racoon2.jpg"
               alt="피드 사진"
             />
-            <div className="feed_items flex flex_start center">
+            <div className="feedItems flex flexStart center">
               <img
                 id="feed_heart"
                 style={{ color: 'black' }}
-                className="margin_left"
+                className="marginLeft"
                 src="images/wanyoung/image/heart.png"
                 alt="좋아요"
               />
               <img
-                className="margin_left"
+                className="marginLeft"
                 src="images/wanyoung/image/chat.png"
                 alt="댓글 말풍선"
               />
               <img
-                className="margin_left"
+                className="marginLeft"
                 src="images/wanyoung/image/send.png"
                 alt="다이렉트 메세지"
               />
-              <div className="feed_inner_items flex margin_right">
+              <div className="feedInnerItems flex marginRight">
                 <img src="images/wanyoung/image/mark.png" alt="" />
               </div>
             </div>
-            <div className="flex flex_start">
+            <div className="flex flexStart">
               <img
-                className="img_circle_17px margin_left"
+                className="imgCircle17px marginLeft"
                 src="images/wanyoung/image/person_pic4.jpg"
                 alt="좋아요 누른 사람"
               />
               <img
-                className="img_circle_17px"
+                className="imgCircle17px"
                 src="images/wanyoung/image/person_pic6.jpg"
                 alt="좋아요 누른 사람"
               />
               <img
-                className="img_circle_17px"
+                className="imgCircle17px"
                 src="images/wanyoung/image/person_pic8.jpg"
                 alt="좋아요 누른 사람"
               />
-              <p className="user_text margin_left">
+              <p className="userText marginLeft">
                 sara_98 외{' '}
-                <span id="count" className="user_text">
+                <span id="count" className="userText">
                   39
                 </span>
                 명이 좋아합니다.
               </p>
             </div>
-            <div className="margin_top">
-              <p className="margin_left font_size_14px">
+            <div className="marginTop">
+              <p className="marginLeft fontSize14px">
                 old_man{' '}
-                <span className="margin_left font_size_12px">라쿤 귀여워~</span>
+                <span className="marginLeft fontSize12px">라쿤 귀여워~</span>
               </p>
             </div>
-            <div id="comment-content" className="feed_comment" />
-            <div className="feed_day flex flex_start">
-              <p className="margin_left">1일전</p>
+            <div id="comment-content" className="feedComment" />
+            <div className="feedDay flex flexStart">
+              <p className="marginLeft">1일전</p>
             </div>
-            <form className="feed_input flex space_between">
+            <form className="feedInput flex spaceBetween">
               <img
-                className="margin_left"
+                className="marginLeft"
                 src="images/wanyoung/image/smile.png"
                 alt=""
               />
               <input
                 id="comment-input"
-                className="margin_left feed_input_input"
+                className="marginLeft feedInputInput"
                 type="text"
                 placeholder="댓글 달기"
               />
               <button
                 id="comment-button"
                 type="submit"
-                className="font_size_14px"
+                className="fontSize14px"
               >
                 게시
               </button>
             </form>
           </article>
-          <article className="left_content_feed_box flex flex_direction_column">
-            <div className="feed_box_title flex flex_start">
+          <article className="leftContentFeedBox flex flexDirectionColumn">
+            <div className="feedBoxTitle flex flexStart">
               <img
-                className="user_title_img margin_left"
-                src="images/wanyoung/image/person_pic7.jpg"
+                className="userTitleImg marginLeft"
+                src="images/wanyoung/image/person_pic8.jpg"
                 alt="유저 프로필 사진"
               />
-              <p className="user_text margin_left">hello_world</p>
+              <p className="userText marginLeft">old_man</p>
             </div>
             <img
-              className="feed_box_img"
-              src="images/wanyoung/image/racoon3.jpg"
+              className="feedBoxImg"
+              src="images/wanyoung/image/racoon2.jpg"
               alt="피드 사진"
             />
-            <div className="feed_items flex flex_start center">
+            <div className="feedItems flex flexStart center">
               <img
                 id="feed_heart"
                 style={{ color: 'black' }}
-                className="margin_left"
+                className="marginLeft"
                 src="images/wanyoung/image/heart.png"
                 alt="좋아요"
               />
               <img
-                className="margin_left"
+                className="marginLeft"
                 src="images/wanyoung/image/chat.png"
                 alt="댓글 말풍선"
               />
               <img
-                className="margin_left"
+                className="marginLeft"
                 src="images/wanyoung/image/send.png"
                 alt="다이렉트 메세지"
               />
-              <div className="feed_inner_items flex margin_right">
+              <div className="feedInnerItems flex marginRight">
                 <img src="images/wanyoung/image/mark.png" alt="" />
               </div>
             </div>
-            <div className="flex flex_start">
+            <div className="flex flexStart">
               <img
-                className="img_circle_17px margin_left"
+                className="imgCircle17px marginLeft"
                 src="images/wanyoung/image/person_pic4.jpg"
                 alt="좋아요 누른 사람"
               />
               <img
-                className="img_circle_17px"
+                className="imgCircle17px"
                 src="images/wanyoung/image/person_pic6.jpg"
                 alt="좋아요 누른 사람"
               />
               <img
-                className="img_circle_17px"
+                className="imgCircle17px"
                 src="images/wanyoung/image/person_pic8.jpg"
                 alt="좋아요 누른 사람"
               />
-              <p className="user_text margin_left">
-                peter_lee님 외{' '}
-                <span id="count" className="user_text">
-                  23
+              <p className="userText marginLeft">
+                sara_98 외{' '}
+                <span id="count" className="userText">
+                  39
                 </span>
                 명이 좋아합니다.
               </p>
             </div>
-            <div className="margin_top">
-              <p className="margin_left font_size_14px">
-                hello_world{' '}
-                <span className="margin_left font_size_12px">라쿤이다.</span>
+            <div className="marginTop">
+              <p className="marginLeft fontSize14px">
+                old_man{' '}
+                <span className="marginLeft fontSize12px">라쿤 귀여워~</span>
               </p>
             </div>
-            <div id="comment-content" className="feed_comment" />
-            <div className="feed_day flex flex_start">
-              <p className="margin_left">3일전</p>
+            <div id="comment-content" className="feedComment" />
+            <div className="feedDay flex flexStart">
+              <p className="marginLeft">1일전</p>
             </div>
-            <form className="feed_input flex space_between">
+            <form className="feedInput flex spaceBetween">
               <img
-                className="margin_left"
+                className="marginLeft"
                 src="images/wanyoung/image/smile.png"
                 alt=""
               />
               <input
                 id="comment-input"
-                className="margin_left feed_input_input"
+                className="marginLeft feedInputInput"
                 type="text"
                 placeholder="댓글 달기"
               />
               <button
                 id="comment-button"
                 type="submit"
-                className="font_size_14px"
+                className="fontSize14px"
               >
                 게시
               </button>
             </form>
           </article>
         </div>
-        <aside className="right_content position_relative margin_left">
-          <div className="right_content_wrapper position_fixed flex flex_direction_column">
-            <div className="flex flex_start margin_left_20px">
+        <aside className="rightContent positionRelative marginLeft">
+          <div className="rightContentWrapper positionFixed flex flexDirectionColumn">
+            <div className="flex flexStart marginLeft20px">
               <img
-                className="img_circle_56px margin_left"
+                className="imgCircle56px marginLeft"
                 src="images/wanyoung/image/person_pic5.jpg"
                 alt=""
               />
-              <div className="flex flex_direction_column margin_left">
-                <p className="margin_left right_content_user_name">wan_0_kim</p>
-                <p className="margin_left font_size_12px">완영</p>
+              <div className="flex flexDirectionColumn marginLeft">
+                <p className="marginLeft rightContentUserName">wan_0_kim</p>
+                <p className="marginLeft fontSize12px">완영</p>
               </div>
             </div>
-            <div className="right_content_user_recommend flex space_between margin_top margin_left_20px">
-              <p className="font_size_14px margin_left">회원님을 위함 추천</p>
-              <p className="margin_left_20px">모두보기</p>
+            <div className="rightContentUserRecommend flex spaceBetween marginTop marginLeft20px">
+              <p className="fontSize14px marginLeft">회원님을 위함 추천</p>
+              <p className="marginLeft20px">모두보기</p>
             </div>
-            <ul className="recommend_user_list">
-              <li className="recommedn_user_list_li flex space_between">
+            <ul className="recommendUserList">
+              <li className="recommendUserListLi flex spaceBetween">
                 <div className="flex">
                   <img
-                    className="img_circle_32px"
+                    className="imgCircle32px"
                     src="images/wanyoung/image/person_pic2.jpg"
                     alt=""
                   />
-                  <div className="flex flex_direction_column margin_left">
-                    <p className="right_content_user_name">tree_angel</p>
-                    <p className="right_content_user_name_desc">
+                  <div className="flex flexDirectionColumn marginLeft">
+                    <p className="rightContentUserName">tree_angel</p>
+                    <p className="rightContentUserNameDesc">
                       leejinse0k님 외 12명이 팔로우합니다
                     </p>
                   </div>
                 </div>
                 <div className="flex">
-                  <p className="recommend_user_list_follow">팔로우</p>
+                  <p className="recommendUserListFollow">팔로우</p>
                 </div>
               </li>
-              <li className="recommedn_user_list_li flex space_between">
+              <li className="recommendUserListLi flex spaceBetween">
                 <div className="flex">
                   <img
-                    className="img_circle_32px"
+                    className="imgCircle32px"
                     src="images/wanyoung/image/person_pic3.jpg"
                     alt=""
                   />
-                  <div className="flex flex_direction_column margin_left">
-                    <p className="right_content_user_name">wecode_2</p>
-                    <p className="right_content_user_name_desc">
+                  <div className="flex flexDirectionColumn marginLeft">
+                    <p className="rightContentUserName">wecode_2</p>
+                    <p className="rightContentUserNameDesc">
                       neter_ee님 외 8명이 팔로우합니다
                     </p>
                   </div>
                 </div>
                 <div className="flex">
-                  <p className="recommend_user_list_follow">팔로우</p>
+                  <p className="recommendUserListFollow">팔로우</p>
                 </div>
               </li>
-              <li className="recommedn_user_list_li flex space_between">
+              <li className="recommendUserListLi flex spaceBetween">
                 <div className="flex">
                   <img
-                    className="img_circle_32px"
+                    className="imgCircle32px"
                     src="images/wanyoung/image/person_pic4.jpg"
                     alt=""
                   />
-                  <div className="flex flex_direction_column margin_left">
-                    <p className="right_content_user_name">suban__0_0</p>
-                    <p className="right_content_user_name_desc">
+                  <div className="flex flexDirectionColumn marginLeft">
+                    <p className="rightContentUserName">suban__0_0</p>
+                    <p className="rightContentUserNameDesc">
                       peter_k님이 팔로우합니다
                     </p>
                   </div>
                 </div>
                 <div className="flex">
-                  <p className="recommend_user_list_follow">팔로우</p>
+                  <p className="recommendUserListFollow">팔로우</p>
                 </div>
               </li>
-              <li className="recommedn_user_list_li flex space_between">
+              <li className="recommendUserListLi flex spaceBetween">
                 <div className="flex">
                   <img
-                    className="img_circle_32px"
+                    className="imgCircle32px"
                     src="images/wanyoung/image/person_pic5.jpg"
                     alt=""
                   />
-                  <div className="flex flex_direction_column margin_left">
-                    <p className="right_content_user_name">koko_a</p>
-                    <p className="right_content_user_name_desc">
+                  <div className="flex flexDirectionColumn marginLeft">
+                    <p className="rightContentUserName">koko_a</p>
+                    <p className="right_contentUserNameDesc">
                       lee_a_jung님 외 7명이 팔로우합니다
                     </p>
                   </div>
                 </div>
                 <div className="flex">
-                  <p className="recommend_user_list_follow">팔로우</p>
+                  <p className="recommendUserListFollow">팔로우</p>
                 </div>
               </li>
-              <li className="recommedn_user_list_li flex space_between">
+              <li className="recommendUserListLi flex spaceBetween">
                 <div className="flex">
                   <img
-                    className="img_circle_32px"
+                    className="imgCircle32px"
                     src="images/wanyoung/image/person_pic6.jpg"
                     alt=""
                   />
-                  <div className="flex flex_direction_column margin_left">
-                    <p className="right_content_user_name">mina_park</p>
-                    <p className="right_content_user_name_desc">
+                  <div className="flex flexDirectionColumn marginLeft">
+                    <p className="rightContentUserName">mina_park</p>
+                    <p className="rightContentUserNameDesc">
                       jong_ho님이 팔로우합니다
                     </p>
                   </div>
                 </div>
                 <div className="flex">
-                  <p className="recommend_user_list_follow">팔로우</p>
+                  <p className="recommendUserListFollow">팔로우</p>
                 </div>
               </li>
             </ul>

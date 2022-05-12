@@ -3,44 +3,44 @@ import './Login.scss';
 
 const Login = () => {
   return (
-    <body className="login flex center height_100vh flex_direction_column">
-      <section className="login_box flex flex_direction_column">
-        <form className=" login_box_form flex space_around flex_direction_column">
-          <h2 className="login_box_logo">Westagram</h2>
-          <div className="login_input_wrapper flex flex_direction_column space_between">
+    <body className="login flex center height100vh flexDirectionColumn">
+      <section className="loginBox flex flexDirectionColumn">
+        <form className=" loginBoxForm flex spaceAround flexDirectionColumn">
+          <h2 className="loginBoxLogo">Westagram</h2>
+          <div className="loginInputWrapper flex flexDirectionColumn spaceBetween">
             <input
               id="user_id"
-              className="login_box_input"
+              className="loginBoxInput"
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
             />
             <input
               id="user_passwd"
-              className="login_box_input"
+              className="loginBoxInput"
               type="password"
               placeholder="비밀번호"
             />
-            <button className="login_box_btn">로그인</button>
+            <button className="loginBoxBtn">로그인</button>
           </div>
         </form>
-        <div className="login_box_line flex center">
-          <hr className="login_box_hr" />
-          <span className="login_box_or">또는</span>
-          <hr className="login_box_hr" />
+        <div className="loginBoxLine flex center">
+          <hr className="loginBoxHr" />
+          <span className="loginBoxOr">또는</span>
+          <hr className="loginBoxHr" />
         </div>
-        <div className="login_box_input_bottom flex space_around flex_direction_column">
-          <button className="btn_style_none bottom_btn">
+        <div className="loginBoxInputBottom flex spaceAround flexDirectionColumn">
+          <button className="btnStyleNone bottomBtn">
             <img src="images/wanyoung/image/facebook.png" alt="facebook" />
-            <span className="facebook_text">Facebook으로 로그인</span>
+            <span className="facebookText">Facebook으로 로그인</span>
           </button>
-          <a className="forgot_passwd" href="#s">
+          <a className="forgotPasswd" href="#s">
             비밀번호를 잊으셨나요?
           </a>
         </div>
       </section>
-      <section className="login_box_bottom flex center margin_top">
-        <p className="forgot_passwd">계정이 없으신가요?</p>
-        <button className="btn_style_none login_box_bottom_text margin_left">
+      <section className="loginBoxBottom flex center marginTop">
+        <p className="forgotPasswd">계정이 없으신가요?</p>
+        <button className="btnStyleNone loginBoxBottomText marginLeft">
           가입하기
         </button>
       </section>

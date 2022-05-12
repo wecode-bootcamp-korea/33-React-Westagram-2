@@ -1,135 +1,139 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 10px !important;
 }
-body{
+
+body {
   background-color: #FAFAFA;
 }
 
-.height_100vh{
+.height100vh {
   height: 100vh;
 }
 
-.flex{
+.flex {
   display: flex;
 }
-.flex_direction_column{
+
+.flexDirectionColumn {
   flex-direction: column;
 }
 
-.center{
+.center {
   justify-content: center;
   align-items: center;
 }
 
-.space_around{
+.spaceAround {
   justify-content: space-around;
   align-items: center;
 }
-.space_evenly{
+
+.spaceEvenly {
   justify-content: space-evenly;
   align-items: center;
 }
 
-.flex_start{
+.flexStart {
   justify-content: flex-start;
   align-items: center;
 }
 
-.space_between{
+.spaceBetween {
   justify-content: space-between;
   align-items: center;
 }
 
-.border_test{
+.borderTest {
   border: 1px solid black;
 }
 
-.margin_top{
+.marginTop {
   margin-top: 1rem;
 }
 
-.margin_left{
+.marginLeft {
   margin-left: 1rem;
 }
 
-.margin_left_20px{
+.marginLeft20px {
   margin-left: 2rem;
 }
 
-.margin_right{
+.marginRight {
   margin-right: 1rem;
 }
 
-.btn_style_none{
-  cursor:pointer;
+.btnStyleNone {
+  cursor: pointer;
   outline: none;
   background: none;
   border: none;
 }
 
-.position_relative{
+.positionRelative {
   position: relative;
 }
 
-.position_absolute{
+.positionAbsolute {
   position: absolute;
 }
 
-.position_fixed{
+.positionFixed {
   position: fixed;
 }
 
-.font_size_14px{
-  font-size: 1.4rem;
+.fontSize14px {
+  font-size: 1.4rem !important;
 }
 
-.font_size_12px{
-  font-size: 1.2rem;
+.fontSize12px {
+  font-size: 1.2rem !important;
 }
 
-.flex_end{
+.flexEnd {
   justify-content: flex-end;
 }
 
-.hidden{
+.hidden {
   visibility: hidden;
 }
 
-.border_bottom{
+.borderBottom {
   border-bottom: 1px solid rgba(219, 219, 219, 0.8);
 }
 
-.padding{
+.padding {
   padding: 0.5rem;
 }
 
-.img_circle_32px {
+.imgCircle32px {
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 1.6rem;
 }
 
-.img_circle_46px {
+.imgCircle46px {
   width: 4.6rem;
   height: 4.6rem;
   border-radius: 2.3rem;
 }
 
-.img_circle_56px {
+.imgCircle56px {
   width: 5.6rem;
   height: 5.6rem;
   border-radius: 2.8rem;
 }
 
-.img_circle_17px {
+.imgCircle17px {
   width: 1.7rem;
   height: 1.7rem;
   border-radius: 0.85rem;
 }
-.main_page {
+
+.mainPage {
   ul {
     list-style: none;
   }
@@ -157,7 +161,7 @@ body{
     }
   }
 
-  .nav_bar {
+  .navBar {
     z-index: 100;
     background-color: #fff;
     position: fixed;
@@ -166,20 +170,20 @@ body{
     height: 6rem;
     border-bottom: 1px solid rgba(223, 223, 210, 1.0);
 
-    .nav_bar_inner {
+    .navBarInner {
       width: 70vw;
 
       .logo {
         font-family: cursive;
-        font-size: 3rem !important; 
+        font-size: 3rem !important;
       }
 
-      .nav_bar_input {
+      .navBarInput {
         outline: none;
         border: none;
         background: #FAFAFA;
         color: #8e8e8e;
-        font-size: 1.5rem;
+        font-size: 1.5rem !important;
         font-weight: 500;
         text-indent: 3rem;
         border-radius: 0.8rem;
@@ -192,7 +196,7 @@ body{
         }
       }
 
-      .search_user_result {
+      .searchUserResult {
         top: 5rem;
         z-index: 200;
         position: absolute;
@@ -203,10 +207,10 @@ body{
         max-height: 30rem;
         overflow: auto;
 
-        .search_result {
+        .searchResult {
           div {
             p {
-              font-size: 1.5rem;
+              font-size: 1.5rem !important;
             }
           }
 
@@ -216,10 +220,10 @@ body{
         }
       }
 
-      .nav_bar_item {
+      .navBarItem {
         width: 25rem;
 
-        .hidden_nav_bar {
+        .hiddenNavBar {
           border-radius: 1rem;
           left: 13rem;
           top: 5rem;
@@ -228,10 +232,10 @@ body{
           height: 20rem;
           box-shadow: 1px 1px 1px 1px rgba(223, 223, 210, 1.0);
 
-          .hidden_nav_item {
+          .hiddenNavItem {
             height: 15rem;
 
-            .hidden_nav_img_wrapper {
+            .hiddenNavImgWrapper {
               width: 19rem;
               height: 3rem;
 
@@ -239,7 +243,7 @@ body{
                 background-color: #d7d7d7;
               }
 
-              .hidden_nav_bar_img {
+              .hiddenNavBarImg {
                 width: 2.4rem;
                 height: 2.4rem;
               }
@@ -258,12 +262,12 @@ body{
   //   color: #8e8e8e;
   // }
 
-  .main_content {
+  .mainContent {
     margin-top: 6rem;
     justify-content: center;
 
-    .left_content {
-      .left_content_new_story {
+    .leftContent {
+      .leftContentNewStory {
         flex-wrap: nowrap;
         border-radius: 0.8rem;
         margin-top: 2rem;
@@ -274,57 +278,57 @@ body{
         background-color: #fff;
         border: 1px solid rgba(223, 223, 210, 1.0);
 
-        .new_story_inner_box {
+        .newStoryInnerBox {
           width: 6rem;
           height: 6rem;
 
           span {
-            font-size: 1.3rem;
+            font-size: 1.3rem !important;
           }
 
-          .new_story_user_img {
+          .newStoryUserImg {
             top: 0rem;
           }
         }
       }
 
-      .left_content_feed_box {
+      .leftContentFeedBox {
         margin-top: 2rem;
         border-radius: 0.8rem;
         width: fit-content;
         background-color: #fff;
         border: 1px solid rgba(223, 223, 210, 1.0);
 
-        .user_text {
-          font-size: 1.5rem;
+        .userText {
+          font-size: 1.5rem !important;
           font-weight: 550;
         }
 
-        .feed_box_title {
+        .feedBoxTitle {
           width: inherit;
           height: 6rem;
 
-          .user_title_img {
+          .userTitleImg {
             width: 2.9rem;
             height: 2.9rem;
             border-radius: 1.45rem;
           }
 
-          .user_text {
-            font-size: 1.5rem;
+          .userText {
+            font-size: 1.5rem !important;
             font-weight: 550;
           }
         }
 
-        .feed_box_img {
+        .feedBoxImg {
           width: 47rem;
           height: 58rem;
         }
 
-        .feed_items {
+        .feedItems {
           height: 6rem;
 
-          .feed_inner_items {
+          .feedInnerItems {
             justify-content: flex-end;
             align-items: center;
             width: 100%;
@@ -332,17 +336,17 @@ body{
         }
       }
 
-      .feed_comment {
+      .feedComment {
         max-height: 7rem;
         height: 7rem;
         overflow: auto;
 
         li {
-          font-size: 1.2rem;
+          font-size: 1.2rem !important;
         }
       }
 
-      .feed_input {
+      .feedInput {
         border-top: 1px solid rgba(223, 223, 210, 1.0);
         width: 100%;
         height: 4rem;
@@ -358,56 +362,56 @@ body{
         }
 
         input {
-          font-size: 1.6rem;
+          font-size: 1.6rem !important;
           border: none;
           outline: none;
           width: 100%;
 
           &::placeholder {
-            font-size: 1.6rem;
+            font-size: 1.6rem !important;
             color: #8e8e8e;
           }
         }
       }
     }
 
-    .right_content {
+    .rightContent {
       margin-top: 4rem;
       background-color: #FAFAFA;
       width: 35rem;
       height: 100px;
 
-      .right_content_wrapper {
+      .rightContentWrapper {
         width: 35rem;
 
-        .right_content_user_name {
-          font-size: 1.5rem;
+        .rightContentUserName {
+          font-size: 1.5rem !important;
           font-weight: 600;
         }
 
-        .right_content_user_recommend {
+        .rightContentUserRecommend {
           color: #8e8e8e;
           font-weight: 600;
 
           p {
-            font-size: 1.4rem;
+            font-size: 1.4rem !important;
           }
         }
 
-        .recommend_user_list {
+        .recommendUserList {
           padding: 3rem;
 
-          .recommedn_user_list_li {
+          .recommendUserListLi {
             width: 32rem;
             height: 5rem;
 
-            .right_content_user_name_desc {
-              font-size: 1.3rem;
+            .rightContentUserNameDesc {
+              font-size: 1.3rem !important;
               color: #8e8e8e;
             }
 
-            .recommend_user_list_follow {
-              font-size: 1.5rem;
+            .recommendUserListFollow {
+              font-size: 1.5rem !important;
               color: #0095f6;
             }
 

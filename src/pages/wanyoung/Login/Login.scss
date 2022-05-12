@@ -1,117 +1,140 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 10px !important;
 }
-body{
+
+body {
   background-color: #FAFAFA;
 }
 
-.height_100vh{
+.height100vh {
   height: 100vh;
 }
 
-.flex{
+.flex {
   display: flex;
 }
-.flex_direction_column{
+
+.flexDirectionColumn {
   flex-direction: column;
 }
 
-.center{
+.center {
   justify-content: center;
   align-items: center;
 }
 
-.space_around{
+.spaceAround {
   justify-content: space-around;
   align-items: center;
 }
-.space_evenly{
+
+.spaceEvenly {
   justify-content: space-evenly;
   align-items: center;
 }
 
-.flex_start{
+.flexStart {
   justify-content: flex-start;
   align-items: center;
 }
 
-.space_between{
+.spaceBetween {
   justify-content: space-between;
   align-items: center;
 }
 
-.border_test{
+.borderTest {
   border: 1px solid black;
 }
 
-.margin_top{
+.marginTop {
   margin-top: 1rem;
 }
 
-.margin_left{
+.marginLeft {
   margin-left: 1rem;
 }
 
-.margin_left_20px{
+.marginLeft20px {
   margin-left: 2rem;
 }
 
-.margin_right{
+.marginRight {
   margin-right: 1rem;
 }
 
-.btn_style_none{
-  cursor:pointer;
+.btnStyleNone {
+  cursor: pointer;
   outline: none;
   background: none;
   border: none;
 }
 
-.position_relative{
+.positionRelative {
   position: relative;
 }
 
-.position_absolute{
+.positionAbsolute {
   position: absolute;
 }
 
-.position_fixed{
+.positionFixed {
   position: fixed;
 }
 
-.border_test{
-  border: 1px solid black;
+.fontSize14px {
+  font-size: 1.4rem !important;
 }
 
-.font_size_14px{
-  font-size: 1.4rem;
+.fontSize12px {
+  font-size: 1.2rem !important;
 }
 
-.font_size_12px{
-  font-size: 1.2rem;
-}
-
-.flex_end{
+.flexEnd {
   justify-content: flex-end;
 }
 
-.hidden{
+.hidden {
   visibility: hidden;
 }
 
-.border_bottom{
+.borderBottom {
   border-bottom: 1px solid rgba(219, 219, 219, 0.8);
 }
 
-.padding{
+.padding {
   padding: 0.5rem;
 }
+
+.imgCircle32px {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 1.6rem;
+}
+
+.imgCircle46px {
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 2.3rem;
+}
+
+.imgCircle56px {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 2.8rem;
+}
+
+.imgCircle17px {
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 0.85rem;
+}
+
 .login {
-  font-size: 10px;
-  .login_box {
+  .loginBox {
     font-family: cursive;
     border: 1px solid #dbdbdb;
     flex-direction: column;
@@ -119,24 +142,24 @@ body{
     height: 40rem;
     background-color: #fff;
 
-    .login_box_form {
+    .loginBoxForm {
       height: 30rem;
 
-      .login_box_logo {
+      .loginBoxLogo {
         font-size: 5rem !important;
       }
 
-      .login_input_wrapper {
+      .loginInputWrapper {
         height: 13rem;
 
-        .login_box_input {
+        .loginBoxInput {
           background-color: #FAFAFA;
           border: 1px solid rgb(219, 219, 219, 0.7);
           width: 26rem;
           height: 3.6rem;
           border-radius: 0.3rem;
           text-indent: 1rem;
-          font-size: 1.4rem;
+          font-size: 1.4rem !important;
 
           &:focus {
             outline: 0.8px solid rgba(219, 219, 219, 1.0);
@@ -144,11 +167,11 @@ body{
 
           &::placeholder {
             color: #8e8e8e;
-            font-size: 1.2rem;
+            font-size: 1.2rem !important;
           }
         }
 
-        .login_box_btn {
+        .loginBoxBtn {
           cursor: pointer;
           background-color: #0095f6;
           width: 26rem;
@@ -157,7 +180,7 @@ body{
           border: none;
           color: #fff;
           font-weight: 600;
-          font-size: 1.3rem;
+          font-size: 1.3rem !important;
           border-radius: 0.3rem;
         }
       }
@@ -165,15 +188,15 @@ body{
     }
   }
 
-  .login_box_line {
-    .login_box_hr {
+  .loginBoxLine {
+    .loginBoxHr {
       width: 12rem;
       background-color: #dbdbdb;
       border: none;
       height: 0.1rem;
     }
 
-    .login_box_or {
+    .loginBoxOr {
       color: #8e8e8e;
       margin: 0 1rem;
     }
@@ -183,40 +206,42 @@ body{
 
 
 
-  .login_box_input_bottom {
+  .loginBoxInputBottom {
     height: 8rem;
-    .bottom_btn {
+
+    .bottomBtn {
       width: inherit;
-      .facebook_text {
-        font-size: 1.4rem;
+
+      .facebookText {
+        font-size: 1.4rem !important;
       }
     }
 
-    .forgot_passwd {
-      font-size: 1.4rem;
+    .forgotPasswd {
+      font-size: 1.4rem !important;
       color: #00376b;
       text-decoration: none;
     }
   }
 
-  .login_box_bottom {
+  .loginBoxBottom {
     background-color: #fff;
     border: 1px solid rgb(219, 219, 219, 0.7);
     width: 35rem;
     height: 8rem;
 
-    .forgot_passwd {
-      font-size: 1.4rem;
+    .forgotPasswd {
+      font-size: 1.4rem !important;
       color: #00376b;
       text-decoration: none;
     }
 
-    .login_box_bottom_text {
+    .loginBoxBottomText {
       width: fit-content;
       font-weight: 650;
       color: #0095f6;
       text-decoration: none;
-      font-size: 1.4rem;
+      font-size: 1.4rem !important;
     }
   }
 
