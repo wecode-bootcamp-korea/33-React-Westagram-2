@@ -1,3 +1,38 @@
-div {
-    color: red;
+$border: 1px solid #e6e6e6;
+$accent-color: #0586fa;
+$radius-3: 3px;
+$radius-8: 8px;
+$bold: 700;
+
+@mixin flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    padding-bottom: 48px;
+    
+    section {
+        @include flex-row;
+
+        padding-top: 126px;
+        height: 100vh;
+        margin: auto;
+        max-width: 975px;
+    }
 }
