@@ -1,0 +1,43 @@
+.leftContentFeedBox {
+  margin-top: 2rem;
+  border-radius: 0.8rem;
+  width: fit-content;
+  background-color: #fff;
+  border: 1px solid rgba(223, 223, 210, 1.0);
+
+  .userText {
+    font-size: 1.5rem !important;
+    font-weight: 550;
+  }
+
+  .feedBoxTitle {
+    width: inherit;
+    height: 6rem;
+
+    .userTitleImg {
+      width: 2.9rem;
+      height: 2.9rem;
+      border-radius: 1.45rem;
+    }
+
+    .userText {
+      font-size: 1.5rem !important;
+      font-weight: 550;
+    }
+  }
+
+  .feedBoxImg {
+    width: 47rem;
+    height: 58rem;
+  }
+
+  .feedItems {
+    height: 6rem;
+
+    .feedInnerItems {
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+    }
+  }
+}

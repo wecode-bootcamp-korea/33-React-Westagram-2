@@ -1,3 +1,92 @@
-div {
-  font-family: 'Courier New', Courier, monospace;
+.navBar {
+  z-index: 100;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 6rem;
+  border-bottom: 1px solid rgba(223, 223, 210, 1.0);
+
+  .navBarInner {
+    width: 70vw;
+
+    .logo {
+      font-family: cursive;
+      font-size: 3rem !important;
+    }
+
+    .navBarInput {
+      outline: none;
+      border: none;
+      background: #FAFAFA;
+      color: #8e8e8e;
+      font-size: 1.5rem !important;
+      font-weight: 500;
+      text-indent: 3rem;
+      border-radius: 0.8rem;
+      width: 25rem;
+      height: 3.6rem;
+      border: 1px solid rgba(223, 223, 210, 1.0);
+
+      &:focus {
+        border: 1px solid rgb(179, 179, 179);
+      }
+    }
+
+    .searchUserResult {
+      top: 5rem;
+      z-index: 200;
+      position: absolute;
+      width: 25rem;
+      height: 30rem;
+      background-color: #fff;
+      border-radius: 1rem;
+      max-height: 30rem;
+      overflow: auto;
+
+      .searchResult {
+        div {
+          p {
+            font-size: 1.5rem !important;
+          }
+        }
+
+        &:hover {
+          background-color: #d7d7d7;
+        }
+      }
+    }
+
+    .navBarItem {
+      width: 25rem;
+
+      .hiddenNavBar {
+        border-radius: 1rem;
+        left: 13rem;
+        top: 5rem;
+        background-color: #fff;
+        width: 20rem;
+        height: 20rem;
+        box-shadow: 1px 1px 1px 1px rgba(223, 223, 210, 1.0);
+
+        .hiddenNavItem {
+          height: 15rem;
+
+          .hiddenNavImgWrapper {
+            width: 19rem;
+            height: 3rem;
+
+            &:hover {
+              background-color: #d7d7d7;
+            }
+
+            .hiddenNavBarImg {
+              width: 2.4rem;
+              height: 2.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,25 @@
+.loginBoxBottom {
+  background-color: #fff;
+  border: 1px solid rgb(219, 219, 219, 0.7);
+  width: 35rem;
+  height: 8rem;
+
+  .forgotPasswd {
+    font-size: 1.4rem !important;
+    color: #00376b;
+    text-decoration: none;
+  }
+
+  .loginBoxBottomText {
+    width: fit-content;
+    font-weight: 650;
+    color: #0095f6;
+    text-decoration: none;
+    font-size: 1.4rem !important;
+  }
+}
+
+.disabled {
+  background-color: #0095f6;
+  opacity: 0.5;
+}
