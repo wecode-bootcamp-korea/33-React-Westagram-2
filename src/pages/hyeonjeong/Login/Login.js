@@ -19,12 +19,14 @@ const Login = () => {
     setPwdInput(e.target.value);
   };
 
+  const isValid = idInput.includes('@') && pwdInput.length >= 5;
+
   return (
     <div className="login">
       <div className="loginContainer">
         <h3 className="title">Westagram</h3>
 
-        <section className="loginArea">
+        <form className="loginArea">
           <input
             className="inputDecoration"
             type="text"
@@ -40,10 +42,14 @@ const Login = () => {
             onChange={handlePwdInput}
           />
           {/* <Link to="/main"><button className="buttonLogin">로그인</button></Link> */}
-          <button className="buttonLogin" onClick={goToMain}>
+          <button
+            className={'buttonLogin ' + (isValid ? 'btnActive' : '')}
+            disabled={!isValid}
+            onClick={goToMain}
+          >
             로그인
           </button>
-        </section>
+        </form>
 
         <footer className="lostPwd">
           <a href="#">비밀번호를 잊으셨나요?</a>
