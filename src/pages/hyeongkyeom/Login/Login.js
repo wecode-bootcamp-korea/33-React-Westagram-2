@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import './Login.scss';
 import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/common.scss';
 import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/reset.scss';
@@ -23,13 +23,21 @@ const Login = () => {
             <input
               type="text"
               className="mainId"
+              value={id}
+              onChange={onChangeId}
               placeholder="전화번호, 사용자 이름 또는 이메일"
             />
-            <input type="password" className="mainPwd" placeholder="비밀번호" />
-            <button className="loginBtn" onClick={goToMain}>
+            <input
+              type="password"
+              className="mainPwd"
+              value={pwd}
+              onChange={onChangePwd}
+              placeholder="비밀번호"
+            />
+            <button className="loginBtn" onClick={goToMain} disabled={disable}>
               로그인
             </button>
-            <p>또는</p>
+            <p className="or">또는</p>
             <a className="facebookLogin" href="#!">
               <i class="fa-brands fa-facebook-square" /> Facebook으로 로그인
             </a>

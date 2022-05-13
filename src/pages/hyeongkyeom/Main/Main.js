@@ -5,21 +5,18 @@ import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/variables.scss';
 import './Main.scss';
 
 const Main = () => {
-  let [colors, setColors] = useState({ color: 'black' });
   let [className, setClassName] = useState('fa-regular fa-heart');
 
   const handleClick = () => {
-    let newColor;
     let newClassName;
-    if (colors !== { color: 'red' }) {
-      newColor = { color: 'red' };
+    if (className === 'fa-regular fa-heart') {
       newClassName = 'fa-solid fa-heart';
-    } else if ((className = 'fa-solid fa-heart')) {
-      newColor = { color: 'black' };
+    } else {
       newClassName = 'fa-regular fa-heart';
     }
-    setColors(newColor);
     setClassName(newClassName);
+
+    console.log('handleClick');
   };
 
   return (
@@ -159,7 +156,6 @@ const Main = () => {
                     <i
                       id="feedHeartBtn"
                       className={className}
-                      style={colors}
                       onClick={handleClick}
                     />
                     <i className="fa-regular fa-comment" />
