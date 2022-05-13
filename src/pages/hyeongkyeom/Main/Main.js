@@ -3,23 +3,30 @@ import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/common.scss';
 import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/reset.scss';
 import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/variables.scss';
 import './Main.scss';
+import Nav from '../../../Components/Nav';
 
 const Main = () => {
-  let [className, setClassName] = useState('fa-regular fa-heart');
+  const [className, setClassName] = useState('fa-regular fa-heart');
+  const [color, setColor] = useState('black');
 
   const handleClick = () => {
+    let newColor;
     let newClassName;
     if (className === 'fa-regular fa-heart') {
+      newColor = 'red';
       newClassName = 'fa-solid fa-heart';
     } else {
       newClassName = 'fa-regular fa-heart';
+      newColor = 'black';
     }
+    setColor(newColor);
     setClassName(newClassName);
   };
 
   return (
     <div className="main">
       <section className="mainWrapper">
+        <Nav />
         <div className="feeds">
           <div className="mainStory">
             <section className="storyBorder">
@@ -154,6 +161,7 @@ const Main = () => {
                     <i
                       id="feedHeartBtn"
                       className={className}
+                      style={{ color: color }}
                       onClick={handleClick}
                     />
                     <i className="fa-regular fa-comment" />
