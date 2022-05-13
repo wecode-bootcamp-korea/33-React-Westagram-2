@@ -4,11 +4,11 @@ import './Nav.scss';
 const Nav = () => {
   return (
     <section className="mainNav">
-      <div className="mainNavLogo" onclick="location.href='main.html'">
-        <span className="mainNav_text">Westagram</span>
+      <div className="mainNavLogo">
+        <span className="mainNavText">Westagram</span>
       </div>
       <div className="mainNavSearch">
-        <i id="nav_searchIcon" className="fa-solid fa-magnifying-glass" />
+        <i className="fa-solid fa-magnifying-glass" />
         <input
           className="navSearch"
           type="search"
