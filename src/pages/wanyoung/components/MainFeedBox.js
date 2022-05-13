@@ -7,13 +7,27 @@ const MainFeedBox = ({ feedUsers }) => {
   const [value, setValue] = useState('');
   const nextId = useRef(2);
   const [comments, setComment] = useState([]);
+  const [heartImg, setHeartImg] = useState({
+    checked: false,
+    url: 'images/wanyoung/image/heart.png',
+  });
+  const onHeartClick = () => {
+    setHeartImg({
+      checked: !heartImg.checked,
+      url: heartImg.checked
+        ? 'images/wanyoung/image/heart_red.png'
+        : 'images/wanyoung/image/heart.png',
+    });
+  };
 
   const onRemove = id => {
     setComment(comments.filter(comment => comment.id !== id));
   };
+
   const onChange = e => {
     setValue(e.target.value);
   };
+
   const onSubmit = e => {
     const newComment = {
       id: nextId.current,
@@ -39,11 +53,10 @@ const MainFeedBox = ({ feedUsers }) => {
       <img className="feedBoxImg" src={imgUrl} alt="피드 사진" />
       <div className="feedItems flex flexStart center">
         <img
-          id="feed_heart"
-          style={{ color: 'black' }}
           className="marginLeft"
-          src="images/wanyoung/image/heart.png"
+          src={heartImg.url}
           alt="좋아요"
+          onClick={onHeartClick}
         />
         <img
           className="marginLeft"

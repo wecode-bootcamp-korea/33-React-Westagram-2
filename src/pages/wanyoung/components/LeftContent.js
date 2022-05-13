@@ -1,7 +1,6 @@
 import './LeftContent.scss';
 import MainNewStroy from './MainNewStory';
 import MainFeedBox from './MainFeedBox';
-import { useState } from 'react';
 
 const LeftContent = () => {
   const feedUsers = [
@@ -24,6 +23,7 @@ const LeftContent = () => {
       imgUrl: 'images/wanyoung/image/person_pic8.jpg',
     },
   ];
+
   return (
     <div className="leftContent flex flexDirectionColumn">
       <MainNewStroy />

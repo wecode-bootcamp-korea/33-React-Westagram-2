@@ -38,6 +38,10 @@
       font-weight: 600;
       font-size: 1.3rem !important;
       border-radius: 0.3rem;
+
+      &:disabled {
+        background-color: rgba(0, 153, 255, 0.5);
+      }
     }
   }
 
