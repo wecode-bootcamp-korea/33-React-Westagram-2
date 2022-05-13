@@ -1,8 +1,20 @@
 import React from 'react';
 import './Login.scss';
 import Nav from '../../../Components/Nav';
+import { useState } from 'react';
 
 function Login() {
+  const [id, setId] = useState('');
+  const [pw, setPw] = useState('');
+
+  const handleIdInput = event => {
+    setId(event.target.value);
+  };
+
+  const handlePwInput = event => {
+    setPw(event.target.value);
+  };
+
   return (
     <>
       <Nav />
@@ -14,8 +26,16 @@ function Login() {
               type="text"
               id="id"
               placeholder="전화번호, 사용자 이름 또는 메일"
+              value={id}
+              onChange={handleIdInput}
             />
-            <input type="password" id="password" placeholder="비밀번호" />
+            <input
+              type="password"
+              id="password"
+              placeholder="비밀번호"
+              value={pw}
+              onChange={handlePwInput}
+            />
             <a href="/main">
               <button id="loginBtn" disabled>
                 로그인
