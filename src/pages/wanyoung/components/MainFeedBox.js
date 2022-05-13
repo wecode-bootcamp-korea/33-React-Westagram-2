@@ -6,13 +6,7 @@ const MainFeedBox = ({ feedUsers }) => {
   const { name, text, imgUrl } = feedUsers;
   const [value, setValue] = useState('');
   const nextId = useRef(2);
-  const [comments, setComment] = useState([
-    {
-      id: 1,
-      name: 'wan_0_kim',
-      text: 'ㅎㅇㅎㅇ',
-    },
-  ]);
+  const [comments, setComment] = useState([]);
 
   const onRemove = id => {
     setComment(comments.filter(comment => comment.id !== id));
@@ -105,6 +99,7 @@ const MainFeedBox = ({ feedUsers }) => {
           alt="아이콘"
         />
         <input
+          maxLength={15}
           id="comment-input"
           className="marginLeft feedInputInput"
           type="text"
