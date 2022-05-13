@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import './Login.scss';
 
 const Login = () => {
@@ -7,6 +8,17 @@ const Login = () => {
   const goToMain = () => {
     navigate('/main-hyeonjeong');
   };
+  const [idInput, setIdInput] = useState('');
+  const [pwdInput, setPwdInput] = useState('');
+
+  const handleIdInput = e => {
+    setIdInput(e.target.value);
+  };
+
+  const handlePwdInput = e => {
+    setPwdInput(e.target.value);
+  };
+
   return (
     <div className="login">
       <div className="loginContainer">
@@ -17,11 +29,15 @@ const Login = () => {
             className="inputDecoration"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
+            value={idInput}
+            onChange={handleIdInput}
           />
           <input
             className="inputDecoration"
             type="password"
             placeholder="비밀번호"
+            value={pwdInput}
+            onChange={handlePwdInput}
           />
           {/* <Link to="/main"><button className="buttonLogin">로그인</button></Link> */}
           <button className="buttonLogin" onClick={goToMain}>
