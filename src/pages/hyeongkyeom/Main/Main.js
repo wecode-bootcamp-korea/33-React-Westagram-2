@@ -15,8 +15,6 @@ const Main = () => {
       newClassName = 'fa-regular fa-heart';
     }
     setClassName(newClassName);
-
-    console.log('handleClick');
   };
 
   return (
