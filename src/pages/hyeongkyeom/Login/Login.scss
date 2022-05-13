@@ -76,7 +76,7 @@ body {
     background-color: #0095f6;
     cursor: pointer;
 
-    :disabled {
+    &:disabled {
       background-color: #c4e1fb;
       cursor: default;
     }

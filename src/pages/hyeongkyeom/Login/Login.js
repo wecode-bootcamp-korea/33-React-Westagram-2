@@ -45,7 +45,11 @@ const Login = () => {
               onChange={handPwdInput}
               placeholder="비밀번호"
             />
-            <button className="loginBtn" onClick={goToMain}>
+            <button
+              className="loginBtn"
+              disabled={id.includes('@') && pwd.length > 5 ? false : true}
+              onClick={goToMain}
+            >
               로그인
             </button>
             <p className="or">또는</p>
