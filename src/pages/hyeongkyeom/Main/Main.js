@@ -147,7 +147,7 @@ const Main = () => {
               </div>
               <i id="feedProfileMore" className="fa-solid fa-ellipsis" />
             </div>
-            <div className="feedmainImg">
+            <div className="feedmainImg" onDoubleClick={handleClick}>
               <img
                 className="yeonTan"
                 src="images/hyeongkyeom/main/feedImage.jpeg"
