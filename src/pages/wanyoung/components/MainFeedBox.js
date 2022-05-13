@@ -1,13 +1,37 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './MainFeedBox.scss';
+import CommentBox from './CommentBox';
 
 const MainFeedBox = ({ feedUsers }) => {
   const { name, text, imgUrl } = feedUsers;
   const [value, setValue] = useState('');
+  const nextId = useRef(2);
+  const [comments, setComment] = useState([
+    {
+      id: 1,
+      name: 'wan_0_kim',
+      text: 'ㅎㅇㅎㅇ',
+    },
+  ]);
+
+  const onRemove = id => {
+    setComment(comments.filter(comment => comment.id !== id));
+  };
   const onChange = e => {
     setValue(e.target.value);
-    console.log(value);
   };
+  const onSubmit = e => {
+    const newComment = {
+      id: nextId.current,
+      name: 'wan_0_kim',
+      text: value,
+    };
+    setComment([...comments, newComment]);
+    nextId.current += 1;
+    setValue('');
+    e.preventDefault();
+  };
+
   return (
     <article className="leftContentFeedBox flex flexDirectionColumn">
       <div className="feedBoxTitle flex flexStart">
@@ -70,12 +94,11 @@ const MainFeedBox = ({ feedUsers }) => {
           new_0_person <span className="marginLeft fontSize12px">{text}</span>
         </p>
       </div>
-
-      <div id="comment-content" className="feedComment" />
+      <CommentBox onRemove={onRemove} comments={comments} />
       <div className="feedDay flex flexStart">
         <p className="marginLeft">1일전</p>
       </div>
-      <form className="feedInput flex spaceBetween">
+      <form className="feedInput flex spaceBetween" onSubmit={onSubmit}>
         <img
           className="marginLeft"
           src="images/wanyoung/image/smile.png"

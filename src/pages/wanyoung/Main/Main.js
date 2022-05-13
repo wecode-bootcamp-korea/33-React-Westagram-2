@@ -7,7 +7,7 @@ import LeftContent from '../components/LeftContent';
 function Main() {
   return (
     <body className="mainPage positionRelative">
-      <Nav />
+      <Nav className="Nav" />
       <section className="mainContent flex">
         <LeftContent />
         <RightContent />
