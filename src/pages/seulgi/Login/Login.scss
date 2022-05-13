@@ -1,3 +1,37 @@
+/* User Agent Stylesheet Reset */
+body,
+ol,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Colors */
+:root {
+  --background-color: #f9f9f9;
+  --blue-color: #3288f5;
+  --border-color: #d6d6d6;
+  --text-color: #838383;
+  --text-first-color: #999999;
+  --text-second-color: #072557;
+}
+
+@mixin centerSort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin spaceSort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .login {
   body {
     background-color: var(--background-color);
@@ -15,6 +49,7 @@
     font-size: 20px;
     margin: 30px 0;
     font-weight: 400;
+    cursor: pointer; // 임시
   }
 
   input {
@@ -66,12 +101,12 @@
     transform: translate(-50%, -50%);
     text-align: center;
     background-color: white;
-  }
 
-  .wrapper div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }

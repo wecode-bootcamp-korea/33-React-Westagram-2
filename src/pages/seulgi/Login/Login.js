@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 
 const Login = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // const goToMain = () => {
-  //   navigate('/main');
-  // };
+  const goToMain = () => {
+    navigate('/main-seulgi');
+  };
 
   return (
     <div className="login">
@@ -31,9 +31,8 @@ const Login = () => {
           <button id="btn" disabled>
             로그인
           </button>
-          <h5>비밀번호를 잊으셨나요?</h5>
+          <h5 onClick={goToMain}>메인페이지로 이동하기</h5>
         </div>
-        {/* <button onClick={goToMain}>메인 페이지로 이동</button> */}
       </div>
     </div>
   );
