@@ -1,6 +1,6 @@
 import React from 'react';
-import './Nav.scss';
 
+import './Nav.scss';
 const Nav = () => {
   return (
     <section className="mainNav">
