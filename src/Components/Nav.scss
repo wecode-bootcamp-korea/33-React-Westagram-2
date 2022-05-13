@@ -1,7 +1,7 @@
 @mixin flex-center {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }
 
 .mainNav {
@@ -18,55 +18,51 @@
   height: 4rem;
   background-color: white;
   font-size: 25px;
-}
 
-.mainNavLogo {
-  margin-left: 25rem;
-  cursor: pointer;
-}
+  .mainNavLogo {
+    margin-left: 25rem;
+    cursor: pointer;
 
-.mainNav_text {
-  font-family: 'Lobster', cursive;
-}
-
-.mainNavSearch {
-  margin-left: 5rem;
-
-  i {
-    position: absolute;
-    margin: 0.5rem;
-    padding-left: 0.5rem;
-    font-size: 15px;
-    color: #8e8e8e;
+    .mainNav_text {
+      font-family: 'Lobster', cursive;
+    }
   }
-}
 
-.navSearch {
-  width: 17rem;
-  height: 2rem;
-  background-color: #efefef;
-  border-radius: 5px;
-  border-style: none;
-  text-indent: 3em;
+  .mainNavSearch {
+    margin-left: 5rem;
 
-  ::placeholder {
-    color: #c5c5c5;
-    font-size: 15px;
+    i {
+      position: absolute;
+      margin: 0.5rem;
+      padding-left: 0.5rem;
+      font-size: 15px;
+      color: #8e8e8e;
+    }
+
+    .navSearch {
+      width: 17rem;
+      height: 2rem;
+      background-color: #efefef;
+      border-radius: 0.5rem;
+      border-style: none;
+      text-indent: 3em;
+
+      ::placeholder {
+        color: #c5c5c5;
+        font-size: 15px;
+      }
+    }
   }
-}
 
-.mainNavicon {
-  margin-right: 11rem;
-  @include flex-center;
-  cursor: pointer;
+  .mainNavicon {
+    margin-right: 11rem;
+    @include flex-center;
+    cursor: pointer;
 
-  img {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: auto 11px;
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: auto 0.7rem;
+    }
   }
-}
-
-.navProfile {
-  border-radius: 100%;
 }
