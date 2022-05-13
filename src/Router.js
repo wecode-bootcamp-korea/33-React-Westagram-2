@@ -15,7 +15,6 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LoginHyeongKyeom />} />
         <Route path="/login-hyeongkyeom" element={<LoginHyeongKyeom />} />
         <Route path="/login-seulgi" element={<LoginSeulGi />} />
         <Route path="/login-wanyoung" element={<LoginWanYoung />} />
