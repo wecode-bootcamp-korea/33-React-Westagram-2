@@ -2,6 +2,7 @@ import React from 'react';
 import './Login.scss';
 import Nav from '../../../Components/Nav';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [id, setId] = useState('');
@@ -13,6 +14,13 @@ function Login() {
 
   const handlePwInput = event => {
     setPw(event.target.value);
+  };
+
+  const mainPageLink = useNavigate();
+
+  const goToMainPage = e => {
+    e.preventDefault();
+    mainPageLink('/main-YounSeop');
   };
 
   return (
@@ -37,7 +45,11 @@ function Login() {
               onChange={handlePwInput}
             />
             <a href="/main">
-              <button id="loginBtn" disabled>
+              <button
+                id="loginBtn"
+                disabled={id.includes('@') && pw.length > 5 ? false : true}
+                onClick={goToMainPage}
+              >
                 로그인
               </button>
             </a>
