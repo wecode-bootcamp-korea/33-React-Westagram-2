@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import './Login.scss';
 import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/common.scss';
 import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/reset.scss';
@@ -6,6 +6,17 @@ import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/variables.scss';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const [id, setId] = useState('');
+  const [pwd, setPwd] = useState('');
+
+  const handleIdInput = e => {
+    setId(e.target.value);
+  };
+
+  const handPwdInput = e => {
+    setPwd(e.target.value);
+  };
+
   const navigate = useNavigate();
 
   const goToMain = () => {
@@ -24,17 +35,17 @@ const Login = () => {
               type="text"
               className="mainId"
               value={id}
-              onChange={onChangeId}
+              onChange={handleIdInput}
               placeholder="전화번호, 사용자 이름 또는 이메일"
             />
             <input
               type="password"
               className="mainPwd"
               value={pwd}
-              onChange={onChangePwd}
+              onChange={handPwdInput}
               placeholder="비밀번호"
             />
-            <button className="loginBtn" onClick={goToMain} disabled={disable}>
+            <button className="loginBtn" onClick={goToMain}>
               로그인
             </button>
             <p className="or">또는</p>
