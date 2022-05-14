@@ -47,7 +47,7 @@ const Login = () => {
             />
             <button
               className="loginBtn"
-              disabled={id.includes('@') && pwd.length > 5 ? false : true}
+              disabled={id.includes('@') && pwd.length > 4 ? false : true}
               onClick={goToMain}
             >
               로그인
