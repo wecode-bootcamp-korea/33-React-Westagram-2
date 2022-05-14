@@ -1,49 +1,30 @@
 import React from 'react';
+import { useState } from 'react';
 import './Main.scss';
 import Nav from '../../../Components/Nav';
 
 const Main = () => {
+  const [inputValue, setInputValue] = useState('');
+  const [commentList, setCommentList] = useState([]);
+
+  const isValid = inputValue.length > 0;
+
+  const handleInput = e => {
+    setInputValue(e.target.value);
+  };
+
+  const post = () => {
+    let copy = [...commentList];
+    copy.push(inputValue);
+    setCommentList(copy);
+    setInputValue('');
+  };
+
+  console.log(commentList);
+
   return (
     <div className="main">
       <Nav />
-      {/* <div className="navContainer">
-        <nav>
-          <div className="navItemBox">
-            <img
-              className="iconSize"
-              src="/images/instagram.png"
-              alt="instagram-icon"
-            />
-            <span>|</span>
-            <a className="westaLogo" href="#">
-              Westagram
-            </a>
-          </div>
-
-          <div className="navItemBox">
-            <input className="searchIdInput" type="text" placeholder="검색" />
-          </div>
-
-          <div className="navItemBox navIcon">
-            <img
-              className="iconSize"
-              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-              alt=""
-            />
-            <img
-              className="iconSize"
-              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-              alt=""
-            />
-            <img
-              className="iconSize"
-              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
-              alt=""
-            />
-          </div>
-        </nav>
-      </div> */}
-
       <main className="mainPage">
         <div className="feedAndRight">
           <div className="feedBox">
@@ -101,36 +82,46 @@ const Main = () => {
                   <div className="margin4px">
                     <span>cut_cat12</span>
                     <span>귀여운 고양이....</span>
-                    <span>더 보기</span>
+                    <span className="grayColor">더 보기</span>
                   </div>
-                  <div>mimini123 균형감각 뛰어난 낙산공원 고양이</div>
+
                   <ul className="commentUl">
                     <li className="commentRow">
-                      <div className="commentDel">
-                        <div className="comment">
-                          <span className="user-padding">catttt022</span>
-                          <span className="comment-area">
-                            고양이는 다 귀여워
-                          </span>
-                        </div>
-
-                        <button className="delBtn">삭제</button>
-                      </div>
+                      {commentList.map((item, idx) => {
+                        return (
+                          <div key={idx}>
+                            <div className="commentDel">
+                              <div className="comment">
+                                <span className="userPadding">catttt022</span>
+                                <span>{item}</span>
+                              </div>
+                              <button className="delBtn">삭제</button>
+                            </div>
+                          </div>
+                        );
+                      })}
                     </li>
                   </ul>
-                  <div className="margin8px">1일전</div>
+                  <div className="margin8px grayColor font10px">1일전</div>
                 </div>
 
-                <div className="commentInputBox">
+                <form className="commentInputBox">
                   <input
                     className="commentInput"
                     type="text"
                     placeholder="댓글 달기..."
+                    onChange={handleInput}
+                    value={inputValue}
                   />
-                  <button className="inputBtn" disabled>
+                  <button
+                    type="submit"
+                    className={'inputBtn ' + (isValid ? 'activateBtn' : '')}
+                    disabled={!isValid}
+                    onClick={post}
+                  >
                     게시
                   </button>
-                </div>
+                </form>
               </div>
             </article>
           </div>
