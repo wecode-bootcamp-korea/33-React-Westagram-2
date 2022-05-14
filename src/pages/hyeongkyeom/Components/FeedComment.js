@@ -1,10 +1,12 @@
 import React from 'react';
 
 const FeedComment = props => {
+  const { userName, userComment } = props;
+
   return (
     <div className="commentDesc">
-      <p className="descNickname">{props.userName}</p>
-      <div className="commentTxt">{props.userComment}</div>
+      <p className="descNickname">{userName}</p>
+      <div className="commentTxt">{userComment}</div>
       <div className="commentBtn">
         <i id="commentLike" class="fa-regular fa-heart" />
       </div>
