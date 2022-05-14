@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './Main.scss';
 import Nav from '../../../Components/Nav';
+import Comment from './Comment';
 
 const Main = () => {
   const [inputValue, setInputValue] = useState('');
@@ -88,17 +89,7 @@ const Main = () => {
                   <ul className="commentUl">
                     <li className="commentRow">
                       {commentList.map((item, idx) => {
-                        return (
-                          <div key={idx}>
-                            <div className="commentDel">
-                              <div className="comment">
-                                <span className="userPadding">catttt022</span>
-                                <span>{item}</span>
-                              </div>
-                              <button className="delBtn">삭제</button>
-                            </div>
-                          </div>
-                        );
+                        return <Comment item={item} idx={idx} key={idx} />;
                       })}
                     </li>
                   </ul>
