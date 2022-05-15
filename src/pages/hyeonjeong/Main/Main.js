@@ -21,8 +21,6 @@ const Main = () => {
     setInputValue('');
   };
 
-  console.log(commentList);
-
   return (
     <div className="main">
       <Nav />
@@ -42,7 +40,7 @@ const Main = () => {
                   <div style={{ fontSize: '20px' }}>cat_1</div>
                 </div>
                 <div>
-                  <i className="fa-solid fa-ellipsis"></i>
+                  <i className="fa-solid fa-ellipsis" />
                 </div>
               </div>
 
@@ -50,18 +48,18 @@ const Main = () => {
                 <img
                   className="mainImg"
                   src="/images/hyeonjeong/낙산고양이이미지.jpg"
-                  alt=""
+                  alt="mainFeedImg"
                 />
               </div>
 
               <div className="iconBox">
                 <div>
-                  <i className="fa-regular fa-heart"></i>
-                  <i className="fa-regular fa-comment"></i>
-                  <i className="fa-regular fa-paper-plane"></i>
+                  <i className="fa-regular fa-heart" />
+                  <i className="fa-regular fa-comment" />
+                  <i className="fa-regular fa-paper-plane" />
                 </div>
                 <div>
-                  <i className="fa-regular fa-bookmark"></i>
+                  <i className="fa-regular fa-bookmark" />
                 </div>
               </div>
 
@@ -71,7 +69,7 @@ const Main = () => {
                     <img
                       className="roundImg"
                       src="/images/hyeonjeong/카페img.jpg"
-                      alt=""
+                      alt="likeProfileImg"
                     />
                   </div>
                   <div>
@@ -135,7 +133,7 @@ const Main = () => {
                 <img
                   className="recommendProfileImg"
                   src="/images/hyeonjeong/카페img.jpg"
-                  alt=""
+                  alt="recommendProfileImg"
                 />
                 <span className="recommendProfileNickname">I'm_happy</span>
                 <span className="follow">팔로우</span>
@@ -144,7 +142,7 @@ const Main = () => {
                 <img
                   className="recommendProfileImg"
                   src="/images/hyeonjeong/카페img.jpg"
-                  alt=""
+                  alt="recommendProfileImg"
                 />
                 <span className="recommendProfileNickname">I'm_happy</span>
                 <span className="follow">팔로우</span>
@@ -153,7 +151,7 @@ const Main = () => {
                 <img
                   className="recommendProfileImg"
                   src="/images/hyeonjeong/카페img.jpg"
-                  alt=""
+                  alt="recommendProfileImg"
                 />
                 <span className="recommendProfileNickname">I'm_happy</span>
                 <span className="follow">팔로우</span>
