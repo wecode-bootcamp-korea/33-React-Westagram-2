@@ -3,7 +3,6 @@
   justify-content: center;
   align-content: center;
 }
-
 .mainNav {
   z-index: 1;
   position: fixed;
@@ -11,26 +10,23 @@
   left: 0;
   right: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: auto 40px;
   align-items: center;
   border-bottom: 1px solid #dbdbdb;
-  width: 100%;
+  width: 100vw;
   height: 4rem;
   background-color: white;
   font-size: 25px;
-
   .mainNavLogo {
-    margin-left: 25rem;
     cursor: pointer;
-
     .mainNavText {
-      font-family: 'Lobster', cursive;
+      font-family: ‘Lobster’, cursive;
+      font-weight: 900;
     }
   }
-
   .mainNavSearch {
-    margin-left: 5rem;
-
+    margin-left: 300px;
     i {
       position: absolute;
       margin: 0.5rem;
@@ -38,7 +34,6 @@
       font-size: 15px;
       color: #8e8e8e;
     }
-
     .navSearch {
       width: 17rem;
       height: 2rem;
@@ -46,19 +41,15 @@
       border-radius: 0.5rem;
       border-style: none;
       text-indent: 3em;
-
       ::placeholder {
         color: #c5c5c5;
         font-size: 15px;
       }
     }
   }
-
   .mainNavicon {
-    margin-right: 11rem;
     @include flex-center;
     cursor: pointer;
-
     img {
       width: 1.5rem;
       height: 1.5rem;

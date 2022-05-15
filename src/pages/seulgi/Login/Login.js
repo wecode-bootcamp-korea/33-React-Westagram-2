@@ -1,13 +1,26 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import './Login.scss';
 
 const Login = () => {
   const navigate = useNavigate();
 
-  const goToMain = () => {
+  function goToMain() {
     navigate('/main-seulgi');
-  };
+  }
+
+  function InputState = () => {
+    const [id, setId] = useState('');
+    const [pw, setPw] = useState('');
+
+    const handleIdInput = (event) => {
+      setId = (event.target.value);
+    };
+    const handlePwInput = (event) => {
+      setPw = (event.target.value);
+    };
+  }
 
   return (
     <div className="login">
@@ -15,17 +28,18 @@ const Login = () => {
         <div>
           <h1>westagram</h1>
           <input
+            onChange={handleIdInput}
             type="id"
             id="id"
             placeholder="전화번호, 사용자 이름 또는 이메일"
-            onkeyup="isEmpty()"
+            // onkeyup="isEmpty()"
           />
           <br />
           <input
             type="password"
             id="password"
             placeholder="비밀번호"
-            onkeyup="isEmpty()"
+            // onkeyup="isEmpty()"
           />
           <br />
           <button id="btn" disabled>
