@@ -1,8 +1,25 @@
 import React from 'react';
 import './Main.scss';
 import Nav from '../../../Components/Nav';
+import CommentBox from './Components/Comments';
+import { useState } from 'react';
 
 function Main() {
+  const [input, setInput] = useState('');
+  const [comment, setComment] = useState([]);
+
+  const handleInputChange = e => {
+    setInput(e.target.value);
+  };
+
+  const handleUpload = e => {
+    e.preventDefault();
+    const newComment = [...comment];
+    newComment.push(input);
+    setComment(newComment);
+    setInput('');
+  };
+
   return (
     <>
       <Nav />
@@ -62,19 +79,30 @@ function Main() {
                 <span>위워크에서 진행한 베이킹 클래스</span>
               </div>
               <ul className="commentsWrapper">
-                <li className="postComment">
-                  <div>
-                    <p className="comment">
-                      <span className="commentUser">seop</span>
-                      <span>GOOD</span>
-                    </p>
-                  </div>
-                </li>
+                {comment.map((comment, id) => {
+                  return (
+                    <CommentBox names="unknown" comments={comment} key={id} />
+                  );
+                })}
               </ul>
               <p className="postTime">42분 전</p>
-              <form method="post" className="writeComment">
-                <input className="writeArea" placeholder="댓글 달기..." />
-                <button type="submit" id="submit" disabled>
+              <form
+                method="post"
+                className="writeComment"
+                onSubmit={handleUpload}
+              >
+                <input
+                  type="text"
+                  className="writeArea"
+                  placeholder="댓글 달기..."
+                  value={input}
+                  onChange={handleInputChange}
+                />
+                <button
+                  type="submit"
+                  id="submit"
+                  disabled={input.length > 0 ? false : true}
+                >
                   게시
                 </button>
               </form>

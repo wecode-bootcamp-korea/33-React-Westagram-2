@@ -47,7 +47,7 @@ function Login() {
             <a href="/main">
               <button
                 id="loginBtn"
-                disabled={id.includes('@') && pw.length > 5 ? false : true}
+                disabled={id.includes('@') && pw.length >= 5 ? false : true}
                 onClick={goToMainPage}
               >
                 로그인
