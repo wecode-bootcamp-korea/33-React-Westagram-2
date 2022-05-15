@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import FeedComment from './FeedComment';
+import InputComment from './InputComment';
 
 const Feed = () => {
   const [className, setClassName] = useState('fa-regular fa-heart');
   const [color, setColor] = useState('black');
   const [comment, setComment] = useState('');
   const [commentList, setCommentList] = useState([]);
+  const [commentId] = useState(0);
 
   const handleClick = () => {
     let newColor;
@@ -26,16 +28,17 @@ const Feed = () => {
   };
 
   const addComment = e => {
-    const newComments = [...commentList];
-    newComments.push(comment);
-    setCommentList(newComments);
-    setComment('');
+    e.preventDefault();
+    if (comment.length !== 0) {
+      const newComments = [...commentList];
+      newComments.push(comment);
+      setCommentList(newComments);
+    }
+    return;
   };
 
-  const addCommentEnter = e => {
-    if (e.key === 'Enter') {
-      addComment();
-    }
+  const deleteReply = id => {
+    setCommentList(commentList.filter(ele => ele.commentId !== commentId));
   };
 
   return (
@@ -101,26 +104,15 @@ const Feed = () => {
                   userName="hang_ke_mi"
                   userComment={comment}
                   key={id}
+                  id={id}
+                  onDeleteBtn={deleteReply}
                 />
               );
             })}
           </div>
         </div>
       </article>
-      <div className="feedComment">
-        <input
-          className="inputComment"
-          type="text"
-          placeholder="댓글 달기..."
-          onChange={handleInput}
-          onKeyPress={e => {
-            addCommentEnter(e);
-          }}
-        />
-        <button type="submit" className="addComment" onClick={addComment}>
-          게시
-        </button>
-      </div>
+      <InputComment addComment={addComment} onChange={handleInput} />
     </>
   );
 };
