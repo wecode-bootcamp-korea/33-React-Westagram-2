@@ -5,15 +5,19 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
-  const [id, setId] = useState('');
-  const [pw, setPw] = useState('');
+  const [input, setInput] = useState({
+    id: '',
+    pw: '',
+  });
 
-  const handleIdInput = event => {
-    setId(event.target.value);
-  };
+  const { id, pw } = input;
 
-  const handlePwInput = event => {
-    setPw(event.target.value);
+  const handleInput = e => {
+    const { name, value } = e.target;
+    setInput({
+      ...input,
+      [name]: value,
+    });
   };
 
   const mainPageLink = useNavigate();
@@ -34,15 +38,15 @@ function Login() {
               type="text"
               id="id"
               placeholder="전화번호, 사용자 이름 또는 메일"
-              value={id}
-              onChange={handleIdInput}
+              name="id"
+              onChange={handleInput}
             />
             <input
               type="password"
               id="password"
               placeholder="비밀번호"
-              value={pw}
-              onChange={handlePwInput}
+              name="pw"
+              onChange={handleInput}
             />
             <a href="/main">
               <button
