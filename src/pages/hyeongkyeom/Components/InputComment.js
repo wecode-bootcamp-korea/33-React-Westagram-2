@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './InputComment.scss';
 
 const InputComment = ({ onInsert }) => {
   const [value, setValue] = useState('');

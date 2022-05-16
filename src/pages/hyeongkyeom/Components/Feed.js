@@ -1,32 +1,40 @@
 import React, { useRef, useState } from 'react';
 import FeedCommentList from './FeedCommentList';
 import InputComment from './InputComment';
+import './Feed.scss';
 
 const Feed = () => {
-  const [className, setClassName] = useState('fa-regular fa-heart');
-  const [color, setColor] = useState('black');
+  const [color, setColor] = useState(false);
   const [commentList, setCommentList] = useState([
-    { id: 1, name: 'iron_man', text: '너무 귀엽다~' },
-    { id: 2, name: 'mighty_thor', text: '나도 강아지 키우고싶다!' },
-    { id: 3, name: 'iamgroot', text: '아이엠그루트' },
+    {
+      id: 1,
+      name: 'im_iron_man',
+      text: '너무 귀엽다~',
+      liked: false,
+    },
+    {
+      id: 2,
+      name: 'odinson_thor',
+      text: '나도 강아지 키우고싶다!',
+      liked: false,
+    },
+    {
+      id: 3,
+      name: 'iamgroot',
+      text: '아이엠그루트',
+      liked: false,
+    },
   ]);
   const nextId = useRef(4);
 
   const onRemove = id =>
     setCommentList(commentList.filter(comment => comment.id !== id));
 
-  const handleClick = () => {
-    let newColor;
-    let newClassName;
-    if (className === 'fa-regular fa-heart') {
-      newColor = 'red';
-      newClassName = 'fa-solid fa-heart';
-    } else {
-      newClassName = 'fa-regular fa-heart';
-      newColor = 'black';
-    }
-    setColor(newColor);
-    setClassName(newClassName);
+  const handleClick = e => {
+    e.preventDefault();
+    e.target.style.color = color ? 'red' : 'black';
+    e.target.className = color ? 'fa-solid fa-heart' : 'fa-regular fa-heart';
+    setColor(!color);
   };
 
   const onInsert = text => {
@@ -35,8 +43,10 @@ const Feed = () => {
       name: 'hang_ke_mi',
       text,
     };
-    setCommentList(commentList.concat(comment));
-    nextId.current += 1;
+    if (text.length !== 0) {
+      setCommentList(commentList.concat(comment));
+      nextId.current += 1;
+    }
   };
 
   return (
@@ -54,7 +64,7 @@ const Feed = () => {
           </div>
           <i id="feedProfileMore" className="fa-solid fa-ellipsis" />
         </div>
-        <div className="feedmainImg" onDoubleClick={handleClick}>
+        <div className="feedmainImg">
           <img
             className="yeonTan"
             src="images/hyeongkyeom/main/feedImage.jpeg"
@@ -67,8 +77,7 @@ const Feed = () => {
               <div className="feedBottomLikesIconLeft">
                 <i
                   id="feedHeartBtn"
-                  className={className}
-                  style={{ color: color }}
+                  className="fa-regular fa-heart"
                   onClick={handleClick}
                 />
                 <i className="fa-regular fa-comment" />
@@ -80,11 +89,11 @@ const Feed = () => {
             </div>
             <div className="feedBottomWhoLikes">
               <img
-                className="WhoLikesProfile"
+                className="whoLikesProfile"
                 src="images/hyeongkyeom/main/wecode.png"
                 alt="feedLikeImg"
               />
-              <span className="like_txt">
+              <span className="likeTxt">
                 <b>wecode_bootcamp</b>님 <b>외 여러 명</b>이 좋아합니다
               </span>
             </div>

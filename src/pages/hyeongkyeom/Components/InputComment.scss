@@ -1,0 +1,28 @@
+.feedComment {
+  border: 1px solid #dbdbdb;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  height: 100px;
+  flex-direction: row;
+  height: 50px;
+  margin-bottom: 20px;
+
+  .inputComment {
+    border: none;
+    width: 570px;
+    text-indent: 1.5em;
+  }
+
+  .addComment {
+    border: none;
+    background-color: white;
+    color: #3b99ef;
+    cursor: pointer;
+
+    &:disabled {
+      color: #8e8e8e;
+      cursor: auto;
+    }
+  }
+}

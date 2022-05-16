@@ -17,6 +17,7 @@ const Main = () => {
         <div className="feeds">
           <Story />
           <Feed />
+          <Feed />
         </div>
         <RightFeed />
       </section>

@@ -1,4 +1,5 @@
 import React from 'react';
+import './RightFeed.scss';
 
 const RightFeed = () => {
   return (

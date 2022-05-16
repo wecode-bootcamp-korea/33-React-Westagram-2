@@ -1,5 +1,6 @@
 import React from 'react';
 import FeedComment from './FeedComment';
+import './FeedCommentList.scss';
 
 const FeedCommentList = ({ commentList, onRemove }) => {
   return (
