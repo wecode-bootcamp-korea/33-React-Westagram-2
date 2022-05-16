@@ -28,6 +28,9 @@ const Login = () => {
     // } else setPw(false);
   };
 
+  console.log('id:', id);
+  console.log(pw);
+
   return (
     <div className="login">
       <div className="wrapper">

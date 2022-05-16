@@ -159,13 +159,20 @@ function Article() {
         </div>
       </div>
       <div className="articleLike">좋아요 925개</div>
-      <div className="articleComment">
+      <Comments />
+    </article>
+  );
+}
+
+function Comments() {
+  return (
+    <ol>
+      <li className="articleComment">
         <span className="commentId">whatabeautifulcat</span>
         <span className="commentDetail">
           So cute 😻 <br />
         </span>
-      </div>
-      <div className="articleTime">1일 전</div>
+      </li>
       <div className="articleAddComment">
         <input
           className="commentInput"
@@ -174,7 +181,7 @@ function Article() {
         />
         <button className="commentAdd">Add</button>
       </div>
-    </article>
+    </ol>
   );
 }
 
