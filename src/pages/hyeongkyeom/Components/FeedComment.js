@@ -1,17 +1,15 @@
 import React from 'react';
 
-const FeedComment = ({ onDeleteBtn, userName, userComment, id }) => {
-  const deleteButtonHandler = event => {
-    event.preventDefault();
-    onDeleteBtn(id);
-  };
+const FeedComment = ({ comment, onRemove }) => {
+  const { id, text, name } = comment;
+
   return (
     <div className="commentDesc">
-      <p className="descNickname">{userName}</p>
-      <div className="commentTxt">{userComment}</div>
+      <p className="descNickname">{name}</p>
+      <div className="commentTxt">{text}</div>
       <div className="commentBtn">
         <i id="commentLike" class="fa-regular fa-heart" />
-        <i class="fa-regular fa-trash-can" onClick={deleteButtonHandler} />
+        <i class="fa-regular fa-trash-can" onClick={() => onRemove(id)} />
       </div>
     </div>
   );

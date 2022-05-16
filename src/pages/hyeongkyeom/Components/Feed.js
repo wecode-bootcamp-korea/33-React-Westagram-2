@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
-import FeedComment from './FeedComment';
+import React, { useRef, useState } from 'react';
+import FeedCommentList from './FeedCommentList';
 import InputComment from './InputComment';
 
 const Feed = () => {
   const [className, setClassName] = useState('fa-regular fa-heart');
   const [color, setColor] = useState('black');
-  const [comment, setComment] = useState('');
-  const [commentList, setCommentList] = useState([]);
-  const [commentId] = useState(0);
+  const [commentList, setCommentList] = useState([
+    { id: 1, name: 'iron_man', text: '너무 귀엽다~' },
+    { id: 2, name: 'mighty_thor', text: '나도 강아지 키우고싶다!' },
+    { id: 3, name: 'iamgroot', text: '아이엠그루트' },
+  ]);
+  const nextId = useRef(4);
+
+  const onRemove = id =>
+    setCommentList(commentList.filter(comment => comment.id !== id));
 
   const handleClick = () => {
     let newColor;
@@ -23,22 +29,14 @@ const Feed = () => {
     setClassName(newClassName);
   };
 
-  const handleInput = e => {
-    setComment(e.target.value);
-  };
-
-  const addComment = e => {
-    e.preventDefault();
-    if (comment.length !== 0) {
-      const newComments = [...commentList];
-      newComments.push(comment);
-      setCommentList(newComments);
-    }
-    return;
-  };
-
-  const deleteReply = id => {
-    setCommentList(commentList.filter(ele => ele.commentId !== commentId));
+  const onInsert = text => {
+    const comment = {
+      id: nextId.current,
+      name: 'hang_ke_mi',
+      text,
+    };
+    setCommentList(commentList.concat(comment));
+    nextId.current += 1;
   };
 
   return (
@@ -97,22 +95,10 @@ const Feed = () => {
             </span>
             <span className="descTxt">연탄이 커여웡! 🥰</span>
           </div>
-          <div className="feedBottomComment">
-            {commentList.map((comment, id) => {
-              return (
-                <FeedComment
-                  userName="hang_ke_mi"
-                  userComment={comment}
-                  key={id}
-                  id={id}
-                  onDeleteBtn={deleteReply}
-                />
-              );
-            })}
-          </div>
         </div>
+        <FeedCommentList commentList={commentList} onRemove={onRemove} />
       </article>
-      <InputComment addComment={addComment} onChange={handleInput} />
+      <InputComment onInsert={onInsert} />
     </>
   );
 };
