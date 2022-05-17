@@ -284,6 +284,7 @@ $bold: 700;
             .storyProfile {
               display: flex;
               justify-content: flex-start;
+              align-items: center;
               margin-bottom: 16px;
 
               img {
@@ -298,6 +299,7 @@ $bold: 700;
 
                 .storyName {
                   font-weight: $bold;
+                  margin-bottom: 2px;
                 }
 
                 .storyTime {
