@@ -12,12 +12,6 @@ const Login = () => {
     navigate('/main-seulgi');
   };
 
-  // const onKeyPress = event => {
-  //   if (event === 'Enter') {
-  //     goToMain();
-  //   }
-  // };
-
   const handleIdInput = event => {
     setId(event.target.value);
   };
@@ -30,29 +24,31 @@ const Login = () => {
     <div className="login">
       <div className="wrapper">
         <h1>westagram</h1>
-        <input
-          onChange={handleIdInput}
-          type="id"
-          value={id}
-          id="id"
-          placeholder="전화번호, 사용자 이름 또는 이메일"
-        />
-        <br />
-        <input
-          onChange={handlePwInput}
-          type="password"
-          value={pw}
-          id="pw"
-          placeholder="비밀번호"
-        />
-        <br />
-        <button
-          id="btn"
-          onClick={goToMain}
-          disabled={id.includes('@') && pw.length > 5 ? false : true}
-        >
-          로그인
-        </button>
+        <form>
+          <input
+            onChange={handleIdInput}
+            type="id"
+            value={id}
+            id="id"
+            placeholder="전화번호, 사용자 이름 또는 이메일"
+          />
+          <br />
+          <input
+            onChange={handlePwInput}
+            type="password"
+            value={pw}
+            id="pw"
+            placeholder="비밀번호"
+          />
+          <br />
+          <button
+            id="btn"
+            onClick={goToMain}
+            disabled={id.includes('@') && pw.length > 5 ? false : true}
+          >
+            로그인
+          </button>
+        </form>
         <h5 onClick={goToMain}>메인페이지로 이동하기</h5>
       </div>
     </div>
