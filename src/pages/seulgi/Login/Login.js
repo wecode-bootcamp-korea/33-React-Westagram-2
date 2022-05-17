@@ -14,22 +14,11 @@ const Login = () => {
 
   const handleIdInput = event => {
     setId(event.target.value);
-    // const id = event.target.value;
-    // if (id.includes('@')) {
-    //   setId(true);
-    // } else setId(false);
   };
 
   const handlePwInput = event => {
     setPw(event.target.value);
-    // const pw = event.target.value;
-    // if (pw.length > 5) {
-    //   setPw(true);
-    // } else setPw(false);
   };
-
-  console.log('id:', id);
-  console.log(pw);
 
   return (
     <div className="login">

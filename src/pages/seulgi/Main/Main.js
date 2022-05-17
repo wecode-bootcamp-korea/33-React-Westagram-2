@@ -1,7 +1,9 @@
 import React from 'react';
+import { useState } from 'react';
 import './Main.scss';
-
 import Nav from '../../../Components/Nav';
+import Comment from '../../seulgi/Main/Comment';
+
 const Main = () => {
   return (
     <div className="mainPage">
@@ -121,6 +123,20 @@ function FeedStory() {
 }
 
 function Article() {
+  const [input, setInput] = useState('');
+  const [comment, setComment] = useState([]);
+  const handleInputChange = e => {
+    setInput(e.target.value);
+  };
+
+  const handleUpload = e => {
+    e.preventDefault();
+    const newComment = [...comment];
+    newComment.push(input);
+    setComment(newComment);
+    setInput('');
+  };
+
   return (
     <article className="article">
       <div className="articleProfile">
@@ -159,29 +175,28 @@ function Article() {
         </div>
       </div>
       <div className="articleLike">좋아요 925개</div>
-      <Comments />
-    </article>
-  );
-}
-
-function Comments() {
-  return (
-    <ol>
-      <li className="articleComment">
-        <span className="commentId">whatabeautifulcat</span>
-        <span className="commentDetail">
-          So cute 😻 <br />
-        </span>
-      </li>
-      <div className="articleAddComment">
+      {comment.map((comment, id) => {
+        return (
+          <Comment names="whatabeautifulcat" comments={comment} key={id} />
+        );
+      })}
+      <form method="post" className="articleComment" onSubmit={handleUpload}>
         <input
-          className="commentInput"
           type="text"
+          className="commentInput"
           placeholder="댓글 달기..."
+          value={input}
+          onChange={handleInputChange}
         />
-        <button className="commentAdd">Add</button>
-      </div>
-    </ol>
+        <button
+          className="articleAddComment"
+          id="submit"
+          disabled={input.length > 0 ? false : true}
+        >
+          게시
+        </button>
+      </form>
+    </article>
   );
 }
 

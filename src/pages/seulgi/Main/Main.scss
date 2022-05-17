@@ -8,6 +8,7 @@ p {
 
 * {
   box-sizing: border-box;
+  list-style: none;
 }
 
 /* Colors */
@@ -125,7 +126,7 @@ p {
   .article {
     background-color: white;
     outline: 1px solid var(--border-color);
-    padding-bottom: 20pxe;
+    padding-bottom: 20px;
     margin-bottom: 20px;
   }
 
@@ -187,6 +188,7 @@ p {
     img {
       width: 614px;
     }
+    margin-bottom: 10px;
   }
 
   .articleIcon {
@@ -216,7 +218,8 @@ p {
   }
 
   .commentInput {
-    width: 500px;
+    width: 510px;
+    margin-right: 10px;
   }
 
   .articleTime {
@@ -229,6 +232,8 @@ p {
   .articleAddComment {
     @include spaceSort();
     padding: 0 16px;
+    display: inline-block;
+    height: 36px;
   }
 
   .mainRight {
