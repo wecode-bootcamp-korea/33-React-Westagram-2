@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style/common.scss';
-import LoginBox from '../components/LoginBox';
-import LoginBoxBottom from '../components/LoginBoxBottom';
+import LoginBox from './LoginBox';
+import LoginBoxBottom from './LoginBoxBottom';
 
 const Login = () => {
   return (

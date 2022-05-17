@@ -1,16 +1,31 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './MainFeedBox.scss';
 import CommentBox from './CommentBox';
 
 const MainFeedBox = ({ feedUsers }) => {
-  const { name, text, imgUrl } = feedUsers;
+  const { name, text, imgUrl, profileUrl } = feedUsers;
   const [value, setValue] = useState('');
-  const nextId = useRef(2);
   const [comments, setComment] = useState([]);
+  const [likePerson, setLikePerson] = useState([]);
+  useEffect(() => {
+    fetch('/data/wanyoung/likePersonData.json')
+      .then(res => res.json())
+      .then(data => {
+        setLikePerson(data);
+      });
+  }, []);
+  useEffect(() => {
+    fetch('http://localhost:3000/data/wanyoung/commentData.json')
+      .then(res => res.json())
+      .then(data => {
+        setComment(data);
+      });
+  }, []);
   const [heartImg, setHeartImg] = useState({
     checked: false,
     url: 'images/wanyoung/image/heart.png',
   });
+  const nextId = useRef(comments.length + 1);
   const onHeartClick = () => {
     setHeartImg({
       checked: !heartImg.checked,
@@ -20,15 +35,16 @@ const MainFeedBox = ({ feedUsers }) => {
     });
   };
 
-  const onRemove = id => {
+  const handleCommentRemove = id => {
     setComment(comments.filter(comment => comment.id !== id));
   };
 
-  const onChange = e => {
-    setValue(e.target.value);
+  const handleInputChange = e => {
+    const { value } = e.target;
+    setValue(value);
   };
 
-  const onSubmit = e => {
+  const handleCommentSubmit = e => {
     const newComment = {
       id: nextId.current,
       name: 'wan_0_kim',
@@ -45,7 +61,7 @@ const MainFeedBox = ({ feedUsers }) => {
       <div className="feedBoxTitle flex flexStart">
         <img
           className="userTitleImg marginLeft"
-          src="images/wanyoung/image/person_pic6.jpg"
+          src={profileUrl}
           alt="유저 프로필 사진"
         />
         <p className="userText marginLeft">{name}</p>
@@ -73,25 +89,18 @@ const MainFeedBox = ({ feedUsers }) => {
         </div>
       </div>
       <div className="flex flexStart">
-        <img
-          className="imgCircle17px marginLeft"
-          src="images/wanyoung/image/person_pic4.jpg"
-          alt="좋아요 누른 사람"
-        />
-        <img
-          className="imgCircle17px"
-          src="images/wanyoung/image/person_pic6.jpg"
-          alt="좋아요 누른 사람"
-        />
-        <img
-          className="imgCircle17px"
-          src="images/wanyoung/image/person_pic8.jpg"
-          alt="좋아요 누른 사람"
-        />
+        {likePerson.map(person => (
+          <img
+            key={person.id}
+            className={person.className}
+            src={person.src}
+            alt={person.alt}
+          />
+        ))}
         <p className="userText marginLeft">
           harry_0님 외{' '}
           <span id="count" className="userText">
-            60
+            {heartImg.url === 'images/wanyoung/image/heart.png' ? 60 : 61}
           </span>
           명이 좋아합니다.
         </p>
@@ -101,11 +110,14 @@ const MainFeedBox = ({ feedUsers }) => {
           new_0_person <span className="marginLeft fontSize12px">{text}</span>
         </p>
       </div>
-      <CommentBox onRemove={onRemove} comments={comments} />
+      <CommentBox onRemove={handleCommentRemove} comments={comments} />
       <div className="feedDay flex flexStart">
         <p className="marginLeft">1일전</p>
       </div>
-      <form className="feedInput flex spaceBetween" onSubmit={onSubmit}>
+      <form
+        className="feedInput flex spaceBetween"
+        onSubmit={handleCommentSubmit}
+      >
         <img
           className="marginLeft"
           src="images/wanyoung/image/smile.png"
@@ -118,7 +130,7 @@ const MainFeedBox = ({ feedUsers }) => {
           type="text"
           placeholder="댓글 달기"
           value={value}
-          onChange={onChange}
+          onChange={handleInputChange}
         />
         <button id="comment-button" type="submit" className="fontSize14px">
           게시

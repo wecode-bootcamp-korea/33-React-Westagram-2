@@ -1,0 +1,7 @@
+[
+  { "id": 1, "src": "images/wanyoung/image/home.png", "alt": "아이콘" },
+  { "id": 2, "src": "images/wanyoung/image/send.png", "alt": "아이콘" },
+  { "id": 3, "src": "images/wanyoung/image/more.png", "alt": "아이콘" },
+  { "id": 4, "src": "images/wanyoung/image/compass.png", "alt": "아이콘" },
+  { "id": 5, "src": "images/wanyoung/image/heart.png", "alt": "아이콘" }
+]

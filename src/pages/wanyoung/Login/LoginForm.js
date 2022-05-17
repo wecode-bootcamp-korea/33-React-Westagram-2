@@ -4,17 +4,18 @@ import { useState } from 'react';
 
 const LoginForm = () => {
   const navigate = useNavigate();
-  const onClickLogin = () => {
+  const onLoginClick = () => {
     navigate('/main-wanyoung');
   };
   const [userInfo, setUserInfo] = useState({
     userId: '',
     userPasswd: '',
   });
-  const onChange = e => {
+  const onInputChange = e => {
+    const { value } = e.target;
     const newUserInfo = {
       ...userInfo,
-      [e.target.name]: e.target.value,
+      [e.target.name]: value,
     };
     setUserInfo(newUserInfo);
   };
@@ -28,18 +29,18 @@ const LoginForm = () => {
           className="loginBoxInput"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
-          onChange={onChange}
+          onChange={onInputChange}
         />
         <input
           name="userPasswd"
           className="loginBoxInput"
           type="password"
           placeholder="비밀번호"
-          onChange={onChange}
+          onChange={onInputChange}
         />
         <button
           className="loginBoxBtn"
-          onClick={onClickLogin}
+          onClick={onLoginClick}
           disabled={
             userInfo.userId.includes('@') && userInfo.userPasswd.length > 5
               ? false

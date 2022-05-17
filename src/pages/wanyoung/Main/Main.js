@@ -1,18 +1,18 @@
 import React from 'react';
 import './Main.scss';
 import '../style/common.scss';
-import Nav from '../../../Components/Nav';
-import RightContent from '../components/RightContent';
-import LeftContent from '../components/LeftContent';
+import Nav from '../components/Nav';
+import RightContent from './RightContent';
+import LeftContent from './LeftContent';
 function Main() {
   return (
-    <body className="mainPage positionRelative">
+    <section className="mainPage positionRelative">
       <Nav className="Nav" />
       <section className="mainContent flex">
         <LeftContent />
         <RightContent />
       </section>
-    </body>
+    </section>
   );
 }
 
