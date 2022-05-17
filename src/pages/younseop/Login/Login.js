@@ -1,8 +1,8 @@
 import React from 'react';
-import './Login.scss';
-import Nav from '../../../Components/Nav';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import Nav from '../../../Components/Nav';
+import './Login.scss';
 
 function Login() {
   const [input, setInput] = useState({
@@ -58,9 +58,9 @@ function Login() {
               </button>
             </a>
           </div>
-          <a href="/" className="forgotPw">
+          <Link to="/" className="forgotPw">
             비밀번호를 잊으셨나요?
-          </a>
+          </Link>
         </div>
       </div>
     </>
