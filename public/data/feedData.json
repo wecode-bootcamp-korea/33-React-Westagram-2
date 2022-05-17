@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "im_iron_man",
+    "text": "스톤닦이 쉑 지 살려고 나한테 스냅시키는거 보소",
+    "src": "images/hyeongkyeom/main/strange.jpeg",
+    "profile": "images/hyeongkyeom/main/ironman.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "farmer_thanos",
+    "text": "자연산 유기농 오이 싸게 팝니다~",
+    "src": "images/hyeongkyeom/main/thanos.jpeg",
+    "profile": "images/hyeongkyeom/main/farmer.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "iamgroot",
+    "text": "아이엠그루트",
+    "src": "images/hyeongkyeom/main/groot.png",
+    "profile": "images/hyeongkyeom/main/iamgroot.jpeg"
+  }
+]

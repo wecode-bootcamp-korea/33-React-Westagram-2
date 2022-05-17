@@ -1,31 +1,22 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import FeedCommentList from './FeedCommentList';
 import InputComment from './InputComment';
 import './Feed.scss';
 
-const Feed = () => {
+const Feed = ({ profile, name, text, src }) => {
+  // console.log({ name, text, src });
+  // console.log(feed);
   const [color, setColor] = useState(false);
-  const [commentList, setCommentList] = useState([
-    {
-      id: 1,
-      name: 'im_iron_man',
-      text: '너무 귀엽다~',
-      liked: false,
-    },
-    {
-      id: 2,
-      name: 'odinson_thor',
-      text: '나도 강아지 키우고싶다!',
-      liked: false,
-    },
-    {
-      id: 3,
-      name: 'iamgroot',
-      text: '아이엠그루트',
-      liked: false,
-    },
-  ]);
+  const [commentList, setCommentList] = useState([]);
   const nextId = useRef(4);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/commentData.json')
+      .then(res => res.json())
+      .then(data => {
+        setCommentList(data);
+      });
+  }, []);
 
   const onRemove = id =>
     setCommentList(commentList.filter(comment => comment.id !== id));
@@ -53,23 +44,15 @@ const Feed = () => {
     <>
       <article className="mainFeed">
         <div className="feedProfile">
-          <img
-            className="feedProfileImg"
-            src="images/hyeongkyeom/main/mainProfile.jpeg"
-            alt="feedProfileImg"
-          />
+          <img className="feedProfileImg" src={profile} alt="feedProfileImg" />
           <div className="feedProfileName">
-            <p className="feedProfileId">hang_ke_mi</p>
+            <p className="feedProfileId">{name}</p>
             <p className="feedProfileLocation">WeCode - 위코드</p>
           </div>
           <i id="feedProfileMore" className="fa-solid fa-ellipsis" />
         </div>
         <div className="feedmainImg">
-          <img
-            className="yeonTan"
-            src="images/hyeongkyeom/main/feedImage.jpeg"
-            alt="feedImg"
-          />
+          <img className="yeonTan" src={src} alt="feedImg" />
         </div>
         <div className="feedBottom">
           <div className="feedBottomLikes">
@@ -100,9 +83,9 @@ const Feed = () => {
           </div>
           <div className="feedBottomDesc">
             <span className="descNickname">
-              <b>hang_ke_mi</b>
+              <b>{name}</b>
             </span>
-            <span className="descTxt">연탄이 커여웡! 🥰</span>
+            <span className="descTxt">{text}</span>
           </div>
         </div>
         <FeedCommentList commentList={commentList} onRemove={onRemove} />

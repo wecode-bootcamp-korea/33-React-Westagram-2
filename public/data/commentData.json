@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "im_iron_man",
+    "text": "너무 귀엽다~",
+    "liked": false
+  },
+  {
+    "id": 2,
+    "name": "odinson_thor",
+    "text": "나도 강아지 키우고싶다!",
+    "liked": false
+  },
+  {
+    "id": 3,
+    "name": "iamgroot",
+    "text": "아이엠그루트",
+    "liked": false
+  }
+]
