@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "className": "imgCircle17px marginLeft",
+    "src": "images/wanyoung/image/person_pic4.jpg",
+    "alt": "좋아요 누른 사람"
+  },
+  {
+    "id": 1,
+    "className": "imgCircle17px",
+    "src": "images/wanyoung/image/person_pic6.jpg",
+    "alt": "좋아요 누른 사람"
+  },
+  {
+    "id": 2,
+    "className": "imgCircle17px marginLeft",
+    "src": "images/wanyoung/image/person_pic8.jpg",
+    "alt": "좋아요 누른 사람"
+  }
+]

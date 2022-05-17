@@ -24,30 +24,31 @@
     cursor: pointer;
 
     .mainNavText {
-      font-family: 'Lobster', cursive;
+      font-family: ‘Lobster’, cursive;
     }
   }
 
   .mainNavSearch {
     margin-left: 300px;
-    i {
+
+    main i {
       position: absolute;
       margin: 0.5rem;
       padding-left: 0.5rem;
       font-size: 15px;
-      color: #8e8e8e;
+      color: #8E8E8E;
     }
 
     .navSearch {
       width: 17rem;
       height: 2rem;
-      background-color: #efefef;
+      background-color: #EFEFEF;
       border-radius: 0.5rem;
       border-style: none;
       text-indent: 3em;
 
       ::placeholder {
-        color: #c5c5c5;
+        color: #C5C5C5;
         font-size: 15px;
       }
     }

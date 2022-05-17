@@ -1,0 +1,45 @@
+.rightContent {
+  margin-top: 4rem;
+  background-color: #FAFAFA;
+  width: 35rem;
+  height: 100px;
+
+  .rightContentWrapper {
+    width: 35rem;
+
+    .rightContentUserName {
+      font-size: 1.5rem !important;
+      font-weight: 600;
+    }
+
+    .rightContentUserRecommend {
+      color: #8e8e8e;
+      font-weight: 600;
+
+      p {
+        font-size: 1.4rem !important;
+      }
+    }
+
+    .recommendUserList {
+      padding: 3rem;
+
+      .recommendUserListLi {
+        width: 32rem;
+        height: 5rem;
+
+        .rightContentUserNameDesc {
+          font-size: 1.3rem !important;
+          color: #8e8e8e;
+        }
+
+        .recommendUserListFollow {
+          font-size: 1.5rem !important;
+          color: #0095f6;
+        }
+
+      }
+    }
+
+  }
+}

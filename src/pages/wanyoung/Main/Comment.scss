@@ -1,0 +1,13 @@
+.Comment {
+  display: flex;
+  width: inherit;
+  margin-left: 1rem;
+  font-size: 14px !important;
+  margin-top: 0.3rem;
+  justify-content: space-between;
+
+  .btn {
+    font-size: 14px !important;
+    color: red;
+  }
+}

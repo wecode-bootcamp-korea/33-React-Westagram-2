@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "new_0_person",
+    "text": "점심 뭐먹지",
+    "imgUrl": "images/wanyoung/image/person_pic6.jpg",
+    "profileUrl": "images/wanyoung/image/person_pic7.jpg"
+  },
+  {
+    "id": 2,
+    "name": "harry_Po",
+    "text": "리액트 재밌다!",
+    "imgUrl": "images/wanyoung/image/person_pic7.jpg",
+    "profileUrl": "images/wanyoung/image/person_pic8.jpg"
+  },
+  {
+    "id": 3,
+    "name": "malfoy_92",
+    "text": "피곤하다...",
+    "imgUrl": "images/wanyoung/image/person_pic8.jpg",
+    "profileUrl": "images/wanyoung/image/person_pic.jpg"
+  }
+]

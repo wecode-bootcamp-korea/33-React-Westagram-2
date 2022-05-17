@@ -1,0 +1,44 @@
+.loginBox {
+  font-family: cursive;
+  border: 1px solid #dbdbdb;
+  flex-direction: column;
+  width: 35rem;
+  height: 40rem;
+  background-color: #fff;
+}
+
+.loginBoxLine {
+  .loginBoxHr {
+    width: 12rem;
+    background-color: #dbdbdb;
+    border: none;
+    height: 0.1rem;
+  }
+
+  .loginBoxOr {
+    color: #8e8e8e;
+    margin: 0 1rem;
+  }
+}
+
+
+
+
+
+.loginBoxInputBottom {
+  height: 8rem;
+
+  .bottomBtn {
+    width: inherit;
+
+    .facebookText {
+      font-size: 1.4rem !important;
+    }
+  }
+
+  .forgotPasswd {
+    font-size: 1.4rem !important;
+    color: #00376b;
+    text-decoration: none;
+  }
+}

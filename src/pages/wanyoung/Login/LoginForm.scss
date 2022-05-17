@@ -1,0 +1,48 @@
+.loginBoxForm {
+  height: 30rem;
+
+  .loginBoxLogo {
+    font-size: 5rem !important;
+  }
+
+  .loginInputWrapper {
+    height: 13rem;
+
+    .loginBoxInput {
+      background-color: #FAFAFA;
+      border: 1px solid rgb(219, 219, 219, 0.7);
+      width: 26rem;
+      height: 3.6rem;
+      border-radius: 0.3rem;
+      text-indent: 1rem;
+      font-size: 1.4rem !important;
+
+      &:focus {
+        outline: 0.8px solid rgba(219, 219, 219, 1.0);
+      }
+
+      &::placeholder {
+        color: #8e8e8e;
+        font-size: 1.2rem !important;
+      }
+    }
+
+    .loginBoxBtn {
+      cursor: pointer;
+      background-color: #0095f6;
+      width: 26rem;
+      height: 3.6rem;
+      outline: none;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.3rem !important;
+      border-radius: 0.3rem;
+
+      &:disabled {
+        background-color: rgba(0, 153, 255, 0.5);
+      }
+    }
+  }
+
+}
