@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import './Main.scss';
 import Nav from '../../../Components/Nav';
-import Comment from '../../seulgi/Main/Comment';
 
 const Main = () => {
   return (
@@ -34,9 +33,9 @@ function FeedStory() {
   return (
     <div className="feedStory">
       <div className="storyBox">
-        <button className="storyButton">
+        <button className="storyButton 1">
           <span>
-            <img className="imgOne" alt="" />
+            <img src="images/seulgi/storyButton1.jpg" alt="" />
           </span>
         </button>
         <div className="storyId">hi__yeon__</div>
@@ -44,10 +43,7 @@ function FeedStory() {
       <div className="storyBox 2">
         <button className="storyButton">
           <span>
-            <img
-              src="https://images.unsplash.com/photo-1651763087840-ab3ccc6a45b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-              alt=""
-            />
+            <img src="images/seulgi/storyButton2.jpg" alt="" />
           </span>
         </button>
         <div className="storyId">__plan_j</div>
@@ -55,10 +51,7 @@ function FeedStory() {
       <div className="storyBox 3">
         <button className="storyButton">
           <span>
-            <img
-              src="https://images.unsplash.com/photo-1632498301446-5f78baad40d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80"
-              alt=""
-            />
+            <img src="images/seulgi/storyButton3.jpg" alt="" />
           </span>
         </button>
         <div className="storyId">suen.park</div>
@@ -66,10 +59,7 @@ function FeedStory() {
       <div className="storyBox 4">
         <button className="storyButton">
           <span>
-            <img
-              src="https://images.unsplash.com/photo-1651695978616-fa82f73762a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-              alt=""
-            />
+            <img src="images/seulgi/storyButton4.jpg" alt="" />
           </span>
         </button>
         <div className="storyId">jindo_luv</div>
@@ -77,10 +67,7 @@ function FeedStory() {
       <div className="storyBox 5">
         <button className="storyButton">
           <span>
-            <img
-              src="https://images.unsplash.com/photo-1651719500430-630f9d7abd7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=968&q=80"
-              alt=""
-            />
+            <img src="images/seulgi/storyButton5.jpg" alt="" />
           </span>
         </button>
         <div className="storyId">jindo_bori</div>
@@ -88,10 +75,7 @@ function FeedStory() {
       <div className="storyBox 6">
         <button className="storyButton">
           <span>
-            <img
-              src="https://images.unsplash.com/photo-1651743544974-67866012132b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-              alt=""
-            />
+            <img src="images/seulgi/storyButton6.jpg" alt="" />
           </span>
         </button>
         <div className="storyId">poong__e</div>
@@ -99,10 +83,7 @@ function FeedStory() {
       <div className="storyBox 7">
         <button className="storyButton">
           <span>
-            <img
-              src="https://images.unsplash.com/photo-1635802324804-54fb506646ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80"
-              alt=""
-            />
+            <img src="images/seulgi/storyButton7.jpg" alt="" />
           </span>
         </button>
         <div className="storyId">peppoya</div>
@@ -110,10 +91,7 @@ function FeedStory() {
       <div className="storyBox 8">
         <button className="storyButton">
           <span>
-            <img
-              src="https://images.unsplash.com/photo-1651690802122-0611d2734232?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-              alt=""
-            />
+            <img src="images/seulgi/storyButton8.jpg" alt="" />
           </span>
         </button>
         <div className="storyId">jeongduck</div>
@@ -143,10 +121,7 @@ function Article() {
         <div className="articleProfileHeader">
           <button className="articleProfileHeaderBtn">
             <span>
-              <img
-                src="https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                alt=""
-              />
+              <img src="images/seulgi/asideProfile.jpg" alt="" />
             </span>
           </button>
           <div className="articleHeaderId">golden_galaxy_sea</div>
@@ -190,13 +165,25 @@ function Article() {
         />
         <button
           className="articleAddComment"
-          id="submit"
           disabled={input.length > 0 ? false : true}
         >
           게시
         </button>
       </form>
     </article>
+  );
+}
+
+function Comment({ names, comments }) {
+  return (
+    <li className="postComment">
+      <ul>
+        <p className="articleComment">
+          <span className="commentId">{names}</span>
+          <span>{comments}</span>
+        </p>
+      </ul>
+    </li>
   );
 }
 
@@ -207,10 +194,7 @@ function RecommendBox() {
         <div className="recommendContentLeft">
           <div className="recommendImgBox">
             <span className="recommendImgBoxProfile">
-              <img
-                src="https://images.unsplash.com/photo-1536544753306-ca75d2e9f7d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2338&q=80"
-                alt=""
-              />
+              <img src="images/seulgi/storyButton1.jpg" alt="" />
             </span>
           </div>
           <div className="contentProfile">
@@ -228,10 +212,7 @@ function RecommendBox() {
         <div className="recommendContentLeft">
           <div className="recommendImgBox">
             <span className="recommendImgBoxProfile">
-              <img
-                src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=985&q=80"
-                alt=""
-              />
+              <img src="images/seulgi/storyButton2.jpg" alt="" />
             </span>
           </div>
           <div className="contentProfile">
@@ -247,10 +228,7 @@ function RecommendBox() {
         <div className="recommendContentLeft">
           <div className="recommendImgBox">
             <span className="recommendImgBoxProfile">
-              <img
-                src="https://images.unsplash.com/photo-1535937633334-08d7431e494d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2346&q=80"
-                alt=""
-              />
+              <img src="images/seulgi/storyButton3.jpg" alt="" />
             </span>
           </div>
           <div className="contentProfile">
@@ -268,10 +246,7 @@ function RecommendBox() {
         <div className="recommendContentLeft">
           <div className="recommendImgBox">
             <span className="recommendImgBoxProfile">
-              <img
-                src="https://images.unsplash.com/photo-1535937703646-73cbf25b06d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2338&q=80"
-                alt=""
-              />
+              <img src="images/seulgi/storyButton4.jpg" alt="" />
             </span>
           </div>
           <div className="contentProfile">
@@ -287,10 +262,7 @@ function RecommendBox() {
         <div className="recommendContentLeft">
           <div className="recommendImgBox">
             <span className="recommendImgBoxProfile">
-              <img
-                src="https://images.unsplash.com/photo-1590915168682-558b3968adf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
-                alt=""
-              />
+              <img src="images/seulgi/storyButton5.jpg" alt="" />
             </span>
           </div>
           <div className="contentProfile">
