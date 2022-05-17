@@ -1,4 +1,8 @@
-/* User Agent Stylesheet Reset */
+* {
+  box-sizing: border-box;
+  list-style: none;
+}
+
 body,
 ol,
 p {
@@ -6,12 +10,6 @@ p {
   padding: 0;
 }
 
-* {
-  box-sizing: border-box;
-  list-style: none;
-}
-
-/* Colors */
 :root {
   --background-color: #f9f9f9;
   --blue-color: #3288f5;

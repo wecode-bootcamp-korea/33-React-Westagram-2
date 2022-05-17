@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useState } from 'react';
 import './Login.scss';
 
@@ -49,7 +49,11 @@ const Login = () => {
             로그인
           </button>
         </form>
-        <h5 onClick={goToMain}>메인페이지로 이동하기</h5>
+        <h5>
+          <Link to="/main-seulgi" style={{ textDecoration: 'none' }}>
+            메인페이지로 이동하기
+          </Link>
+        </h5>
       </div>
     </div>
   );
