@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer';
 
 const Aside = () => {
   return (
@@ -117,13 +118,7 @@ const Aside = () => {
             </li>
           </ul>
         </div>
-        <footer>
-          <p>
-            Westagram 정보 · 지원 · 홍보 센터 · API · 채용정보 ·
-            개인정보처리방침 · 약관 · 디렉터리 · 프로필 · 해시태그 · 언어
-          </p>
-          <span>ⓒ 2022 WESTAGRAM</span>
-        </footer>
+        <Footer />
       </div>
     </aside>
   );
