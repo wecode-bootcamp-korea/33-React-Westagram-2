@@ -8,6 +8,7 @@ p {
 
 * {
   box-sizing: border-box;
+  list-style: none;
 }
 
 /* Colors */
@@ -33,10 +34,6 @@ p {
 }
 
 .login {
-  body {
-    background-color: var(--background-color);
-  }
-
   h1 {
     font-family: 'Rancho', cursive;
     font-weight: 400;

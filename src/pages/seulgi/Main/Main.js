@@ -103,6 +103,7 @@ function FeedStory() {
 function Article() {
   const [input, setInput] = useState('');
   const [comment, setComment] = useState([]);
+
   const handleInputChange = e => {
     setInput(e.target.value);
   };
