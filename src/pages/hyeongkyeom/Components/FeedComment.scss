@@ -22,12 +22,12 @@
     i {
       margin: auto 5px;
       font-size: 15px;
-    }
 
-    i:hover {
-      cursor: pointer;
-      color: #dbdbdb;
-      transition: 0.2s;
+      &:hover {
+        cursor: pointer;
+        color: #dbdbdb;
+        transition: 0.2s;
+      }
     }
   }
 }

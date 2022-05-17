@@ -4,8 +4,6 @@ import InputComment from './InputComment';
 import './Feed.scss';
 
 const Feed = ({ profile, name, text, src }) => {
-  // console.log({ name, text, src });
-  // console.log(feed);
   const [color, setColor] = useState(false);
   const [commentList, setCommentList] = useState([]);
   const nextId = useRef(4);

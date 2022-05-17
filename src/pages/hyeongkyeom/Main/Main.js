@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/common.scss';
-import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/reset.scss';
-import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/variables.scss';
 import './Main.scss';
 import Nav from '../../../Components/Nav';
 import Story from '../Components/Story';
