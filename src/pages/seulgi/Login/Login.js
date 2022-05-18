@@ -5,19 +5,18 @@ import './Login.scss';
 
 const Login = () => {
   const navigate = useNavigate();
-  const [id, setId] = useState('');
-  const [pw, setPw] = useState('');
+  const [input, setInput] = useState({ id: '', password: '' });
 
   const goToMain = () => {
     navigate('/main-seulgi');
   };
 
-  const handleIdInput = event => {
-    setId(event.target.value);
-  };
-
-  const handlePwInput = event => {
-    setPw(event.target.value);
+  const handleInput = e => {
+    const { name, value } = e.target;
+    setInput({
+      ...input,
+      [name]: value,
+    });
   };
 
   const testBackend = e => {
@@ -25,13 +24,12 @@ const Login = () => {
     fetch('http://10.58.3.110:8000/users/signin', {
       method: 'POST',
       body: JSON.stringify({
-        email: id,
-        password: pw,
+        email: input.id,
+        password: input.password,
       }),
     })
       .then(response => response.json())
       .then(result => {
-        console.log('결과', result.token);
         if (result.token) {
           localStorage.setItem('local_token', result.token);
           goToMain();
@@ -45,25 +43,27 @@ const Login = () => {
         <h1>westagram</h1>
         <form>
           <input
-            onChange={handleIdInput}
+            onChange={handleInput}
+            name={input.id}
             type="id"
-            value={id}
             id="id"
             placeholder="전화번호, 사용자 이름 또는 이메일"
           />
           <br />
           <input
-            onChange={handlePwInput}
+            onChange={handleInput}
             type="password"
-            value={pw}
-            id="pw"
+            name={input.password}
+            id="password"
             placeholder="비밀번호"
           />
           <br />
           <button
             id="btn"
             onClick={testBackend}
-            disabled={id.includes('@') && pw.length > 5 ? false : true}
+            disabled={
+              input.id.includes('@') && input.password.length > 5 ? false : true
+            }
           >
             로그인
           </button>

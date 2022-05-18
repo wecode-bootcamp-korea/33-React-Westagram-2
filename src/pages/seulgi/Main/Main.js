@@ -75,15 +75,6 @@ function Article() {
     setInput('');
   };
 
-  // const [ input, setInput ] = useState({ id:"", pw: ""})
-  // const handleInput = e => {
-  //   const { name, value } = e.target;
-  //   setInput({
-  //     ...input,
-  //     [name]: value,
-  //   });
-  // };
-
   return (
     <article className="article">
       <div className="articleProfile">
