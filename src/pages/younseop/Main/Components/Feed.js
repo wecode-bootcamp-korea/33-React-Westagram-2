@@ -6,6 +6,17 @@ const Feed = () => {
   const [input, setInput] = useState('');
   const [comment, setComment] = useState([]);
 
+  // POST 1
+  // input comment
+  // POST 2
+  // input comment
+
+  // Feeds -> Feed (input, comment) -> CommentBox
+
+  // Feeds -> POST_LIST Feed
+  // Feed ->
+  // Comment ->
+
   const handleInputChange = e => {
     setInput(e.target.value);
   };

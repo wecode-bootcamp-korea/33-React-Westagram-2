@@ -22,9 +22,25 @@ function Login() {
 
   const mainPageLink = useNavigate();
 
-  const goToMainPage = e => {
-    e.preventDefault();
+  const goToMainPage = () => {
     mainPageLink('/main-YounSeop');
+  };
+
+  const checkLoginApi = () => {
+    fetch('http://10.58.3.156:8000/user/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        user_email: input.id,
+        password: input.pw,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.Token) {
+          localStorage.setItem('Token', result.Token);
+          goToMainPage();
+        }
+      });
   };
 
   return (
@@ -48,15 +64,13 @@ function Login() {
               name="pw"
               onChange={handleInput}
             />
-            <a href="/main">
-              <button
-                id="loginBtn"
-                disabled={id.includes('@') && pw.length >= 5 ? false : true}
-                onClick={goToMainPage}
-              >
-                로그인
-              </button>
-            </a>
+            <button
+              id="loginBtn"
+              disabled={id.includes('@') && pw.length >= 5 ? false : true}
+              onClick={checkLoginApi}
+            >
+              로그인
+            </button>
           </div>
           <Link to="/" className="forgotPw">
             비밀번호를 잊으셨나요?
