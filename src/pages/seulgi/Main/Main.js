@@ -75,6 +75,15 @@ function Article() {
     setInput('');
   };
 
+  // const [ input, setInput ] = useState({ id:"", pw: ""})
+  // const handleInput = e => {
+  //   const { name, value } = e.target;
+  //   setInput({
+  //     ...input,
+  //     [name]: value,
+  //   });
+  // };
+
   return (
     <article className="article">
       <div className="articleProfile">
@@ -148,92 +157,41 @@ function Comment({ names, comments }) {
 }
 
 function RecommendBox() {
+  const USER_LIST = [
+    { id: 1, userId: 'hi__yeon__' },
+    { id: 2, userId: '__plan_j' },
+    { id: 3, userId: 'suen.park' },
+    { id: 4, userId: 'jindo_luv' },
+    { id: 5, userId: 'jindo_bori' },
+    { id: 6, userId: 'poong__e' },
+    { id: 7, userId: 'peppoya' },
+    { id: 8, userId: 'jeongduck' },
+  ];
   return (
     <div className="RightRecommendContentBox">
-      <div className="content 1">
-        <div className="recommendContentLeft">
-          <div className="recommendImgBox">
-            <span className="recommendImgBoxProfile">
-              <img src="images/seulgi/storyButton1.jpg" alt="" />
-            </span>
-          </div>
-          <div className="contentProfile">
-            <div className="id">lovemysanso</div>
-            <div className="description">
-              jindo_bory님 외 1명이 팔로우합니다
+      {USER_LIST.map(user => (
+        <div className="content" key={user.id}>
+          <div className="recommendContentLeft">
+            <div className="recommendImgBox">
+              <span className="recommendImgBoxProfile">
+                <img
+                  src={`images/seulgi/storyButton${user.id}.jpg`}
+                  alt="userProfile"
+                />
+              </span>
+            </div>
+            <div className="contentProfile">
+              <div className="id">{user.userId}</div>
+              <div className="description">
+                {`${user.userId}님 외 1명이 팔로우합니다`}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="contentRight">
-          <button className="contentRightBtn">팔로우</button>
-        </div>
-      </div>
-      <div className="content 2">
-        <div className="recommendContentLeft">
-          <div className="recommendImgBox">
-            <span className="recommendImgBoxProfile">
-              <img src="images/seulgi/storyButton2.jpg" alt="" />
-            </span>
-          </div>
-          <div className="contentProfile">
-            <div className="id">na120100</div>
-            <div className="description">회원님을 팔로우합니다.</div>
+          <div className="contentRight">
+            <button className="contentRightBtn">팔로우</button>
           </div>
         </div>
-        <div className="contentRight">
-          <button className="contentRightBtn">팔로우</button>
-        </div>
-      </div>
-      <div className="content 3">
-        <div className="recommendContentLeft">
-          <div className="recommendImgBox">
-            <span className="recommendImgBoxProfile">
-              <img src="images/seulgi/storyButton3.jpg" alt="" />
-            </span>
-          </div>
-          <div className="contentProfile">
-            <div className="id">yeon_.fit</div>
-            <div className="description">
-              hi__yeon__님 외 2명이 팔로우합니다.
-            </div>
-          </div>
-        </div>
-        <div className="contentRight">
-          <button className="contentRightBtn">팔로우</button>
-        </div>
-      </div>
-      <div className="content 4">
-        <div className="recommendContentLeft">
-          <div className="recommendImgBox">
-            <span className="recommendImgBoxProfile">
-              <img src="images/seulgi/storyButton4.jpg" alt="" />
-            </span>
-          </div>
-          <div className="contentProfile">
-            <div className="id">tinkerbell_jw</div>
-            <div className="description">hi__yeon__님이 팔로우합니다</div>
-          </div>
-        </div>
-        <div className="contentRight">
-          <button className="contentRightBtn">팔로우</button>
-        </div>
-      </div>
-      <div className="content 5">
-        <div className="recommendContentLeft">
-          <div className="recommendImgBox">
-            <span className="recommendImgBoxProfile">
-              <img src="images/seulgi/storyButton5.jpg" alt="" />
-            </span>
-          </div>
-          <div className="contentProfile">
-            <div className="id">gorani_sd</div>
-            <div className="description">wwhite_bear_님이 팔로우합니다</div>
-          </div>
-        </div>
-        <div className="contentRight">
-          <button className="contentRightBtn">팔로우</button>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }
