@@ -1,8 +1,7 @@
-import React from 'react';
-import { useState } from 'react';
-import './Main.scss';
+import React, { useState } from 'react';
 import Nav from '../../../Components/Nav';
 import USER_LIST from './UserData';
+import './Main.scss';
 
 const Main = () => {
   return (
