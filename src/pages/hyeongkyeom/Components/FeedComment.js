@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './FeedComment.scss';
 
-const FeedComment = ({ comment, onRemove }) => {
-  const { id, text, name } = comment;
+const FeedComment = ({ id, text, name, liked, onRemove }) => {
   const [likedBtn, setlikedBtn] = useState(false);
 
   const likeButton = e => {
@@ -21,6 +20,7 @@ const FeedComment = ({ comment, onRemove }) => {
           id="commentLike"
           className="fa-regular fa-heart"
           onClick={likeButton}
+          liked={liked}
         />
         <i class="fa-regular fa-trash-can" onClick={() => onRemove(id)} />
       </div>

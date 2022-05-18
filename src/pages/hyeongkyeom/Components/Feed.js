@@ -1,20 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import FeedCommentList from './FeedCommentList';
 import InputComment from './InputComment';
 import './Feed.scss';
 
-const Feed = ({ profile, name, text, src }) => {
+const Feed = ({ profile, name, text, src, comment }) => {
   const [color, setColor] = useState(false);
-  const [commentList, setCommentList] = useState([]);
+  const [commentList, setCommentList] = useState(comment);
   const nextId = useRef(4);
-
-  useEffect(() => {
-    fetch('http://localhost:3000/data/commentData.json')
-      .then(res => res.json())
-      .then(data => {
-        setCommentList(data);
-      });
-  }, []);
 
   const onRemove = id =>
     setCommentList(commentList.filter(comment => comment.id !== id));

@@ -24,7 +24,7 @@ const Main = () => {
         <div className="feeds">
           <Story />
           {feedList.map(feed => {
-            const { name, text, src, id, profile } = feed;
+            const { name, text, src, id, profile, comment } = feed;
             return (
               <Feed
                 name={name}
@@ -32,6 +32,7 @@ const Main = () => {
                 src={src}
                 key={id}
                 profile={profile}
+                comment={comment}
               />
             );
           })}

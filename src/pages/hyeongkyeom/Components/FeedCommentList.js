@@ -7,7 +7,13 @@ const FeedCommentList = ({ commentList, onRemove }) => {
     <div className="feedBottomComment">
       {commentList.map(comment => {
         return (
-          <FeedComment comment={comment} key={comment.id} onRemove={onRemove} />
+          <FeedComment
+            name={comment.name}
+            text={comment.text}
+            id={comment.id}
+            key={comment.id}
+            onRemove={onRemove}
+          />
         );
       })}
     </div>
