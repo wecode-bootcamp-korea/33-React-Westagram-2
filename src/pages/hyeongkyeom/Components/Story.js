@@ -17,11 +17,12 @@ const Story = () => {
       <section className="storyBorder">
         <div className="storyProfile">
           {storyList.map(story => {
+            const { id, src, name } = story;
             return (
-              <div className="storyProfileOne" key={story.id}>
-                <img className="storyImg" src={story.src} alt="storyImg1" />
+              <div className="storyProfileOne" key={id}>
+                <img className="storyImg" src={src} alt="storyImg1" />
                 <div className="storyProfileName">
-                  <span>{story.name}</span>
+                  <span>{name}</span>
                 </div>
               </div>
             );

@@ -24,13 +24,14 @@ const Main = () => {
         <div className="feeds">
           <Story />
           {feedList.map(feed => {
+            const { name, text, src, id, profile } = feed;
             return (
               <Feed
-                name={feed.name}
-                text={feed.text}
-                src={feed.src}
-                key={feed.id}
-                profile={feed.profile}
+                name={name}
+                text={text}
+                src={src}
+                key={id}
+                profile={profile}
               />
             );
           })}

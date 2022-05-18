@@ -20,7 +20,25 @@ const Login = () => {
   const navigate = useNavigate();
 
   const goToMain = () => {
-    navigate('/main-hyeongkyeom');
+    fetch('http://10.58.3.175:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: id,
+        password: pwd,
+      }),
+    })
+      .then(res => res.json())
+      .then(result => {
+        localStorage.setItem('token', result.access_token);
+        const access_token = localStorage.getItem('token');
+
+        if (result.message === 'SUCCESS') {
+          alert('로그인에 성공했습니다!');
+          navigate('/main-hyeongkyeom');
+        } else {
+          alert('이메일과 비밀번호를 다시 한번 확인해주세요!');
+        }
+      });
   };
 
   return (
