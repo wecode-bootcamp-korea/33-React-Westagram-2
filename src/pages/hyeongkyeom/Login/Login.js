@@ -30,7 +30,6 @@ const Login = () => {
       .then(res => res.json())
       .then(result => {
         localStorage.setItem('token', result.access_token);
-        const access_token = localStorage.getItem('token');
 
         if (result.message === 'SUCCESS') {
           alert('로그인에 성공했습니다!');
