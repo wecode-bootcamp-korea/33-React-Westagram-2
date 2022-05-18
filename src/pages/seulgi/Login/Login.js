@@ -44,7 +44,7 @@ const Login = () => {
         <form>
           <input
             onChange={handleInput}
-            name={input.id}
+            name="id"
             type="id"
             id="id"
             placeholder="전화번호, 사용자 이름 또는 이메일"
@@ -53,7 +53,7 @@ const Login = () => {
           <input
             onChange={handleInput}
             type="password"
-            name={input.password}
+            name="password"
             id="password"
             placeholder="비밀번호"
           />
