@@ -76,7 +76,7 @@ p {
     margin-bottom: 24px;
     font-size: 12px;
     display: flex;
-    overflow-x: hidden;
+    overflow: scroll;
   }
 
   .storyBox {

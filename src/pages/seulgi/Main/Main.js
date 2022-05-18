@@ -30,72 +30,31 @@ const Main = () => {
 };
 
 function FeedStory() {
+  const USER_LIST = [
+    { id: 1, userId: 'hi__yeon__' },
+    { id: 2, userId: '__plan_j' },
+    { id: 3, userId: 'suen.park' },
+    { id: 4, userId: 'jindo_luv' },
+    { id: 5, userId: 'jindo_bori' },
+    { id: 6, userId: 'poong__e' },
+    { id: 7, userId: 'peppoya' },
+    { id: 8, userId: 'jeongduck' },
+  ];
   return (
     <div className="feedStory">
-      <div className="storyBox">
-        <button className="storyButton 1">
-          <span>
-            <img src="images/seulgi/storyButton1.jpg" alt="" />
-          </span>
-        </button>
-        <div className="storyId">hi__yeon__</div>
-      </div>
-      <div className="storyBox 2">
-        <button className="storyButton">
-          <span>
-            <img src="images/seulgi/storyButton2.jpg" alt="" />
-          </span>
-        </button>
-        <div className="storyId">__plan_j</div>
-      </div>
-      <div className="storyBox 3">
-        <button className="storyButton">
-          <span>
-            <img src="images/seulgi/storyButton3.jpg" alt="" />
-          </span>
-        </button>
-        <div className="storyId">suen.park</div>
-      </div>
-      <div className="storyBox 4">
-        <button className="storyButton">
-          <span>
-            <img src="images/seulgi/storyButton4.jpg" alt="" />
-          </span>
-        </button>
-        <div className="storyId">jindo_luv</div>
-      </div>
-      <div className="storyBox 5">
-        <button className="storyButton">
-          <span>
-            <img src="images/seulgi/storyButton5.jpg" alt="" />
-          </span>
-        </button>
-        <div className="storyId">jindo_bori</div>
-      </div>
-      <div className="storyBox 6">
-        <button className="storyButton">
-          <span>
-            <img src="images/seulgi/storyButton6.jpg" alt="" />
-          </span>
-        </button>
-        <div className="storyId">poong__e</div>
-      </div>
-      <div className="storyBox 7">
-        <button className="storyButton">
-          <span>
-            <img src="images/seulgi/storyButton7.jpg" alt="" />
-          </span>
-        </button>
-        <div className="storyId">peppoya</div>
-      </div>
-      <div className="storyBox 8">
-        <button className="storyButton">
-          <span>
-            <img src="images/seulgi/storyButton8.jpg" alt="" />
-          </span>
-        </button>
-        <div className="storyId">jeongduck</div>
-      </div>
+      {USER_LIST.map(user => (
+        <div className="storyBox" key={user.id}>
+          <button className="storyButton">
+            <span>
+              <img
+                src={`images/seulgi/storyButton${user.id}.jpg`}
+                alt="userProfile"
+              />
+            </span>
+          </button>
+          <div className="storyId">{user.userId}</div>
+        </div>
+      ))}
     </div>
   );
 }
