@@ -197,35 +197,51 @@ function RecommendBox() {
 }
 
 function MainRightProfile() {
+  const PROFILE = [
+    {
+      id: 1,
+      userId: 'golden_galaxy_sea',
+      userNickname: '금호🐱 은하🐈 동해🐶',
+    },
+  ];
   return (
-    <div className="mainRightProfile">
-      <span>
-        <img src="/images/seulgi/asideProfile.jpg" alt="" />
-      </span>
-      <div className="info">
-        golden_galaxy_sea
-        <br />
-        <div className="description">금호🐱 은하🐈 동해🐶</div>
-      </div>
-      <button className="contentRightDescriptionBtn">전환</button>
+    <div>
+      {PROFILE.map(user => (
+        <div className="mainRightProfile" key={user.id}>
+          <span>
+            <img src="/images/seulgi/asideProfile.jpg" alt="myProfile" />
+          </span>
+          <div className="info">
+            {user.userId}
+            <br />
+            <div className="description">{user.userNickname}</div>
+          </div>
+          <button className="contentRightDescriptionBtn">전환</button>
+        </div>
+      ))}
     </div>
   );
 }
 
 function Sitemap() {
+  const SITE_LIST = [
+    { id: 1, url: '', title: '소개' },
+    { id: 2, url: '', title: '도움말' },
+    { id: 3, url: '', title: '홍보 센터' },
+    { id: 4, url: '', title: 'API' },
+    { id: 5, url: '', title: '채용 정보' },
+    { id: 6, url: '', title: '개인정보처리방침' },
+    { id: 7, url: '', title: '약관' },
+    { id: 8, url: '', title: '위치' },
+    { id: 9, url: '', title: '인기 계정' },
+    { id: 10, url: '', title: '해시태그' },
+    { id: 11, url: '', title: '언어' },
+  ];
   return (
     <ol className="sitemap">
-      <li>소개</li>
-      <li>도움말</li>
-      <li>홍보 센터</li>
-      <li>API</li>
-      <li>채용 정보</li>
-      <li>개인정보처리방침</li>
-      <li>약관</li>
-      <li>위치</li>
-      <li>인기 계정</li>
-      <li>해시태그</li>
-      <li>언어</li>
+      {SITE_LIST.map(title => (
+        <li key={title.id}>{title.title}</li>
+      ))}
     </ol>
   );
 }
