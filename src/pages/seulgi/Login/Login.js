@@ -20,6 +20,25 @@ const Login = () => {
     setPw(event.target.value);
   };
 
+  const testBackend = e => {
+    e.preventDefault();
+    fetch('http://10.58.3.110:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: id,
+        password: pw,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        console.log('결과', result.token);
+        if (result.token) {
+          localStorage.setItem('local_token', result.token);
+          goToMain();
+        }
+      });
+  };
+
   return (
     <div className="login">
       <div className="wrapper">
@@ -43,7 +62,7 @@ const Login = () => {
           <br />
           <button
             id="btn"
-            onClick={goToMain}
+            onClick={testBackend}
             disabled={id.includes('@') && pw.length > 5 ? false : true}
           >
             로그인
