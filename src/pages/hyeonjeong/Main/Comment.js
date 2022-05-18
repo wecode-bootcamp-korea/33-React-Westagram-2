@@ -1,16 +1,20 @@
 import React from 'react';
 
-const Comment = ({ item, idx, remove }) => {
+const Comment = props => {
+  const removeComment = e => {
+    let copy = [...props.commentList];
+    props.setCommentList(copy.filter(item => item.id != e.target.id));
+  };
   return (
-    <div className="commentDel">
+    <li className="commentRow">
       <div className="comment">
-        <span className="userPadding">catttt022</span>
-        <span>{item}</span>
+        <span className="userPadding idFontWeight">{props.item.userName}</span>
+        <span>{props.item.content}</span>
       </div>
-      <button className="delBtn" id={idx}>
+      <button className="delBtn" onClick={removeComment} id={props.item.id}>
         삭제
       </button>
-    </div>
+    </li>
   );
 };
 

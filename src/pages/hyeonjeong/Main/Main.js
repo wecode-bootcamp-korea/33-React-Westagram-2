@@ -1,12 +1,24 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Main.scss';
 import Nav from '../../../Components/Nav';
 import Comment from './Comment';
 
 const Main = () => {
   const [inputValue, setInputValue] = useState('');
-  const [commentList, setCommentList] = useState([]);
+  const [commentList, setCommentList] = useState([]); //받아온 데이터 배열에 저장할 공간 만들어 둠
+  const idRef = useRef(0);
+
+  useEffect(() => {
+    //목데이터 가져오기
+    fetch('http://localhost:3000/data/hyunjung.json') //'api주소',정보객체
+      .then(res => res.json()) //받아온 데이터를 js형태로 바꿔줌(데이터 알아볼 수 있도록 변환)
+      .then(data => {
+        setCommentList(data);
+        idRef.current = data.length + 1;
+      });
+  }, []);
+  //2번째 인자 빈배열> 마운트 시(최초 화면에 렌더링시)에 useEffect실행됨
 
   const isValid = inputValue.length > 0;
 
@@ -14,9 +26,25 @@ const Main = () => {
     setInputValue(e.target.value);
   };
 
-  const post = () => {
+  // const post = () => {
+  //   let copy = [...commentList];
+  //   copy.push(inputValue);
+  //   setCommentList(copy);
+  //   setInputValue('');
+  // };
+
+  const post = e => {
+    e.preventDefault();
     let copy = [...commentList];
-    copy.push(inputValue);
+    //객체를 할당한 변수를 post함수 밖에 만들면 렌더링 될 때마다 user가 만들어지니까 안에 쓴다
+    //form태그는 submit 되면 계속 새로고침 되니까 e.prevent로 막아준다.
+    //그래야 댓글 쓰고 입력한 값이 commentList 어레이에 들어감
+    const user = {
+      id: idRef.current++,
+      userName: 'catttt022',
+      content: inputValue,
+    };
+    copy.push(user);
     setCommentList(copy);
     setInputValue('');
   };
@@ -37,7 +65,7 @@ const Main = () => {
                       alt=""
                     />
                   </div>
-                  <div style={{ fontSize: '20px' }}>cat_1</div>
+                  <div className="idFontSize">cat_1</div>
                 </div>
                 <div>
                   <i className="fa-solid fa-ellipsis" />
@@ -47,7 +75,7 @@ const Main = () => {
               <div>
                 <img
                   className="mainImg"
-                  src="/images/hyeonjeong/낙산고양이이미지.jpg"
+                  src={'/images/hyeonjeong/' + '낙산고양이이미지.jpg'}
                   alt="mainFeedImg"
                 />
               </div>
@@ -85,11 +113,20 @@ const Main = () => {
                   </div>
 
                   <ul className="commentUl">
-                    <li className="commentRow">
-                      {commentList.map((item, idx) => {
-                        return <Comment item={item} idx={idx} key={idx} />;
-                      })}
-                    </li>
+                    {commentList.map(item => {
+                      console.log('item', item);
+                      return (
+                        <Comment
+                          // id={item.id}
+                          // userName={item.userName}
+                          // content={item.content}
+                          commentList={commentList}
+                          setCommentList={setCommentList}
+                          item={item}
+                          key={item.id}
+                        />
+                      );
+                    })}
                   </ul>
                   <div className="margin8px grayColor font10px">1일전</div>
                 </div>
@@ -126,7 +163,7 @@ const Main = () => {
             </div>
             <div className="recommend">
               <span>회원님을 위한 추천</span>
-              <a href="#">모두보기</a>
+              <a href="/">모두보기</a>
             </div>
             <div className="recommendList">
               <div className="recommendProfile">

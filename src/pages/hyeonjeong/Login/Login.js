@@ -5,11 +5,30 @@ import './Login.scss';
 
 const Login = () => {
   const navigate = useNavigate();
-  const goToMain = () => {
-    navigate('/main-hyeonjeong');
-  };
   const [idInput, setIdInput] = useState('');
   const [pwdInput, setPwdInput] = useState('');
+
+  const goToMain = e => {
+    e.preventDefault();
+    console.log(11);
+    fetch('http://10.58.4.207:8000/users/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: idInput,
+        password: pwdInput,
+      }),
+    })
+      .then(response => response.json())
+      .then(response => {
+        if (response.access_token) {
+          localStorage.setItem('login-token', response.access_token);
+        }
+      });
+    navigate('/main-hyeonjeong');
+  };
+
+  let token = localStorage.getItem('login-token');
+  console.log('token', token);
 
   const handleIdInput = e => {
     setIdInput(e.target.value);

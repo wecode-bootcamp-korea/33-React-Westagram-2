@@ -1,9 +1,9 @@
+* {
+  box-sizing: border-box;
+}
 .main {
   margin: 0;
   margin-top: 64px;
-  * {
-    box-sizing: border-box;
-  }
 
   .mainPage {
     margin: 0 auto;
@@ -64,6 +64,10 @@
         height: 100%;
         object-fit: cover;
         border-radius: 50px;
+      }
+
+      .idFontSize {
+        font-size: 20px;
       }
 
       .mainImg {
@@ -147,7 +151,12 @@
           display: none;
         }
 
-        .commentDel {
+        // .commentDel {
+        //   display: flex;
+        //   justify-content: space-between;
+        // }
+
+        .commentRow {
           display: flex;
           justify-content: space-between;
         }
@@ -164,6 +173,10 @@
 
         .userPadding {
           padding-right: 5px;
+        }
+
+        .idFontWeight {
+          font-weight: 700;
         }
       }
 
