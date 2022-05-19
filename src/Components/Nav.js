@@ -8,7 +8,8 @@ const Nav = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const onMenuClick = () => setShowMenu(!showMenu);
-  const onKeyPress = e => setShowSearch(!showSearch);
+  const onFocus = () => setShowSearch(true);
+  const onBlur = () => setShowSearch(false);
   const navigate = useNavigate();
   const goToLogin = e => navigate('/login-hyeongkyeom');
   useEffect(() => {
@@ -34,7 +35,8 @@ const Nav = () => {
           onChange={e => {
             setValue(e.target.value);
           }}
-          onKeyDown={onKeyPress}
+          onFocus={onFocus}
+          onBlur={onBlur}
         />
       </div>
       {showSearch ? (
