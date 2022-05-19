@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 const LeftContent = () => {
   const [feedUsers, setUsers] = useState([]);
+  // FIXME: no localhost
   useEffect(() => {
     fetch('http://localhost:3000/data/wanyoung/feedData.json')
       .then(res => res.json())

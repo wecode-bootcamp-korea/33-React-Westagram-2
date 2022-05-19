@@ -9,6 +9,7 @@ function Main() {
     <section className="mainPage positionRelative">
       <Nav className="Nav" />
       <section className="mainContent flex">
+        {/* FIXME: 컴포넌트 이름 */}
         <LeftContent />
         <RightContent />
       </section>

@@ -3,6 +3,7 @@ import './MainFeedBox.scss';
 import CommentBox from './CommentBox';
 
 const MainFeedBox = ({ feedUsers }) => {
+  //FIXME: 문맥별 공백
   const { name, text, imgUrl, profileUrl } = feedUsers;
   const [value, setValue] = useState('');
   const [comments, setComment] = useState([]);
@@ -21,10 +22,12 @@ const MainFeedBox = ({ feedUsers }) => {
         setComment(data);
       });
   }, []);
+  // FIXME: state -> UI 1대1 대응 안해도 됨
   const [heartImg, setHeartImg] = useState({
     checked: false,
     url: 'images/wanyoung/image/heart.png',
   });
+  // FIXME: 항상 0
   const nextId = useRef(comments.length + 1);
   const onHeartClick = () => {
     setHeartImg({
@@ -53,6 +56,7 @@ const MainFeedBox = ({ feedUsers }) => {
     setComment([...comments, newComment]);
     nextId.current += 1;
     setValue('');
+    // FIXME: 흐름
     e.preventDefault();
   };
 
@@ -66,6 +70,7 @@ const MainFeedBox = ({ feedUsers }) => {
         />
         <p className="userText marginLeft">{name}</p>
       </div>
+      {/* FIXME: alt에 사진, image, img 등의 내용은 필요 없음 */} 
       <img className="feedBoxImg" src={imgUrl} alt="피드 사진" />
       <div className="feedItems flex flexStart center">
         <img
@@ -90,6 +95,7 @@ const MainFeedBox = ({ feedUsers }) => {
       </div>
       <div className="flex flexStart">
         {likePerson.map(person => (
+          // FIMXE: 매개변수자리 구조분해
           <img
             key={person.id}
             className={person.className}
@@ -125,6 +131,7 @@ const MainFeedBox = ({ feedUsers }) => {
         />
         <input
           maxLength={15}
+          // FIXME: no id attribute
           id="comment-input"
           className="marginLeft feedInputInput"
           type="text"

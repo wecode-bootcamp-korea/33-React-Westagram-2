@@ -4,14 +4,17 @@ import { useState } from 'react';
 
 const LoginForm = () => {
   const navigate = useNavigate();
+  // FIXME: 함수명
   const onLoginClick = () => {
     navigate('/main-wanyoung');
   };
   const [userInfo, setUserInfo] = useState({
+    // FIXME: user prefix
     userId: '',
     userPasswd: '',
   });
   const onInputChange = e => {
+    // FIXME: 구조분해할당
     const { value } = e.target;
     const newUserInfo = {
       ...userInfo,
@@ -41,6 +44,7 @@ const LoginForm = () => {
         <button
           className="loginBoxBtn"
           onClick={onLoginClick}
+          // FIXME: 삼항연산자 true false
           disabled={
             userInfo.userId.includes('@') && userInfo.userPasswd.length > 5
               ? false
