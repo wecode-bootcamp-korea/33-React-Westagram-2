@@ -3,7 +3,6 @@
   justify-content: center;
   align-content: center;
 }
-
 .mainNav {
   z-index: 1;
   position: fixed;
@@ -19,15 +18,12 @@
   height: 4rem;
   background-color: white;
   font-size: 25px;
-
   .mainNavLogo {
     cursor: pointer;
-
     .mainNavText {
-      font-family: 'Lobster', cursive;
+      font-family: ‘Lobster’, cursive;
     }
   }
-
   .mainNavSearch {
     margin-left: 300px;
     i {
@@ -37,7 +33,6 @@
       font-size: 15px;
       color: #8e8e8e;
     }
-
     .navSearch {
       width: 17rem;
       height: 2rem;
@@ -45,18 +40,15 @@
       border-radius: 0.5rem;
       border-style: none;
       text-indent: 3em;
-
       ::placeholder {
         color: #c5c5c5;
         font-size: 15px;
       }
     }
   }
-
   .mainNavicon {
     @include flex-center;
     cursor: pointer;
-
     img {
       width: 1.5rem;
       height: 1.5rem;

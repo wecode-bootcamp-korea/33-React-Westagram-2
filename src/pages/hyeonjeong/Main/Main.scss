@@ -1,3 +1,271 @@
-div {
-    color: red;
+* {
+  box-sizing: border-box;
+}
+.main {
+  margin: 0;
+  margin-top: 64px;
+
+  .mainPage {
+    margin: 0 auto;
+    background-color: #fafafa;
+
+    .feedAndRight {
+      /* width: 821px; */
+      width: 70%;
+      /* min-width: 680px; */
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+
+      .grayColor {
+        color: #a8a8a8;
+      }
+
+      .font10px {
+        font-size: 10px;
+      }
+
+      .feedBox {
+        width: 55%;
+        padding-top: 1px;
+        margin: 50px 0;
+      }
+
+      .feed {
+        background-color: #ffffff;
+        margin: 0 10px;
+        margin-bottom: 30px;
+        min-width: 376px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+      }
+
+      .header {
+        height: 70px;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .profileHeader {
+        width: 90%;
+        display: flex;
+        align-items: center;
+      }
+
+      .profileImgBox {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
+
+      .roundImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50px;
+      }
+
+      .idFontSize {
+        font-size: 20px;
+      }
+
+      .mainImg {
+        width: 100%;
+        height: 500px;
+      }
+
+      .iconBox {
+        padding: 0 12px 6px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      i {
+        font-size: 28px;
+        padding: 8px;
+      }
+
+      .likeArea {
+        padding: 0 18px;
+        display: flex;
+      }
+
+      .likeProfileImg {
+        width: 25px;
+        height: 25px;
+        border-radius: 70%;
+        overflow: hidden;
+        margin-right: 10px;
+      }
+
+      .commentBox {
+        padding: 0 18px;
+        border-bottom: 1px solid lightgray;
+      }
+
+      .margin4px {
+        margin-bottom: 4px;
+      }
+
+      .margin8px {
+        margin-bottom: 8px;
+      }
+
+      .commentInputBox {
+        padding: 10px 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .commentInput {
+        width: 80%;
+        border: none;
+        padding: 5px 10px 0 10px;
+        font-size: 20px;
+      }
+
+      .inputBtn {
+        border: none;
+        background-color: #ffffff;
+        font-size: 20px;
+        color: #b2dffc;
+      }
+
+      .activateBtn {
+        cursor: pointer;
+        color: #0095f6;
+      }
+
+      ul {
+        padding: 0px;
+      }
+
+      .commentUl {
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        .commentUl::-webkit-scrollbar {
+          display: none;
+        }
+
+        // .commentDel {
+        //   display: flex;
+        //   justify-content: space-between;
+        // }
+
+        .commentRow {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .comment {
+          display: flex;
+        }
+
+        .delBtn {
+          border: none;
+          height: 25px;
+          background-color: #ffffff;
+        }
+
+        .userPadding {
+          padding-right: 5px;
+        }
+
+        .idFontWeight {
+          font-weight: 700;
+        }
+      }
+
+      .mainRight {
+        width: 42%;
+        margin-top: 50px;
+
+        .myProfileBox {
+          width: 100%;
+          height: 66px;
+          margin: 10px 0 16px 0;
+          display: flex;
+          align-items: center;
+
+          .profileImg {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 15px;
+            margin-left: 16px;
+          }
+
+          span {
+            font-size: 20px;
+          }
+        }
+
+        .userName {
+          width: 225px;
+          height: 30px;
+        }
+
+        .recommend {
+          padding: 4px 16px;
+          display: flex;
+          justify-content: space-between;
+          font-weight: 600;
+
+          span {
+            font-size: 17px;
+            color: rgb(194, 193, 193);
+          }
+
+          a {
+            font-size: 14px;
+            color: black;
+            text-decoration: none;
+            &:visited {
+              color: black;
+            }
+          }
+        }
+
+        .recommendList {
+          padding: 8px 0;
+
+          .recommendProfile {
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+          }
+
+          .recommendProfileImg {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /* flex: 0; */
+          }
+
+          .recommendProfileNickname {
+            flex: 5;
+            padding-left: 10px;
+            font-size: 16px;
+          }
+
+          .follow {
+            color: #0095f6;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1020px) {
+    .mainRight {
+      display: none;
+    }
+    .feedBox {
+      width: 90%;
+    }
+  }
 }
