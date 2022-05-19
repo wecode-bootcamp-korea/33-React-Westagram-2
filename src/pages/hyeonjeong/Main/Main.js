@@ -3,10 +3,12 @@ import { useState, useEffect, useRef } from 'react';
 import './Main.scss';
 import Nav from '../../../Components/Nav';
 import Comment from './Comment';
+import Feed from './Feed';
 
 const Main = () => {
   const [inputValue, setInputValue] = useState('');
   const [commentList, setCommentList] = useState([]); //받아온 데이터 배열에 저장할 공간 만들어 둠
+  const [feedList, setFeedList] = useState([]);
   const idRef = useRef(0);
 
   useEffect(() => {
@@ -19,6 +21,17 @@ const Main = () => {
       });
   }, []);
   //2번째 인자 빈배열> 마운트 시(최초 화면에 렌더링시)에 useEffect실행됨
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/hyunjung2.json')
+      .then(res => res.json())
+      .then(feedData => {
+        setFeedList(feedData);
+        console.log('feedData', feedData);
+      });
+  }, []);
+
+  console.log('feedList > ', feedList);
 
   const isValid = inputValue.length > 0;
 
@@ -55,7 +68,23 @@ const Main = () => {
       <main className="mainPage">
         <div className="feedAndRight">
           <div className="feedBox">
-            <article className="feed">
+            {feedList.map(item => {
+              return (
+                <Feed
+                  isValid={isValid}
+                  inputValue={inputValue}
+                  handleInput={handleInput}
+                  eachFeed={item}
+                  comment={Comment}
+                  commentList={commentList}
+                  setCommentList={setCommentList}
+                  post={post}
+                  key={item.id}
+                />
+              );
+            })}
+
+            {/* <article className="feed">
               <div className="header">
                 <div className="profileHeader">
                   <div className="profileImgBox">
@@ -107,19 +136,15 @@ const Main = () => {
 
                 <div className="commentBox">
                   <div className="margin4px">
-                    <span>cut_cat12</span>
+                    <span className="idFontWeight">cut_cat12</span>
                     <span>귀여운 고양이....</span>
                     <span className="grayColor">더 보기</span>
                   </div>
 
                   <ul className="commentUl">
                     {commentList.map(item => {
-                      console.log('item', item);
                       return (
                         <Comment
-                          // id={item.id}
-                          // userName={item.userName}
-                          // content={item.content}
                           commentList={commentList}
                           setCommentList={setCommentList}
                           item={item}
@@ -149,7 +174,7 @@ const Main = () => {
                   </button>
                 </form>
               </div>
-            </article>
+            </article> */}
           </div>
 
           <aside className="mainRight">

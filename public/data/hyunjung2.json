@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "profile": "대만냥이.jpg",
+    "userName": "cutecat_1",
+    "content": "나른나른 고영",
+    "likeUser": "/images/hyeonjeong/카페img.jpg"
+  },
+  {
+    "id": 2,
+    "profile": "IMG_20211020_110139.png",
+    "userName": "hi_11",
+    "content": "위풍당당 cat",
+    "likeUser": "/images/hyeonjeong/카페img.jpg"
+  },
+  {
+    "id": 3,
+    "profile": "치즈냥.jpg",
+    "userName": "삼색이",
+    "content": "내친구 치즈냥이.",
+    "likeUser": "/images/hyeonjeong/카페img.jpg"
+  }
+]
