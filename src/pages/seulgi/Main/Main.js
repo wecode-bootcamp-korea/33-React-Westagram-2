@@ -29,6 +29,7 @@ const Main = () => {
   );
 };
 
+// FIXME: 파일당 하나의 컴포넌트
 function FeedStory() {
   return (
     <div className="feedStory">
@@ -38,6 +39,7 @@ function FeedStory() {
             <span>
               <img
                 src={`images/seulgi/storyButton${user.id}.jpg`}
+                // FIXME: alt는 일반 영문법에 맞게
                 alt="userProfile"
               />
             </span>
@@ -59,6 +61,7 @@ function Article() {
 
   const handleUpload = e => {
     e.preventDefault();
+    // FIXME: 선언할 때 한번에
     const newComment = [...comment];
     newComment.push(input);
     setComment(newComment);
@@ -71,6 +74,8 @@ function Article() {
         <div className="articleProfileHeader">
           <button className="articleProfileHeaderBtn">
             <span>
+              {/* FIXME: alt */} 
+              {/* FIXME: 절대 경로 */}
               <img src="images/seulgi/asideProfile.jpg" alt="" />
             </span>
           </button>
@@ -100,6 +105,7 @@ function Article() {
         </div>
       </div>
       <div className="articleLike">좋아요 925개</div>
+      {/* FIXME: 매개변수 명 정확히 */}
       {comment.map((comment, id) => {
         return (
           <Comment names="whatabeautifulcat" comments={comment} key={id} />
@@ -168,6 +174,7 @@ function RecommendBox() {
 }
 
 function MainRightProfile() {
+  // FIXME: 상수는 컴포넌트 바깥에 선언
   const PROFILE = [
     {
       id: 1,
@@ -210,6 +217,7 @@ function Sitemap() {
   ];
   return (
     <ol className="sitemap">
+      {/* FIXME: 매개변수자리 구조분해 */}
       {SITE_LIST.map(title => (
         <li key={title.id}>{title.title}</li>
       ))}

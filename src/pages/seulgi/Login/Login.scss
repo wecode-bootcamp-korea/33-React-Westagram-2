@@ -3,6 +3,7 @@
   list-style: none;
 }
 
+// FIXME: body style common
 body,
 ol,
 p {
@@ -39,6 +40,7 @@ p {
     margin: 50px 0;
   }
 
+  // FIXME: tag selector 지양
   h5 {
     font-size: 20px;
     margin: 30px 0;

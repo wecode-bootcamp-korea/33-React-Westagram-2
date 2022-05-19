@@ -13,6 +13,7 @@ const Login = () => {
 
   const handleInput = e => {
     const { name, value } = e.target;
+    // FIXME: setState argument callback function
     setInput({
       ...input,
       [name]: value,
@@ -35,6 +36,7 @@ const Login = () => {
           goToMain();
         }
       });
+    // FIXME: status code
   };
 
   return (
@@ -46,6 +48,8 @@ const Login = () => {
             onChange={handleInput}
             name="id"
             type="id"
+            // FIXME: no id attribute
+            // FIXME: value prop
             id="id"
             placeholder="전화번호, 사용자 이름 또는 이메일"
           />
