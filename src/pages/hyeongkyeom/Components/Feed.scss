@@ -97,13 +97,12 @@
 
   .feedBottomDesc {
     display: flex;
-    align-items: center;
     margin: 5px 20px 10px 20px;
 
     .descNickname {
-      margin-right: 5px;
+      margin-right: 10px;
       font-weight: bold;
-      width: 100px;
+      width: 110px;
     }
   }
 }

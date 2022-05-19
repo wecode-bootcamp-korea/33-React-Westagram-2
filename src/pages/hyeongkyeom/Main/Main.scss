@@ -29,4 +29,14 @@ body {
   }
 }
 
+@media (max-width: 1000px) {
+  .mainWrapper {
+    padding-right: 0;
+  }
+
+  .feeds {
+    margin-right: 0;
+  }
+}
+
 /* MainNav */

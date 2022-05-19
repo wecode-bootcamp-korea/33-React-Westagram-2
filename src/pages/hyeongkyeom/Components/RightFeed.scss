@@ -48,11 +48,15 @@
       justify-content: space-between;
       margin: 15px;
       margin-right: 30px;
+
+      .recommendTxt {
+        color: #8e8e8e;
+      }
     }
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .mainRight {
     display: none;
   }

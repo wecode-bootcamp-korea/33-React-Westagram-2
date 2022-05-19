@@ -29,7 +29,7 @@ const RightFeed = () => {
       <div className="mainRecommend">
         <section className="recommendBorder">
           <div className="recommendBorderTitle">
-            <span>회원님을 위한 추천</span>{' '}
+            <span className="recommendTxt">회원님을 위한 추천</span>{' '}
             <span>
               <b>모두 보기</b>
             </span>
