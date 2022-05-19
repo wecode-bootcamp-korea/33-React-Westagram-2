@@ -4,17 +4,21 @@ import InputComment from './InputComment';
 import './Feed.scss';
 
 const Feed = ({ profile, name, text, src, comment }) => {
+  // FIXME: 변수명 의미 드러나게
   const [color, setColor] = useState(false);
   const [commentList, setCommentList] = useState(comment);
   const nextId = useRef(4);
 
+  // FIXME: 함수명 의도 드러나게
   const onRemove = id =>
     setCommentList(commentList.filter(comment => comment.id !== id));
 
   const handleClick = e => {
+    // FIXME: DOM 직접 조작 필요한 상황 제외하고는 지양
     e.preventDefault();
     e.target.style.color = color ? 'red' : 'black';
     e.target.className = color ? 'fa-solid fa-heart' : 'fa-regular fa-heart';
+    // FIXME: function prev update
     setColor(!color);
   };
 
@@ -39,6 +43,7 @@ const Feed = ({ profile, name, text, src, comment }) => {
             <p className="feedProfileId">{name}</p>
             <p className="feedProfileLocation">WeCode - 위코드</p>
           </div>
+          {/* FIXME: no id */}
           <i id="feedProfileMore" className="fa-solid fa-ellipsis" />
         </div>
         <div className="feedmainImg">

@@ -10,7 +10,8 @@ const Main = () => {
   const [feedList, setFeedList] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/feedData.json')
+    // FIXME: localhost 생략
+    fetch('/data/feedData.json')
       .then(res => res.json())
       .then(data => {
         setFeedList(data);
@@ -24,9 +25,11 @@ const Main = () => {
         <div className="feeds">
           <Story />
           {feedList.map(feed => {
+            // FIXME: 매개변수 구조분해할당
             const { name, text, src, id, profile, comment } = feed;
             return (
               <Feed
+                // FIXME: 다 전해줄거면 그냥 한번에
                 name={name}
                 text={text}
                 src={src}

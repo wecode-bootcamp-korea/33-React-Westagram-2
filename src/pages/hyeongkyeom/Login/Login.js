@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import './Login.scss';
-import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/common.scss';
-import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/reset.scss';
-import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/variables.scss';
+// FIXME: import 경로, import 할 필요 없음
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const [id, setId] = useState('');
-  const [pwd, setPwd] = useState('');
+  // FIXME: 공통된 관심사의 state는 하나로
+  // 응집도
+  const [userInput, setUserInput] = useState({
+    id:"",
+    pwd:""
+  })
 
+  // FIXME: inputHanlder 
   const handleIdInput = e => {
     setId(e.target.value);
   };
@@ -20,6 +23,13 @@ const Login = () => {
   const navigate = useNavigate();
 
   const goToMain = () => {
+    // Promise, async
+    // 
+    // 1 do complete
+    //
+    // 2 do complete
+    //
+    // 3 do complete
     fetch('http://10.58.3.175:8000/users/signin', {
       method: 'POST',
       body: JSON.stringify({
@@ -27,17 +37,19 @@ const Login = () => {
         password: pwd,
       }),
     })
-      .then(res => res.json())
-      .then(result => {
-        localStorage.setItem('token', result.access_token);
-
-        if (result.message === 'SUCCESS') {
-          alert('로그인에 성공했습니다!');
-          navigate('/main-hyeongkyeom');
+      .then(res => {
+        if(res.ok) {
+          return res.json()
         } else {
           alert('이메일과 비밀번호를 다시 한번 확인해주세요!');
         }
-      });
+      })
+      .then(result => {
+        localStorage.setItem('token', result.access_token);
+        alert('로그인에 성공했습니다!');
+        navigate('/main-hyeongkyeom')
+      }
+      );
   };
 
   return (
@@ -64,7 +76,8 @@ const Login = () => {
             />
             <button
               className="loginBtn"
-              disabled={id.includes('@') && pwd.length > 4 ? false : true}
+              // FIXME: 삼항연산자 true false
+              disabled={!(id.includes('@') && pwd.length > 4)}
               onClick={goToMain}
             >
               로그인
@@ -80,7 +93,7 @@ const Login = () => {
         </section>
         <section className="signBorder">
           <p className="signUp">
-            계정이 없으신가요?{' '}
+            계정이 없으신가요?
             <a className="signUplink" href="#!">
               가입하기
             </a>
