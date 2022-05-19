@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const StoryItems = () => {
+  const [story, setStory] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/younseop/storyItems.json')
+      .then(response => response.json())
+      .then(result => setStory(result));
+  }, []);
+
   return (
     <ul className="storyContents">
-      {STORY_ITEM.map(profile => {
+      {story.map(profile => {
         return (
           <li className="storyProfile" key={profile.id}>
             <img
@@ -21,12 +29,5 @@ const StoryItems = () => {
     </ul>
   );
 };
-
-const STORY_ITEM = [
-  { id: 1, username: 'seop_code', time: '방금 전' },
-  { id: 2, username: 'younseop', time: '10분 전' },
-  { id: 3, username: 'dbstjq', time: '1시간 전' },
-  { id: 4, username: 'devseop', time: '2시간 전' },
-];
 
 export default StoryItems;

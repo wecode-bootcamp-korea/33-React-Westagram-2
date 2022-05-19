@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const RecommendItems = () => {
+  const [item, setItem] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/younseop/recommendItems.json')
+      .then(response => response.json())
+      .then(result => setItem(result));
+  }, []);
+
   return (
     <ul className="userList">
-      {RECOMMEND_ITEM.map(profile => {
+      {item.map(profile => {
         return (
           <li className="userListItem" key={profile.id}>
             <div className="listItemInfo">
@@ -24,12 +32,5 @@ const RecommendItems = () => {
     </ul>
   );
 };
-
-const RECOMMEND_ITEM = [
-  { id: 1, username: 'seop_code', time: '방금 전' },
-  { id: 2, username: 'younseop', time: '10분 전' },
-  { id: 3, username: 'dbstjq', time: '1시간 전' },
-  { id: 4, username: 'devseop', time: '2시간 전' },
-];
 
 export default RecommendItems;

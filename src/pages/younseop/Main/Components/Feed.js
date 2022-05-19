@@ -1,21 +1,10 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CommentBox from './Comments';
 
 const Feed = () => {
   const [input, setInput] = useState('');
   const [comment, setComment] = useState([]);
-
-  // POST 1
-  // input comment
-  // POST 2
-  // input comment
-
-  // Feeds -> Feed (input, comment) -> CommentBox
-
-  // Feeds -> POST_LIST Feed
-  // Feed ->
-  // Comment ->
+  const [post, setPost] = useState([]);
 
   const handleInputChange = e => {
     setInput(e.target.value);
@@ -29,9 +18,15 @@ const Feed = () => {
     setInput('');
   };
 
+  useEffect(() => {
+    fetch('http://localhost:3000/data/younseop/post.json')
+      .then(response => response.json())
+      .then(result => setPost(result));
+  }, []);
+
   return (
     <div className="feeds">
-      {POST_LIST.map(info => {
+      {post.map(info => {
         return (
           <article className="post" key={info.id}>
             <div className="postProfile">
@@ -119,11 +114,5 @@ const Feed = () => {
     </div>
   );
 };
-
-const POST_LIST = [
-  { id: 1, username: 'younseop', comment: '그리운 제주도...' },
-  { id: 2, username: 'devseop', comment: '자바스크립트는 나의 적' },
-  { id: 3, username: 'dldbstjq', comment: '집에 가고 싶다' },
-];
 
 export default Feed;
