@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Comments from './Comments';
 
 const Feed = ({ data }) => {
   const [input, setInput] = useState('');
   const [comment, setComment] = useState([]);
+  const [defaultcmt, setDefaultCmt] = useState([]);
 
   const handleInputChange = e => {
     const { value } = e.target;
@@ -17,6 +18,13 @@ const Feed = ({ data }) => {
     setComment(newComment);
     setInput('');
   };
+
+  useEffect(() => {
+    fetch(`http://localhost:3000/data/younseop/defaultComment${data.id}.json`)
+      .then(response => response.json())
+      .then(data => setDefaultCmt(data));
+  }, []);
+
   return (
     <div className="feeds">
       <article className="post" key={data.id}>
@@ -72,6 +80,16 @@ const Feed = ({ data }) => {
           <span>{data.comment}</span>
         </div>
         <ul className="commentsWrapper">
+          {defaultcmt.map(data => (
+            <li className="postComment" key={data.id}>
+              <div>
+                <p className="comment">
+                  <span className="commentUser">{data.username}</span>
+                  <span>{data.comment}</span>
+                </p>
+              </div>
+            </li>
+          ))}
           {comment.map((comment, id) => {
             return <Comments names="unknown" comments={comment} key={id} />;
           })}
