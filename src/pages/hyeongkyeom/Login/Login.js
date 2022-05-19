@@ -71,7 +71,7 @@ const Login = () => {
             </button>
             <p className="or">또는</p>
             <a className="facebookLogin" href="#!">
-              <i class="fa-brands fa-facebook-square" /> Facebook으로 로그인
+              <i className="fa-brands fa-facebook-square" /> Facebook으로 로그인
             </a>
             <a className="forgetPwd" href="#!">
               비밀번호를 잊으셨나요?

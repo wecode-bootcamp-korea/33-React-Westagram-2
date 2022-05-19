@@ -22,7 +22,7 @@ const FeedComment = ({ id, text, name, liked, onRemove }) => {
           onClick={likeButton}
           liked={liked}
         />
-        <i class="fa-regular fa-trash-can" onClick={() => onRemove(id)} />
+        <i className="fa-regular fa-trash-can" onClick={() => onRemove(id)} />
       </div>
     </div>
   );

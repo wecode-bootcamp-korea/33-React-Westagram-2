@@ -50,9 +50,9 @@ const Nav = () => {
             .map(list => (
               <li key={list.id}>
                 <img className="searchImg" alt="searchImg" src={list.src} />
-                <div class="searchUser">
-                  <span class="searchId">{list.nickname}</span>
-                  <p class="searchName">{list.name}</p>
+                <div className="searchUser">
+                  <span className="searchId">{list.nickname}</span>
+                  <p className="searchName">{list.name}</p>
                 </div>
               </li>
             ))}
@@ -68,24 +68,24 @@ const Nav = () => {
         <img src="images/Nav/user.png" alt="user" onClick={onMenuClick} />
       </div>
       {showMenu ? (
-        <div class="profileMenubar">
+        <div className="profileMenubar">
           <li>
-            <i class="fa-regular fa-circle-user" />
+            <i className="fa-regular fa-circle-user" />
             <p>프로필</p>
           </li>
           <li>
-            <i class="fa-regular fa-bookmark" />
+            <i className="fa-regular fa-bookmark" />
             <p>저장됨</p>
           </li>
           <li>
-            <i class="fa-solid fa-gear" />
+            <i className="fa-solid fa-gear" />
             <p>설정</p>
           </li>
           <li>
-            <i class="fa-solid fa-arrow-right-arrow-left" />
+            <i className="fa-solid fa-arrow-right-arrow-left" />
             <p>계정 전환</p>
           </li>
-          <div class="logout" onClick={goToLogin}>
+          <div className="logout" onClick={goToLogin}>
             <li>로그아웃</li>
           </div>
         </div>

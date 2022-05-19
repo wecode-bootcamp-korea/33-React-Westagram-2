@@ -54,7 +54,7 @@ const Feed = ({ profile, name, text, src, comment }) => {
                   onClick={handleClick}
                 />
                 <i className="fa-regular fa-comment" />
-                <i class="fa-regular fa-paper-plane" />
+                <i className="fa-regular fa-paper-plane" />
               </div>
               <div className="feedBottomLkesIconRight">
                 <i className="fa-regular fa-bookmark" />
