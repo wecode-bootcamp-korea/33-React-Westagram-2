@@ -4,6 +4,7 @@ $radius-3: 3px;
 $radius-8: 8px;
 $bold: 700;
 
+// FIXME: common으로 이동
 @mixin flexSpaceBetween {
   display: flex;
   justify-content: space-between;
@@ -35,6 +36,7 @@ $bold: 700;
     margin: auto;
     max-width: 975px;
 
+    // FIXME: 컴포넌트 style은 해당 컴포넌트에서
     .feeds {
       max-width: 614px;
       position: relative;

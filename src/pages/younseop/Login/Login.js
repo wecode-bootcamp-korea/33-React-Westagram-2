@@ -12,12 +12,16 @@ function Login() {
 
   const { id, pw } = input;
 
+
   const handleInput = e => {
     const { name, value } = e.target;
-    setInput({
-      ...input,
-      [name]: value,
-    });
+    // FIXME: setState argument -> callback function
+    setInput((input) => {
+      return {
+        ...input,
+        [name]:value
+      }
+    })
   };
 
   const mainPageLink = useNavigate();
@@ -41,6 +45,7 @@ function Login() {
           goToMainPage();
         }
       });
+      // FIXME: status code
   };
 
   return (
@@ -52,9 +57,12 @@ function Login() {
           <div className="loginBox">
             <input
               type="text"
+              // FIXME: no id attribute
               id="id"
               placeholder="전화번호, 사용자 이름 또는 메일"
               name="id"
+              value={input.id}
+              // FIXME value prop
               onChange={handleInput}
             />
             <input
@@ -66,6 +74,7 @@ function Login() {
             />
             <button
               id="loginBtn"
+              // FIXME: 삼항 연산자 결과로 boolean 사용 X
               disabled={id.includes('@') && pw.length >= 5 ? false : true}
               onClick={checkLoginApi}
             >

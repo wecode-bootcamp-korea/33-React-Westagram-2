@@ -8,6 +8,7 @@ function Main() {
   return (
     <>
       <Nav />
+      {/* FIXME: 불필요한 div */}
       <div className="main">
         <section>
           <Feed />

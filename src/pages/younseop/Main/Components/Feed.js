@@ -4,7 +4,8 @@ import CommentBox from './Comments';
 const Feed = () => {
   const [input, setInput] = useState('');
   const [comment, setComment] = useState([]);
-  const [post, setPost] = useState([]);
+  // FIXME: post 복수형
+  const [posts, setPosts] = useState([]);
 
   const handleInputChange = e => {
     setInput(e.target.value);
@@ -12,6 +13,7 @@ const Feed = () => {
 
   const handleUpload = e => {
     e.preventDefault();
+    // FIXME: push 사용 안해도 됨
     const newComment = [...comment];
     newComment.push(input);
     setComment(newComment);
@@ -26,17 +28,18 @@ const Feed = () => {
 
   return (
     <div className="feeds">
-      {post.map(info => {
+      {/* FIXME: 매개변수 구조분해 */}
+      {posts.map(({id, username}) => {
         return (
-          <article className="post" key={info.id}>
+          <article className="post" key={id}>
             <div className="postProfile">
               <div className="userInfo">
                 <img
-                  src="images/younseop/post-user.jpg"
-                  alt=""
+                  src="/images/younseop/post-user.jpg"
+                  alt="user"
                   className="user-photo"
                 />
-                <span>{info.username}</span>
+                <span>{username}</span>
               </div>
               <img
                 className="iconNamedMore"
@@ -83,7 +86,7 @@ const Feed = () => {
             <ul className="commentsWrapper">
               {comment.map((comment, id) => {
                 return (
-                  <CommentBox names="unknown" comments={comment} key={id} />
+                  <CommentBox names="unknown" comments={comment} id={id} />
                 );
               })}
             </ul>
