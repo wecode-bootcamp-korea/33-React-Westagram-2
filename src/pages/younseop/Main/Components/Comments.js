@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CommentBox = ({ names, comments }) => {
+const Comments = ({ names, comments }) => {
   return (
     <li className="postComment">
       <div>
@@ -13,4 +13,4 @@ const CommentBox = ({ names, comments }) => {
   );
 };
 
-export default CommentBox;
+export default Comments;
