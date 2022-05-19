@@ -7,7 +7,8 @@ const Feed = () => {
   const [post, setPost] = useState([]);
 
   const handleInputChange = e => {
-    setInput(e.target.value);
+    const { value } = e.target;
+    setInput(value);
   };
 
   const handleUpload = e => {
