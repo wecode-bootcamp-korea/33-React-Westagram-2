@@ -20,6 +20,7 @@ const Main = () => {
   }, []);
   //2번째 인자 빈배열> 마운트 시(최초 화면에 렌더링시)에 useEffect실행됨
 
+  // FIXME: 변수명 좀 더 정확하게
   const isValid = inputValue.length > 0;
 
   const handleInput = e => {
@@ -35,6 +36,7 @@ const Main = () => {
 
   const post = e => {
     e.preventDefault();
+    // FIXME: 선언할 때 한번에, 변수명
     let copy = [...commentList];
     //객체를 할당한 변수를 post함수 밖에 만들면 렌더링 될 때마다 user가 만들어지니까 안에 쓴다
     //form태그는 submit 되면 계속 새로고침 되니까 e.prevent로 막아준다.
@@ -115,6 +117,7 @@ const Main = () => {
                   <ul className="commentUl">
                     {commentList.map(item => {
                       console.log('item', item);
+                      // FIXME: commentList, setCommentList 보다는 삭제하는 함수를 받도록
                       return (
                         <Comment
                           // id={item.id}

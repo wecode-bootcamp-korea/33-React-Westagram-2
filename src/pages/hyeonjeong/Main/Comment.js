@@ -1,5 +1,6 @@
 import React from 'react';
 
+// FIXME: 매개변수 구조분해할당
 const Comment = props => {
   const removeComment = e => {
     let copy = [...props.commentList];

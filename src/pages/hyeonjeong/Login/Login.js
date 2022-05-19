@@ -5,11 +5,13 @@ import './Login.scss';
 
 const Login = () => {
   const navigate = useNavigate();
+  // FIXME: 공통된 관심사의 state는 하나로
   const [idInput, setIdInput] = useState('');
   const [pwdInput, setPwdInput] = useState('');
 
   const goToMain = e => {
     e.preventDefault();
+    // FIXME: no console
     console.log(11);
     fetch('http://10.58.4.207:8000/users/login', {
       method: 'POST',
@@ -24,6 +26,7 @@ const Login = () => {
           localStorage.setItem('login-token', response.access_token);
         }
       });
+    // FIXME: status code
     navigate('/main-hyeonjeong');
   };
 
