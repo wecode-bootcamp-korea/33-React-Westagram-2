@@ -10,7 +10,7 @@ const Aside = () => {
         <div className="profile">
           <img
             src="images/younseop/post-user.jpg"
-            alt=""
+            alt="post user"
             className="imgUserPhoto"
           />
           <div className="profileTextWrapper">

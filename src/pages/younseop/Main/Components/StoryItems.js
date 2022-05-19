@@ -16,7 +16,7 @@ const StoryItems = () => {
           <li className="storyProfile" key={profile.id}>
             <img
               src="images/younseop/post-user.jpg"
-              alt=""
+              alt="post user"
               className="imgUserPhoto"
             />
             <div className="storyTextWrapper">

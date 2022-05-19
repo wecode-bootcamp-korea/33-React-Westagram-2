@@ -17,7 +17,7 @@ const RecommendItems = () => {
             <div className="listItemInfo">
               <img
                 src="images/younseop/post-user.jpg"
-                alt=""
+                alt="post user"
                 className="imgUserPhoto"
               />
               <div className="storyTextWrapper">

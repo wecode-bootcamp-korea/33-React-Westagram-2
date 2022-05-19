@@ -46,22 +46,22 @@ const Feed = () => {
               />
             </div>
             <div className="imgWrapper">
-              <img src="images/younseop/post-user.jpg" alt="" />
+              <img src="images/younseop/post-user.jpg" alt="post user" />
             </div>
             <div className="btnsWrapper">
               <div className="left-ic-wrapper">
                 <button className="btnNamedLike">
-                  <img src="images/younseop/heart-regular.svg" alt="" />
+                  <img src="images/younseop/heart-regular.svg" alt="like" />
                 </button>
                 <button className="btnNamedComment">
-                  <img src="images/younseop/comment.svg" alt="" />
+                  <img src="images/younseop/comment.svg" alt="comment" />
                 </button>
                 <button className="btnNamedShare">
-                  <img src="images/younseop/share.svg" alt="" />
+                  <img src="images/younseop/share.svg" alt="share" />
                 </button>
               </div>
               <button className="btnNamedBookmark">
-                <img src="images/younseop/bookmark.svg" alt="" />
+                <img src="images/younseop/bookmark.svg" alt="bookmark" />
               </button>
             </div>
             <div className="likeList">
