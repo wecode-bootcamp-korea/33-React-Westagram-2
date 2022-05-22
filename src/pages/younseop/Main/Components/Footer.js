@@ -13,6 +13,7 @@ const Footer = () => {
     <footer>
       <p>
         {footers.map(info => {
+          // FIXME: Link component
           return (
             <a href="/" key={info.id}>
               {info.content}

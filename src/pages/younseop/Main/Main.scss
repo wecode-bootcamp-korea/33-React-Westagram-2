@@ -4,6 +4,7 @@ $radius-3: 3px;
 $radius-8: 8px;
 $bold: 700;
 
+// FIXME: common으로 이동
 @mixin flexSpaceBetween {
   display: flex;
   justify-content: space-between;

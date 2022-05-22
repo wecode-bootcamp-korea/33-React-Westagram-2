@@ -13,16 +13,14 @@ const Feed = ({ data }) => {
 
   const handleUpload = e => {
     e.preventDefault();
-    const newComment = [...comment];
-    newComment.push(input);
-    setComment(newComment);
+    setComment([...comment, input]);
     setInput('');
   };
 
   useEffect(() => {
     fetch(`http://localhost:3000/data/younseop/defaultComment${data.id}.json`)
       .then(response => response.json())
-      .then(data => setDefaultCmt(data));
+      .then(commentsData => setDefaultCmt(commentsData));
   }, []);
 
   return (
