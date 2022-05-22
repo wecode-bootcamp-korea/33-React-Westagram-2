@@ -59,7 +59,6 @@ function Login() {
               placeholder="전화번호, 사용자 이름 또는 메일"
               name="id"
               value={input.id}
-              // FIXME value prop
               onChange={handleInput}
             />
             <input
