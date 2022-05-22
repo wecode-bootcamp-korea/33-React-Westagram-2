@@ -7,10 +7,10 @@ import './Login.scss';
 function Login() {
   const [input, setInput] = useState({
     id: '',
-    pw: '',
+    pwd: '',
   });
 
-  const { id, pw } = input;
+  const { id, pwd } = input;
 
   const handleInput = e => {
     const { name, value } = e.target;
@@ -56,8 +56,6 @@ function Login() {
           <div className="loginBox">
             <input
               type="text"
-              // FIXME: no id attribute
-              id="id"
               placeholder="전화번호, 사용자 이름 또는 메일"
               name="id"
               value={input.id}
@@ -66,15 +64,13 @@ function Login() {
             />
             <input
               type="password"
-              id="password"
               placeholder="비밀번호"
-              name="pw"
+              name="pwd"
               onChange={handleInput}
             />
             <button
               id="loginBtn"
-              // FIXME: 삼항 연산자 결과로 boolean 사용 X
-              disabled={!id.includes('@') && pw.length}
+              disabled={!id.includes('@') && pwd.length}
               onClick={checkLoginApi}
             >
               로그인

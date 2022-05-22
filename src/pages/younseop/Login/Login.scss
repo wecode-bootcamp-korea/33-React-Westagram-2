@@ -34,7 +34,8 @@ $accent-color: #0586fa;
     text-align: center;
     margin: 0;
     margin-bottom: -48px;
-  } }
+  }
+}
 
 .loginBox {
   input {
@@ -44,14 +45,14 @@ $accent-color: #0586fa;
     border: $border;
     border-radius: 4px;
     padding: 0 16px;
-  }
 
-  #id {
-    margin-bottom: 8px;
-  }
+    &:first-child {
+      margin-bottom: 8px;
+    }
 
-  #password {
-    margin-bottom: 16px;
+    &:nth-child(2) {
+      margin-bottom: 16px;
+    }
   }
 
   #loginBtn {
