@@ -1,3 +1,85 @@
-div {
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@mixin flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+$border: 1px solid #e6e6e6;
+$accent-color: #0586fa;
+
+.login {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  font-size: 14px;
+
+  .wrapper {
+    @include flexSpaceBetween;
+
+    border: $border;
+    border-radius: 4px;
+    margin: auto;
+    padding: 56px 44px 16px;
+    width: 350px;
+    height: 400px;
+    text-align: center;
+    flex-direction: column;
+    background-color: #fff;
+  }
+
+  .westaLogo {
+    font-family: 'Lobster', cursive;
+    font-size: 36px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: -48px;
+  }
+}
+
+.loginBox {
+  input {
+    width: 100%;
+    height: 40px;
+    background-color: #fafafa;
+    border: $border;
+    border-radius: 4px;
+    padding: 0 16px;
+
+    &:first-child {
+      margin-bottom: 8px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 16px;
+    }
+  }
+
+  #loginBtn {
+    width: 100%;
+    height: 36px;
+    color: #fff;
+    background-color: $accent-color;
+    opacity: 1;
+    border: 0;
+    border-radius: 4px;
+    text-align: center;
+
+    &:disabled {
+      opacity: 0.4;
+    }
+
+    &:disabled:hover {
+      cursor: default;
+    }
+    &:enabled:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.forgotPw {
+  color: #043667;
+  text-decoration: none;
+  font-weight: 500;
 }
