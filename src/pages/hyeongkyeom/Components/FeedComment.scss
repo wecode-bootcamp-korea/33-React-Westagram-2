@@ -1,0 +1,33 @@
+.commentDesc {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .descNickname {
+    font-weight: bold;
+    width: 120px;
+  }
+
+  .commentTxt {
+    margin: 0;
+  }
+
+  .commentBtn {
+    position: absolute;
+    right: 0;
+    align-items: center;
+
+    i {
+      margin: auto 5px;
+      font-size: 15px;
+
+      &:hover {
+        cursor: pointer;
+        color: #dbdbdb;
+        transition: 0.2s;
+      }
+    }
+  }
+}

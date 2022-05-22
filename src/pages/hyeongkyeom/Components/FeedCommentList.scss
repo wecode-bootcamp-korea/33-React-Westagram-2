@@ -1,0 +1,24 @@
+.feedBottomComment {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  height: 150px;
+  overflow: auto;
+  margin: 5px 20px 10px 20px;
+
+  &::-webkit-scrollbar {
+    background-color: white;
+    height: 10px;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #abafb4;
+    border-radius: 20px;
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    display: block;
+  }
+}

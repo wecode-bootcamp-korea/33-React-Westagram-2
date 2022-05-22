@@ -1,0 +1,44 @@
+.recommendProfile {
+  display: flex;
+  flex-direction: column;
+  margin: 13px;
+
+  .recommendProfileOne {
+    display: flex;
+    margin-bottom: 20px;
+
+    .recommendImg {
+      border-radius: 100%;
+      width: 45px;
+      height: 45px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    .recommendProfileName {
+      margin-top: 7px;
+      font-size: 13px;
+      span {
+        font-weight: bold;
+        :hover {
+          text-decoration-line: underline;
+          cursor: pointer;
+        }
+      }
+      p {
+        color: #8e8e8e;
+      }
+    }
+
+    .recommendProfileFollowBtn {
+      background-color: #fafafa;
+      font-size: 17px;
+      color: #3b99ef;
+      border: none;
+      margin-left: 40px;
+      margin-top: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}

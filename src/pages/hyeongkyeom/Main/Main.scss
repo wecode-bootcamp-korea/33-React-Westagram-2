@@ -1,3 +1,41 @@
-div {
-    color: red;
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+body {
+  background-color: #fafafa;
+}
+
+.main {
+  /* mainWrapper */
+
+  .mainWrapper {
+    width: 100%;
+    z-index: 0;
+    @include flex-center;
+    flex-direction: column;
+    padding-right: 15rem;
+  }
+
+  /* feeds */
+
+  .feeds {
+    margin: 5rem auto;
+    margin-right: 23rem;
+    width: 39rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .mainWrapper {
+    padding-right: 0;
+  }
+
+  .feeds {
+    margin-right: 0;
+  }
+}
+
+/* MainNav */

@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "name": "im_iron_man",
+    "text": "스톤닦이놈 지 살려고 나한테 스냅시키는거 보소",
+    "src": "images/hyeongkyeom/main/strange.jpeg",
+    "profile": "images/hyeongkyeom/main/ironman.jpeg",
+    "comment": [
+      {
+        "id": 1,
+        "name": "farmer_thanos",
+        "text": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
+        "liked": false
+      },
+      {
+        "id": 2,
+        "name": "ho_seunbaenim",
+        "text": "원딜 선이요",
+        "liked": false
+      },
+      {
+        "id": 3,
+        "name": "iamgroot",
+        "text": "아이엠그루트",
+        "liked": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "farmer_thanos",
+    "text": "자연산 유기농 오이 싸게 팝니다~ 60억명이 먹다 30억명이 먼지가 되어도 모르는 맛. 스톤을 걸고 절대 속이거나 하지 않았습니다. 타이탄 행성으로 연락주세요.",
+    "src": "images/hyeongkyeom/main/thanos.jpeg",
+    "profile": "images/hyeongkyeom/main/farmer.jpeg",
+    "comment": [
+      {
+        "id": 1,
+        "name": "odinson_thor",
+        "text": "Kg당 얼마인가요?",
+        "liked": false
+      },
+      {
+        "id": 2,
+        "name": "steve_rogers",
+        "text": "저 농장 다녀왔는데 먼지만 풀풀 날리더라구요. 사지 마세요.",
+        "liked": false
+      },
+      {
+        "id": 3,
+        "name": "iamgroot",
+        "text": "아이엠그루트",
+        "liked": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "iamgroot",
+    "text": "아이엠그루트",
+    "src": "images/hyeongkyeom/main/groot.png",
+    "profile": "images/hyeongkyeom/main/iamgroot.jpeg",
+    "comment": [
+      {
+        "id": 1,
+        "name": "farmer_thanos",
+        "text": "I'm inevitable",
+        "liked": false
+      },
+      {
+        "id": 2,
+        "name": "im_iron_man",
+        "text": "아이 엠 아이언맨",
+        "liked": false
+      },
+      {
+        "id": 3,
+        "name": "iamgroot",
+        "text": "아이엠그루트",
+        "liked": false
+      }
+    ]
+  }
+]

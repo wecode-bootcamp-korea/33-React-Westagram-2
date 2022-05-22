@@ -11,12 +11,14 @@ import MainWanYoung from './pages/wanyoung/Main/Main.js';
 import MainYounSeop from './pages/younseop/Main/Main.js';
 import MainHyeonJeong from './pages/hyeonjeong/Main/Main.js';
 import Nav from './Components/Nav';
+import JoinForm from './pages/hyeongkyeom/Login/JoinForm';
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Nav />} />
+        <Route path="/join-hyeongkyeom" element={<JoinForm />} />
         <Route path="/login-hyeongkyeom" element={<LoginHyeongKyeom />} />
         <Route path="/login-seulgi" element={<LoginSeulGi />} />
         <Route path="/login-wanyoung" element={<LoginWanYoung />} />
