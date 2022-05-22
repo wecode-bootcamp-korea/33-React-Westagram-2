@@ -10,7 +10,7 @@ const Main = () => {
   const [feedList, setFeedList] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/feedData.json')
+    fetch('/data/feedData.json')
       .then(res => res.json())
       .then(data => {
         setFeedList(data);
@@ -24,17 +24,7 @@ const Main = () => {
         <div className="feeds">
           <Story />
           {feedList.map(feed => {
-            const { name, text, src, id, profile, comment } = feed;
-            return (
-              <Feed
-                name={name}
-                text={text}
-                src={src}
-                key={id}
-                profile={profile}
-                comment={comment}
-              />
-            );
+            return <Feed feed={feed} key={feed.id} />;
           })}
         </div>
         <RightFeed />

@@ -2,6 +2,7 @@
   border: 1px solid #dbdbdb;
   border-bottom: 1px solid #dbdbdb;
   border-radius: 5px 5px 0 0;
+  background-color: white;
 
   .feedProfile {
     position: relative;
@@ -57,7 +58,6 @@
     flex-direction: column;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #efefef;
 
     .feedBottomLikesIcon {
       display: flex;

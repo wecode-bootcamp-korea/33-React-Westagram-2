@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
 import './Login.scss';
-import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/common.scss';
-import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/reset.scss';
-import '/Users/kyeom/Desktop/33-React-Westagram-2/src/styles/variables.scss';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const [id, setId] = useState('');
-  const [pwd, setPwd] = useState('');
+  const [input, setInput] = useState({
+    id: '',
+    pwd: '',
+  });
 
-  const handleIdInput = e => {
-    setId(e.target.value);
-  };
+  const { id, pwd } = input;
 
-  const handPwdInput = e => {
-    setPwd(e.target.value);
+  const validation = id.includes('@') && pwd.length > 4;
+
+  const handleInput = e => {
+    const { name, value } = e.target;
+    setInput({
+      ...input,
+      [name]: value,
+    });
   };
 
   const navigate = useNavigate();
@@ -27,16 +30,17 @@ const Login = () => {
         password: pwd,
       }),
     })
-      .then(res => res.json())
-      .then(result => {
-        localStorage.setItem('token', result.access_token);
-
-        if (result.message === 'SUCCESS') {
-          alert('로그인에 성공했습니다!');
-          navigate('/main-hyeongkyeom');
+      .then(res => {
+        if (res.ok) {
+          return res.json();
         } else {
           alert('이메일과 비밀번호를 다시 한번 확인해주세요!');
         }
+      })
+      .then(result => {
+        localStorage.setItem('token', result.access_token);
+        alert('로그인에 성공했습니다!');
+        navigate('/main-hyeongkyeom');
       });
   };
 
@@ -52,19 +56,21 @@ const Login = () => {
               type="text"
               className="mainId"
               value={id}
-              onChange={handleIdInput}
+              name="id"
+              onChange={handleInput}
               placeholder="전화번호, 사용자 이름 또는 이메일"
             />
             <input
               type="password"
               className="mainPwd"
               value={pwd}
-              onChange={handPwdInput}
+              name="pwd"
+              onChange={handleInput}
               placeholder="비밀번호"
             />
             <button
               className="loginBtn"
-              disabled={id.includes('@') && pwd.length > 4 ? false : true}
+              disabled={!validation}
               onClick={goToMain}
             >
               로그인
@@ -80,7 +86,7 @@ const Login = () => {
         </section>
         <section className="signBorder">
           <p className="signUp">
-            계정이 없으신가요?{' '}
+            계정이 없으신가요?
             <a className="signUplink" href="#!">
               가입하기
             </a>

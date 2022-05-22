@@ -1,6 +1,5 @@
 .mainStory {
   display: flex;
-  background-color: #fafafa;
   margin: 15px auto;
 
   .storyBorder {
@@ -48,6 +47,7 @@
           border-radius: 100%;
           width: 60px;
           height: 60px;
+          overflow: auto;
           border: 2px solid transparent;
           background-image: linear-gradient(#fff, #fff),
             linear-gradient(to right, red 0%, orange 100%);

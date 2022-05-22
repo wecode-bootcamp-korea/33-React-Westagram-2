@@ -3,8 +3,9 @@ import FeedCommentList from './FeedCommentList';
 import InputComment from './InputComment';
 import './Feed.scss';
 
-const Feed = ({ profile, name, text, src, comment }) => {
-  const [color, setColor] = useState(false);
+const Feed = ({ feed }) => {
+  const { name, text, src, profile, comment } = feed;
+  const [liked, setLiked] = useState(false);
   const [commentList, setCommentList] = useState(comment);
   const nextId = useRef(4);
 
@@ -12,10 +13,9 @@ const Feed = ({ profile, name, text, src, comment }) => {
     setCommentList(commentList.filter(comment => comment.id !== id));
 
   const handleClick = e => {
-    e.preventDefault();
-    e.target.style.color = color ? 'red' : 'black';
-    e.target.className = color ? 'fa-solid fa-heart' : 'fa-regular fa-heart';
-    setColor(!color);
+    e.target.style.color = liked ? 'red' : 'black';
+    e.target.className = liked ? 'fa-solid fa-heart' : 'fa-regular fa-heart';
+    setLiked(!liked);
   };
 
   const onInsert = text => {
